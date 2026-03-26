@@ -1,0 +1,65 @@
+extends ../generate/layout/_layout
+
+block title
+  - var title = "Events: Conferences, Meetups & Industry Summits"
+
+block content
+  main.main
+    +banner({
+      image: 'https://palai.media/wp-content/uploads/2022/07/1920x540_desktop-1.png'
+    }).banner--wide
+
+    section.section
+      .container-fluid
+        .container
+          +breadcrumbs([
+            {
+              text: 'Main page',
+              url: './'
+            },
+            {
+              text: 'Articles',
+              url: null
+            }
+          ])
+
+          .content.content--left
+            .content__header
+              h1.content__title= title
+              .text.content__text
+                p Stay updated with upcoming conferences, networking events, and industry summits across affiliate marketing, iGaming, crypto, and digital business.
+
+            .content__left
+              +filters.js-filters
+            .content__center
+              .grid
+                .col-12
+                  .content__date April 2026
+                each item, index in EVENTS
+                  .col-12
+                    +event-alt(item).event--alt
+                .col-12
+                  +more-button('Load more')
+            .content__right
+              +banner({
+                image: 'https://palai.media/wp-content/uploads/2022/07/768h540-1.png'
+              })
+
+    section.section
+      .container-fluid
+        .container
+          +banner({
+            image: 'https://palai.media/wp-content/uploads/2022/07/1920x540_desktop-1.png'
+          })
+
+    section.section
+      .container-fluid
+        .container
+          .title.title--italic
+            h2.title__text Related Articles
+            +more-link('./articles.html', 'View all articles').title__link
+
+          .grid
+            each item in ARTICLES.slice(0, 3)
+              .col-12.col-mob-m-6.col-desk-s-4
+                +article(item)

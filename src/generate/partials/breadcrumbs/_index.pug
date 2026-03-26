@@ -1,0 +1,12 @@
+mixin breadcrumbs(data)
+    .breadcrumbs&attributes(attributes)
+        button(type="button" aria-label="Back" title="back").breadcrumbs__back.js-breadcrumbs-back
+            +icon('arrow-left')
+            span Back
+        .breadcrumbs__wrapper
+            each item in data
+                if item.url
+                    a(href=item.url aria-label=item.text).breadcrumbs__link= item.text
+                    +icon('arrow-right')
+                else
+                    p.breadcrumbs__text= item.text

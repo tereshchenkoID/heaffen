@@ -1,0 +1,9 @@
+mixin tab(data)
+    .tab&attributes(attributes)
+        .tab__wrapper
+            button(type="button").tab__toggle.js-tab-toggle
+                span= data[0].text
+                +icon('angle-down')
+            .tab__dropdown.js-tab-dropdown
+                each item, index in data
+                    button(type="button" class=`${item.active ? 'tab__item--active' : ''}` aria-label=item.text).tab__item.js-tab-button= item.text

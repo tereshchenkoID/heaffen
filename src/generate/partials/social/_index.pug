@@ -1,0 +1,30 @@
+-
+    var SOCIAL = [
+        {
+            icon: 'Facebook',
+            link: '/'
+        },
+        {
+            icon: 'Instagram',
+            link: '/'
+        },
+        {
+            icon: 'Youtube',
+            link: '/'
+        },
+        {
+            icon: 'Telegram',
+            link: '/'
+        },
+        {
+            icon: 'Tiktok',
+            link: '/'
+        }
+    ]
+
+mixin social
+    ul.social&attributes(attributes)
+        each item in SOCIAL
+            li.social__item
+                a(href=item.link target="_blank" rel="nofollow" title=item.icon aria-label=item.icon).social__link
+                    +icon(item.icon.toLowerCase())

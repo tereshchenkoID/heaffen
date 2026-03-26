@@ -1,0 +1,58 @@
+@use 'scss/config' as *;
+
+.swiper {
+  @include size(100%, fit-content);
+
+  &:has(.swiper-pagination) {
+    padding-bottom: rem(30px);
+  }
+
+  &:has(.swiper-pagination-lock) {
+    padding-bottom: 0;
+  }
+
+  &-pagination {
+    --swiper-pagination-bottom: 0;
+    --swiper-pagination-bullet-width: 10px;
+    --swiper-pagination-bullet-size: 10px;
+
+    @include flex(center, center);
+
+    &-bullet {
+      @include transition;
+
+      &-active {
+        width: rem(36px);
+        border-radius: rem(100px);
+      }
+    }
+  }
+
+  &-navigation {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: rem(5px);
+    align-items: center;
+
+    &-next,
+    &-prev {
+      @include size(rem(25px));
+
+      color: var(--color-neon-azure);
+
+      .icon {
+        @include size(100%);
+      }
+
+      &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+    }
+  }
+
+  &-slide {
+    display: grid;
+    height: auto;
+  }
+}

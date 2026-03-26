@@ -1,0 +1,9 @@
+mixin post(data)
+    .card.post&attributes(attributes)
+        .post__picture
+            img(src=data.image decoding="async" loading="lazy" alt=data.text).post__img
+        .post__content
+            a(href="./articles.html" aria-label=data.text title=data.text).post__description= data.text
+            footer.post__footer
+                a(href="./articles.html" aria-label=data.author title=data.author).post__author= data.author
+                p.post__date= data.date

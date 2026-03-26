@@ -1,0 +1,94 @@
+@use 'scss/config' as *;
+
+.post-single {
+  margin-bottom: rem(30px);
+  padding: rem(20px) rem(16px);
+  border-radius: rem(10px);
+  background-color: var(--color-white);
+
+  @include media(tab-l) {
+    margin-bottom: rem(40px);
+    padding: rem(20px) rem(30px);
+  }
+
+  &__meta,
+  &__footer {
+    @include flex(space-between, center, null, wrap);
+
+    gap: rem(20px);
+  }
+
+  &__meta {
+    margin-bottom: rem(20px);
+  }
+
+  &__date {
+    color: var(--color-neon-azure);
+  }
+
+  &__footer {
+    &--right {
+      justify-content: flex-end;
+    }
+  }
+
+  &__social {
+    @include flex(null, center, null, wrap);
+
+    gap: rem(20px);
+    max-width: 100%;
+    flex-shrink: 0;
+    font-size: rem(18px);
+    font-weight: var(--typography-semibold);
+  }
+
+  &__button {
+    width: 100%;
+    min-width: rem(190px);
+    flex-shrink: 0;
+
+    @include media(tab-s) {
+      width: auto
+    }
+  }
+
+  &__divider {
+    background-color: var(--color-stroke-polar);
+  }
+
+  &__wrapper {
+    display: grid;
+    gap: rem(20px);
+    margin-bottom: rem(24px);
+    overflow: hidden;
+  }
+
+  &__picture {
+    border-radius: rem(5px);
+  }
+
+  &__list {
+    display: grid;
+    column-gap: rem(20px);
+    row-gap: rem(15px);
+
+    @include media(tab-s) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__item {
+    @include flex(null, center, null, wrap);
+
+    gap: rem(5px);
+    padding: rem(8px) rem(20px);
+    border-radius: rem(5px);
+    overflow: hidden;
+    background-color: var(--color-polar-white);
+    border: rem(1px) solid var(--color-stroke-polar);
+
+    &--active {
+      border-color: var(--color-neon-azure);
+    }
+  }
+}

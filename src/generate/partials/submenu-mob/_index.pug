@@ -1,0 +1,54 @@
+mixin submenu-mob
+    .submenu-mob&attributes(attributes)
+        .container-fluid.submenu-mob__top
+            .container
+                .submenu-mob__header
+                    +button('Search', 'button', 'search').button--white.button--md.submenu-mob__toggle.js-submenu-mob-toggle
+                    +language.js-language
+
+                .submenu-mob__header
+                    form.submenu-mob__search.js-submenu-mob-search
+                        +icon('search')
+                        input(type="text" placeholder="Search news, articles, and directories…").submenu-mob__field
+
+                    +button('-').button--white.button--md.button--square.submenu-mob__hide.js-submenu-mob-hide
+
+                .submenu-mob__results
+                    +icon('top')
+
+                .submenu-mob__results
+                    p.text Found 128 results for “Lorem Ipsum...”
+                    a(href="./search.html" aria-label="Search").button.button--primary.button--sm Search
+
+                .submenu-mob__results
+                    p.text Try a different keyword or check spelling
+                    a(href="./search.html" aria-label="Search").button.button--primary.button--disabled.button--sm Search
+
+                .submenu-mob__body
+                  each item in MENU
+                      .submenu-mob__dropdown
+                          if item.submenu
+                              a(arial-label=item.text data-value=item.slug).submenu-mob__link.js-submenu-mob-link
+                                  span= item.text
+                                  +icon('angle-right').submenu-mob__angle
+                              .submenu-mob__wrapper(data-category=item.slug).js-submenu-mob-wrapper
+                                each columns in item.submenu
+                                  each link in columns
+                                      a(href="./" aria-label=link).submenu-mob__sublink= link
+                          else
+                              a(href=item.link arial-label=item.text).submenu-mob__link= item.text
+
+                .submenu-mob__video
+                    +video(VIDEOS[0])
+                    p.text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam asperiores consectetur corporis, debitis delectus eveniet hic magni minima molestiae optio quasi repellat, sequi unde? Aperiam beatae, ipsum. Laudantium, praesentium sequi.
+        .container-fluid.submenu-mob__bottom
+            .container
+                .grid.grid--justify-center
+                    .col-12
+                        a(href="./" aria-label="About the Heaffen").link About the Heaffen
+                    .col-12
+                        a(href="./" aria-label="Advertising on the Website").link Advertising on the Website
+                    .col-12
+                        a(href="./" aria-label="Contact Us").link Contact Us
+                    .col-12
+                        +social

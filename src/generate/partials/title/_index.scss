@@ -1,0 +1,25 @@
+@use 'scss/config' as *;
+
+.title {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: rem(10px);
+  padding-block: rem(10px);
+  border-bottom: rem(1px) solid var(--color-neon-azure);
+  margin-bottom: rem(30px);
+
+  &__icon {
+    @include size(rem(22px));
+
+    color: var(--color-electric-ocean);
+  }
+
+  &--italic {
+    font-style: italic;
+  }
+
+  &--white {
+    color: var(--color-white);
+  }
+}

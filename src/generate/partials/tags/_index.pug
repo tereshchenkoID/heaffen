@@ -1,0 +1,4 @@
+mixin tags(data)
+    .tags&attributes(attributes)
+        each item in data
+            +tag(item, './')

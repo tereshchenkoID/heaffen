@@ -1,0 +1,145 @@
+extends ../generate/layout/_layout
+
+block title
+  - var title = "Home"
+
+block content
+  main.main
+    +banner({
+      image: 'https://palai.media/wp-content/uploads/2022/07/1920x540_desktop-1.png'
+    }).banner--wide
+
+    section.section
+      .container-fluid
+        .container
+          .grid
+            .col-12.col-tab-l-6
+              .grid
+                .col-12
+                  +post(POSTS[0]).post--lg
+                .col-12
+                  +banner({
+                    image: 'https://palai.media/wp-content/uploads/2022/07/1920x540_desktop-1.png'
+                  })
+            .col-12.col-tab-l-6
+              .grid
+                .col-12.col-tab-l-6
+                  +post(POSTS[1])
+                .col-12.col-tab-l-6
+                  +post(POSTS[2])
+                .col-12
+                  +post(POSTS[3]).post--lg
+
+    section.section.section--overflow
+      .container-fluid
+        .container
+          .title.title--italic
+            h2.title__text News
+            +more-link('./news.html', 'More news').title__link
+          .swiper.js-slider(data-slider-type="default")
+            .swiper-wrapper
+              .swiper-slide
+                +related-news('Affiliate')
+              .swiper-slide
+                +related-news('IGaming')
+              .swiper-slide
+                +related-news('AI')
+            .swiper-pagination
+
+    section.section
+      .container-fluid
+        .container
+          +banner({
+            image: 'https://palai.media/wp-content/uploads/2022/07/1920h540-1.png'
+          })
+
+    section.section.section--black
+      .container-fluid
+        .container
+          .title.title--italic.title--white
+            h2.title__text Latest video
+            +more-link('./news.html', 'Watch all').more-link--white.title__link
+          .grid
+            .col-12
+              p We work with industry professionals to collect real opinions, practical experience, and honest insights across affiliate marketing, iGaming, AI, and digital business.
+              p Through interviews, discussions, and expert conversations, we share how teams actually operate, what decisions drive results, and which mistakes are worth avoiding.
+              p Our goal is not to promote trends, but to document real-world experience and give professionals access to knowledge that helps them navigate a fast-changing industry.
+
+            .col-12.col-tab-m-8
+              +video(VIDEOS[0])
+            .col-12.col-tab-m-4
+              .grid
+                .col-12
+                  +video(VIDEOS[1])
+                .col-12
+                  +video(VIDEOS[2])
+
+    section.section
+      .container-fluid
+        .container
+          .title.title--italic
+            h2.title__text Latest Articles
+            +more-link('./articles.html', 'View all articles').title__link
+
+          .grid
+            each item, index in ARTICLES
+              .col-12.col-mob-m-6.col-desk-s-4
+                +article(item)
+              if index === 1
+                .col-12.col-mob-m-6.col-desk-s-4
+                  +banner({
+                    image: 'https://palai.media/wp-content/uploads/2022/07/768h540-1.png'
+                  })
+
+    section.section
+      .container-fluid
+        .container
+          .title.title--italic
+            h2.title__text Top Directories
+            +icon('top').title__icon
+
+          .grid
+            .col-12
+              +tab([
+                {
+                  id: 0,
+                  text: 'Affiliate Networks',
+                  active: true
+                },
+                {
+                  id: 1,
+                  text: 'Advertising Networks',
+                  active: false
+                },
+                {
+                  id: 2,
+                  text: 'Tools',
+                  active: false
+                }
+              ]).js-tab
+            each item in DIRECTORIES
+              .col-12
+                +directory(item)
+            .col-12
+              +more-button('Load more')
+
+    section.section
+      .container-fluid
+        .container
+          +banner({
+            image: 'https://palai.media/wp-content/uploads/2022/07/1920h540-1.png'
+          })
+
+    section.section.section--overflow
+      .container-fluid
+        .container
+          .title.title--italic
+            h2.title__text Upcoming Events
+            +more-link('./events.html', 'View all').title__link
+
+          .swiper.js-slider(data-slider-type="default")
+            .swiper-wrapper
+              each item in EVENTS
+                .swiper-slide
+                  +event(item)
+            .swiper-pagination

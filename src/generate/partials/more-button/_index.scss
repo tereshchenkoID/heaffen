@@ -1,0 +1,14 @@
+@use 'scss/config' as *;
+
+.more-button {
+  @include flex(center);
+
+  &__item {
+    min-height: rem(30px);
+    min-width: rem(200px);
+
+    @include media(tab-l) {
+      min-height: rem(39px);
+    }
+  }
+}

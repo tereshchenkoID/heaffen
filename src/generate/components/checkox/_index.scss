@@ -1,0 +1,86 @@
+@use 'scss/config' as *;
+
+.checkbox {
+  $svg-icon: "data:image/svg+xml,%3Csvg width='10' height='8' viewBox='0 0 10 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.83325 0.833496L3.33325 6.3335L0.833252 3.8335' stroke='black' stroke-width='1.6666' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E";
+
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+
+  &__label {
+    position: relative;
+    padding-top: rem(1px);
+    padding-inline-start: rem(26px);
+    line-height: 1;
+
+    &::after,
+    &::before {
+      @include transition;
+
+      position: absolute;
+      content: '';
+    }
+
+    &::before {
+      @include size(rem(16px));
+
+      top: 0;
+      inset-inline-start: 0;
+      border-radius: rem(4px);
+      border: rem(1px) solid #EAECF0;
+      background-color: #F2F4F7;
+    }
+
+    &::after {
+      @include size(rem(10px), rem(8px));
+
+      top: rem(4px);
+      inset-inline-start: rem(3px);
+      background-color: #EAECF0;
+      -webkit-mask-image: url($svg-icon);
+      mask-image: url($svg-icon);
+      -webkit-mask-repeat: no-repeat;
+      mask-repeat: no-repeat;
+      -webkit-mask-size: contain;
+      mask-size: contain;
+      opacity: 1;
+    }
+  }
+
+  &__input {
+    @include size(0);
+
+    position: absolute;
+    opacity: 0;
+
+    &:checked ~ .checkbox {
+      &__label {
+        &::before {
+          background-color: #E6F3FF;
+          border-color: var(--color-stellar-blue);
+        }
+        &::after {
+          background-color: #0039AE;
+        }
+      }
+    }
+  }
+
+  @include hover {
+    &:hover {
+      .checkbox {
+        &__label {
+          &::before {
+            background-color: #E6F3FF;
+            border-color: var(--color-neon-azure);
+          }
+
+          &::after {
+            background-color: #0160FD;
+          }
+        }
+      }
+    }
+  }
+}

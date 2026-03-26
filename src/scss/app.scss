@@ -1,0 +1,70 @@
+@charset "UTF-8";
+
+//
+// Reset
+//
+
+@use 'base/reset' as *;
+
+
+//
+// Non Compiled Files
+//
+
+@use 'config' as *;
+
+
+//
+// Custom Properties
+//
+
+@use 'base/variables/index' as *;
+
+
+//
+// Fonts
+//
+
+@use 'base/fonts/index' as *;
+
+
+//
+// Plugins
+//
+@use 'swiper/css';
+@use 'swiper/css/pagination';
+
+
+//
+// Global Styles
+//
+
+@use 'base/index' as *;
+
+
+//
+// Grid system
+//
+
+@use 'base/grid' as *;
+
+
+//
+// Components
+//
+
+@use '../generate/components/index' as *;
+
+
+//
+// Partials
+//
+
+@use '../generate/partials/index' as *;
+
+
+//
+// Sections
+//
+
+@use '../generate/sections/index' as *;

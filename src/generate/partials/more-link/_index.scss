@@ -1,0 +1,44 @@
+@use 'scss/config' as *;
+
+.more-link {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: rem(5px);
+  width: fit-content;
+  color: var(--color-neon-azure);
+
+  @include media(tab-l) {
+    font-size: rem(10px);
+  }
+
+  &__text {
+    font-style: italic;
+    font-size: rem(18px);
+    font-weight: var(--typography-extrabold);
+
+    @include media(tab-l) {
+      font-size: rem(20px);
+    }
+  }
+
+  .icon {
+    @include size(rem(20px));
+
+    color: currentColor;
+  }
+
+  @include hover {
+    &:hover {
+      color: var(--color-stellar-blue);
+
+      .icon {
+        transform: rotateZ(-90deg);
+      }
+    }
+  }
+
+  &--white {
+    color: var(--color-white);
+  }
+}

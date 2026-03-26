@@ -1,0 +1,7 @@
+@use 'scss/abstract/variables/breakpoints' as *;
+
+@mixin media($breakpoint) {
+  @media (min-width: map-get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}

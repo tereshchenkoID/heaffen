@@ -1,0 +1,123 @@
+@use 'scss/config' as *;
+
+.filters {
+  @include flex(null, null, column);
+
+  padding-inline: rem(20px);
+  border: rem(1px) solid var(--color-stroke-polar);
+  border-radius: rem(10px);
+  overflow: hidden;
+  background-color: var(--color-white);
+  color: var(--color-carbon-black);
+
+  &--active {
+    .filters {
+      &__dropdown {
+        display: block;
+      }
+
+      &__arrow {
+        transform: rotateZ(90deg);
+      }
+    }
+  }
+
+  &__header,
+  &__footer,
+  &__category {
+    display: grid;
+    align-items: center;
+    height: rem(64px);
+  }
+
+  &__dropdown {
+    display: none;
+
+    @include media(tab-l) {
+      display: block;
+    }
+  }
+
+  &__header {
+    grid-template-columns: auto 1fr auto;
+    gap: rem(5px);
+    font-size: rem(18px);
+    font-weight: var(--typography-semibold);
+    line-height: 1;
+
+    @include media(tab-l) {
+      pointer-events: none;
+    }
+  }
+
+  &__decor {
+    @include size(rem(20px));
+
+    color: var(--color-neon-azure);
+  }
+
+  &__arrow {
+    @include size(rem(24px));
+
+    @include media(tab-l) {
+      display: none;
+    }
+  }
+
+  &__body {
+    border-block: rem(1px) solid var(--color-stroke-polar);
+  }
+
+  &__footer {
+    grid-template-columns: repeat(2, 1fr);
+    gap: rem(15px);
+  }
+
+  &__category {
+    grid-template-columns: 1fr auto;
+    width: 100%;
+    font-size: rem(18px);
+    font-weight: var(--typography-semibold);
+    text-align: left;
+
+    @include hover {
+      &:hover {
+        color: var(--color-neon-azure);
+      }
+    }
+  }
+
+  &__section {
+
+    &:not(:last-child) {
+      border-bottom: rem(1px) solid var(--color-stroke-polar);
+    }
+
+    &--active {
+
+      .filters {
+
+        &__list {
+          display: grid;
+        }
+
+        &__angle {
+          transform: rotateZ(90deg);
+        }
+      }
+    }
+  }
+
+  &__angle {
+    @include size(rem(24px));
+  }
+
+  &__list {
+    @include scroll-y;
+
+    display: none;
+    gap: rem(10px);
+    max-height: rem(360px);
+    padding-bottom: rem(15px);
+  }
+}

@@ -1,0 +1,87 @@
+extends ../generate/layout/_layout
+
+block title
+  - var title = "Conversion Conf 2026"
+
+block content
+  main.main
+    +banner({
+      image: 'https://palai.media/wp-content/uploads/2022/07/1920x540_desktop-1.png'
+    }).banner--wide
+
+    section.section
+      .container-fluid
+        .container
+          +breadcrumbs([
+            {
+              text: 'Main page',
+              url: './'
+            },
+            {
+              text: 'Events',
+              url: './events.html'
+            },
+            {
+              text: 'Conversion Conf 2026',
+              url: null
+            },
+          ])
+
+          .content.content--right
+            .content__center
+              .post-single
+                .post-single__wrapper
+                  img(src="https://palai.media/wp-content/uploads/2026/03/palai-cover-860x416_11zon-9.webp" alt="Post title").post-single__picture
+                  h1.post-single__title= title
+
+                  .post-single__list
+                    .post-single__item
+                      strong Category:
+                      span Conference
+                    .post-single__item
+                      strong Date:
+                      span 1-2 April 2026
+                    .post-single__item
+                      strong Location:
+                      span Warsaw, Poland
+                    .post-single__item.post-single__item--active
+                      strong Status:
+                      span Scheduled
+
+                  .info-section
+                    p In the area of licensing and compliance, multiple new licenses were issued during the reporting period, generating substantial contributions to the state budget. In parallel, several licenses were revoked due to violations of regulatory requirements. As a result of inspections, a number of gambling operators were fined for non-compliance, with total penalties amounting to several million in national currency.
+                    br
+                    p A key milestone during this period was the adoption of a government resolution required to launch a centralized online monitoring system for gambling activities. The system is designed to ensure real-time oversight of the legal market, improve transparency, and strengthen control over licensed operators through automated reporting and data collection.
+                    br
+                    p In January 2026, the regulatory authority continued strengthening its efforts to implement state policy in the area of gambling and lottery market oversight. As part of the campaign against illegal advertising, the highest number of violations was identified on social media platforms. In particular, dozens of accounts were reported for blocking due to the promotion of unauthorized gambling services. Several profiles were removed on major social networks, while access restrictions for multiple video channels are expected to be introduced in specific regions.
+
+                .post-single__footer
+                  +button('Buy Ticket').button--primary.button--md.post-single__button
+                  .post-single__social
+                    p Share to:
+                    +social.social--polar-white
+            .content__right
+              +banner({
+                image: 'https://palai.media/wp-content/uploads/2022/07/768h540-1.png'
+              })
+
+    section.section.section--wide
+      .container-fluid
+        .container
+          +banner({
+            image: 'https://palai.media/wp-content/uploads/2022/07/1920x540_desktop-1.png'
+          })
+
+    section.section.section--overflow
+      .container-fluid
+        .container
+          .title.title--italic
+            h2.title__text Upcoming Events
+            +more-link('./events.html', 'View all').title__link
+
+          .swiper.js-slider(data-slider-type="default")
+            .swiper-wrapper
+              each item in EVENTS
+                .swiper-slide
+                  +event(item)
+            .swiper-pagination

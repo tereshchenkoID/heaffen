@@ -1,0 +1,77 @@
+@use 'scss/config' as *;
+
+.article {
+
+  &__picture {
+    display: block;
+    aspect-ratio: 1.6 / 1;
+    overflow: hidden;
+
+    @include hover {
+      &:hover {
+        .article {
+          &__img {
+            transform: scale(1.05);
+          }
+        }
+      }
+    }
+  }
+
+  &__img {
+    @include transition;
+    @include size(100%);
+
+    object-fit: cover;
+  }
+
+  &__content {
+    @include flex(null, null, column);
+
+    gap: rem(10px);
+    padding: rem(20px);
+    flex-grow: 1;
+  }
+
+  &__description {
+    @include line-clamp(3);
+
+    font-weight: var(--typography-semibold);
+
+    @include media(tab-l) {
+      font-size: rem(18px);
+    }
+  }
+
+  &__footer {
+    margin-top: auto;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: rem(8px);
+    align-items: center;
+    font-size: rem(14px);
+    line-height: 1;
+  }
+
+  &--alt {
+    .article {
+      &__date {
+        color: var(--color-neon-azure);
+      }
+
+      &__content {
+        gap: rem(15px);
+      }
+
+      &__text {
+        @include line-clamp(4);
+
+        font-size: rem(14px);
+      }
+
+      &__description {
+        font-size: rem(20px);
+      }
+    }
+  }
+}

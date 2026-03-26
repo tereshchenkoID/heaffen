@@ -1,0 +1,10 @@
+@use 'scss/config' as *;
+
+.card {
+  position: relative;
+  height: 100%;
+  border: rem(1px) solid var(--color-stroke-polar);
+  border-radius: rem(10px);
+  overflow: hidden;
+  background-color: var(--color-white);
+}

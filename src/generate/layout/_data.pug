@@ -1,0 +1,416 @@
+-
+    var MENU = [
+        {
+            text: 'Directories',
+            slug: 'directories',
+            submenu: [
+                [
+                    'Affiliate Networks',
+                    'Advertising Nerworks',
+                    'Slots Providers'
+                ],
+                [
+                    'Payments Solutions',
+                    'Tools',
+                    'AI tools'
+                ]
+            ]
+        },
+        {
+            text: 'Articles',
+            slug: 'articles',
+            submenu: [
+                [
+                    'Affiliate',
+                    'iGaming',
+                    'AI'
+                ],
+                [
+                    'Apps',
+                    'eCommerce'
+                ]
+            ]
+        },
+        {
+            link: './news.html',
+            text: 'News'
+        },
+        {
+            text: 'Affiliate',
+            slug: 'affiliate',
+            submenu: [
+                [
+                    'Articles',
+                    'News',
+                    'Offers List'
+                ],
+                [
+                    'Affiliate Networks',
+                    'Advertising Nerworks',
+                    'Payments Solutions'
+                ],
+                [
+                    'Tools',
+                    'Events',
+                    'Complaints'
+                ]
+            ]
+        },
+        {
+            text: 'iGaming',
+            slug: 'igaming',
+            submenu: [
+                [
+                    'Articles',
+                    'News',
+                    'Offers List'
+                ],
+                [
+                    'Events',
+                    'Advertising Nerworks',
+                    'Slots Providers'
+                ]
+            ]
+        },
+        {
+            link: '/',
+            text: 'Offers list'
+        },
+        {
+            link: './events',
+            text: 'Events'
+        },
+        {
+            text: 'Jobs',
+            slug: 'jobs',
+            submenu: [
+                [
+                    'For Candidates',
+                    'For Employers'
+                ]
+            ]
+        },
+    ]
+
+-
+    var ARTICLES = [
+        {
+            tags: [
+                'IGaming',
+                'Google'
+            ],
+            title: 'Bithumb Accidentally Distributed Hundreds of Millions of Dollars in BTC to Users',
+            text: 'A brief overview of recent events in the crypto market, highlighting operational risks, platform transparency, and their impact on users and partners [...]',
+            author: 'Yuliia Tverytnikova',
+            date: '27.01.2026',
+            image: 'https://palai.media/wp-content/uploads/2026/03/palai-cover-860x416_11zon-8.webp'
+        },
+        {
+            tags: [
+                'Facebook'
+            ],
+            title: 'Gwangju Prosecutors Lose Confiscated Bitcoins After Phishing Attack',
+            text: 'A brief overview of recent events in the crypto market, highlighting operational risks, platform transparency, and their impact on users and partners [...]',
+            author: 'Yuliia Tverytnikova',
+            date: '27.01.2026',
+            image: 'https://palai.media/wp-content/uploads/2026/03/palai-cover-860x416-1_3_11zon.webp'
+        },
+        {
+            tags: [
+                'Google'
+            ],
+            title: 'Polymarket Banned in Portugal Over Bets on Presidential Elections',
+            text: 'A brief overview of recent events in the crypto market, highlighting operational risks, platform transparency, and their impact on users and partners [...]',
+            author: 'Yuliia Tverytnikova',
+            date: '27.01.2026',
+            image: 'https://palai.media/wp-content/uploads/2026/03/palai-cover-860x416_11zon-5.webp'
+        },
+        {
+            tags: [
+                'Facebook'
+            ],
+            title: 'BC Game Loses 92% of Deposits: Crypto Casino Market Results for January',
+            text: 'A brief overview of recent events in the crypto market, highlighting operational risks, platform transparency, and their impact on users and partners [...]',
+            author: 'Yuliia Tverytnikova',
+            date: '27.01.2026',
+            image: 'https://palai.media/wp-content/uploads/2026/03/palai-cover-860x416_11zon-6.webp'
+        },
+        {
+            tags: [
+                'Google'
+            ],
+            title: 'Bithumb Accidentally Distributed Hundreds of Millions of Dollars in BTC to Users',
+            text: 'A brief overview of recent events in the crypto market, highlighting operational risks, platform transparency, and their impact on users and partners [...]',
+            author: 'Yuliia Tverytnikova',
+            date: '27.01.2026',
+            image: 'https://palai.media/wp-content/uploads/2026/03/palai-cover-860x416-1_3_11zon-1.webp'
+        },
+        {
+            tags: [
+                'IGaming',
+                'Google'
+            ],
+            title: 'Bithumb Accidentally Distributed Hundreds of Millions of Dollars in BTC to Users',
+            text: 'A brief overview of recent events in the crypto market, highlighting operational risks, platform transparency, and their impact on users and partners [...]',
+            author: 'Yuliia Tverytnikova',
+            date: '27.01.2026',
+            image: 'https://palai.media/wp-content/uploads/2026/03/palai-cover-860x416_11zon-8.webp'
+        },
+        {
+            tags: [
+                'Facebook'
+            ],
+            title: 'Gwangju Prosecutors Lose Confiscated Bitcoins After Phishing Attack',
+            text: 'A brief overview of recent events in the crypto market, highlighting operational risks, platform transparency, and their impact on users and partners [...]',
+            author: 'Yuliia Tverytnikova',
+            date: '27.01.2026',
+            image: 'https://palai.media/wp-content/uploads/2026/03/palai-cover-860x416-1_3_11zon.webp'
+        },
+        {
+            tags: [
+                'Google'
+            ],
+            title: 'Polymarket Banned in Portugal Over Bets on Presidential Elections',
+            text: 'A brief overview of recent events in the crypto market, highlighting operational risks, platform transparency, and their impact on users and partners [...]',
+            author: 'Yuliia Tverytnikova',
+            date: '27.01.2026',
+            image: 'https://palai.media/wp-content/uploads/2026/03/palai-cover-860x416_11zon-5.webp'
+        },
+        {
+            tags: [
+                'Facebook'
+            ],
+            title: 'BC Game Loses 92% of Deposits: Crypto Casino Market Results for January',
+            text: 'A brief overview of recent events in the crypto market, highlighting operational risks, platform transparency, and their impact on users and partners [...]',
+            author: 'Yuliia Tverytnikova',
+            date: '27.01.2026',
+            image: 'https://palai.media/wp-content/uploads/2026/03/palai-cover-860x416_11zon-6.webp'
+        },
+    ]
+
+-
+    var POSTS = [
+        {
+            text: 'From Affiliate Networks to Direct Advertising with In-House',
+            author: 'Yuliia Tverytnikova',
+            date: '27.01.2026',
+            image: 'https://palai.media/wp-content/uploads/2026/03/palai-cover-860x416_11zon-6.webp'
+        },
+        {
+            text: 'Full Localization of Arbitrage: 55+ Services to Replace',
+            author: 'Yuliia Tverytnikova',
+            date: '27.01.2026',
+            image: 'https://palai.media/wp-content/uploads/2026/03/palai-cover-860x416_11zon-8.webp'
+        },
+        {
+            text: 'Full Localization of Arbitrage: 55+ Services to Replace',
+            author: 'Yuliia Tverytnikova',
+            date: '27.01.2026',
+            image: 'https://palai.media/wp-content/uploads/2026/03/palai-cover-860x416-1_3_11zon-1.webp'
+        },
+        {
+            text: 'From Affiliate Networks to Direct Advertising with In-House',
+            author: 'Yuliia Tverytnikova',
+            date: '27.01.2026',
+            image: 'https://palai.media/wp-content/uploads/2026/03/palai-cover-860x416_11zon-8.webp'
+        }
+    ]
+
+-
+    var EVENTS = [
+        {
+            tags: [
+                'Conference'
+            ],
+            title: 'CONVERSION CONF 2026',
+            text: 'Conversion Conf 2026 is a multi-vertical affiliate conference bringing together professionals from iGaming, betting, crypto, and digital marketing. The event features industry leaders, practical case studies, networking sessions, and discussions on traffic, monetization, and scaling strategies.',
+            date: '20.09.2026 - 23.09.2026',
+            location: 'Warsaw',
+            image: 'https://palai.media/wp-content/uploads/2025/08/2.awereturns-1200x628-jd.jpg'
+        },
+        {
+            tags: [
+                'Conference'
+            ],
+            title: 'Affiliate Networking Series Rome',
+            text: 'Conversion Conf 2026 is a multi-vertical affiliate conference bringing together professionals from iGaming, betting, crypto, and digital marketing. The event features industry leaders, practical case studies, networking sessions, and discussions on traffic, monetization, and scaling strategies.',
+            date: '05.11.2026',
+            location: 'Rome',
+            image: 'https://palai.media/wp-content/uploads/2025/10/940x529.png'
+        },
+        {
+            tags: [
+                'Conference',
+                'Google'
+            ],
+            title: 'SIGMA Central Europe',
+            text: 'Conversion Conf 2026 is a multi-vertical affiliate conference bringing together professionals from iGaming, betting, crypto, and digital marketing. The event features industry leaders, practical case studies, networking sessions, and discussions on traffic, monetization, and scaling strategies.',
+            date: '03.11.2026',
+            location: 'Rome',
+            image: 'https://palai.media/wp-content/uploads/2025/09/goryzontalnyj-kopyya.jpg'
+        }
+    ]
+
+-
+    var GAMES = [
+        {
+            title: 'Diamond Roulette Live',
+            text: 'Ezugi’s Unlimited Blackjack removes seating limits, allowing an infinite number of players to join. With dynamic side bets and the Bet Behind feature, everyone stays engaged throughout the game.',
+            image: 'https://palai.media/wp-content/uploads/2025/08/2.awereturns-1200x628-jd.jpg'
+        },
+        {
+            title: 'Lucky 7',
+            text: 'Designed for VIP players, Blackjack Salon Privé offers exclusive tables with personalized service. Players enjoy greater control over the pace and game conditions, ensuring a premium experience.',
+            image: 'https://palai.media/wp-content/uploads/2025/10/940x529.png'
+        },
+        {
+            title: 'Diamond Roulette Live',
+            text: 'Ezugi’s Unlimited Blackjack removes seating limits, allowing an infinite number of players to join. With dynamic side bets and the Bet Behind feature, everyone stays engaged throughout the game.',
+            image: 'https://palai.media/wp-content/uploads/2025/09/goryzontalnyj-kopyya.jpg'
+        }
+    ]
+
+-
+    var DIRECTORIES = [
+        {
+            tags: [
+                'IGaming',
+                'Google'
+            ],
+            text: 'Makeberry Affiliates is an affiliate network with over 500 gambling and betting offers. A direct advertiser for WinSpirit Casino and RocketPlay Casino, with in-house media buying and strong expertise across Tier-1 and Tier-2 markets, as well as a wide selection of offers in Tier-3 countries.',
+            image: 'https://palai.media/wp-content/uploads/2025/09/horizontal_black_2350x474-1.png'
+        },
+        {
+            tags: [
+                'Facebook'
+            ],
+            text: 'GG.BET Affiliates is a direct advertiser for the GG.BET brand. It is a multi-vertical affiliate program combining casino, sports betting, and esports, allowing partners to earn across multiple verticals simultaneously. Founded in 2016, the program operates on CPA, RevShare, and Hybrid partnership models, offering RevShare of up to 60% and weekly payouts starting from €100.',
+            image: 'https://palai.media/wp-content/uploads/2024/10/logo-ua-black-1.png'
+        },
+        {
+            tags: [
+                'Google'
+            ],
+            text: 'Win-Offers is an affiliate program offering exclusive iGaming offers across Europe, including Betmatch (HU and DACH), Royal Sea (HU and DACH, IT), StawkiBet (Ukrainian audience in the EU), and two additional brands. The program provides effective monetization of gambling and betting traffic through CPA, RevShare, and Hybrid models across European markets.',
+            image: 'https://palai.media/wp-content/uploads/2024/11/logo-wo-color-1.png'
+        },
+        {
+            tags: [
+                'Facebook'
+            ],
+            text: 'Win-Offers is an affiliate program offering exclusive iGaming offers across Europe, including Betmatch (HU and DACH), Royal Sea (HU and DACH, IT), StawkiBet (Ukrainian audience in the EU), and two additional brands. The program provides effective monetization of gambling and betting traffic through CPA, RevShare, and Hybrid models across European markets.',
+            image: 'https://palai.media/wp-content/uploads/2024/11/dephouse_svg_white.png'
+        },
+        {
+            tags: [
+                'Google'
+            ],
+            text: 'Win-Offers is an affiliate program offering exclusive iGaming offers across Europe, including Betmatch (HU and DACH), Royal Sea (HU and DACH, IT), StawkiBet (Ukrainian audience in the EU), and two additional brands. The program provides effective monetization of gambling and betting traffic through CPA, RevShare, and Hybrid models across European markets.',
+            image: 'https://palai.media/wp-content/uploads/2026/01/logo_dark-1.png'
+        }
+    ]
+
+-
+    var VIDEOS = [
+        {
+            url: 'xLwRVRWZdWs',
+            title: 'РЫБАЛКА ПОД ШТОРМОВЫМ ДОЖДЕМ С СОБАКОЙ ОСЕНЬЮ / СЛОБОДА / 22 СЕКТОР / КАРПФИШИНГ'
+        },
+        {
+            url: '3syxhZS8kFI',
+            title: 'Карпфишинг в декабре! Озеро Слобода'
+        },
+        {
+            url: 'F-msAggOBuM',
+            title: 'Как поймать трофейного карпа Осенью?'
+        }
+    ]
+
+-
+    var CATEGORIES = [
+        'AdNetworks',
+        'Adult',
+        'AI',
+        'Apps',
+        'ASO',
+        'Crypto',
+        'eCommerce',
+        'EdTech',
+        'Essay',
+        'Facebook',
+        'Gambling',
+        'Google',
+        'iGaming'
+    ]
+
+-
+    var COUNTRIES = [
+        'Ukraine',
+        'Poland',
+        'Romania',
+        'Hungary',
+        'Italy',
+        'Germany',
+        'France',
+        'Denmark',
+        'Spain',
+        'Portugal',
+        'United Kingdom'
+    ]
+
+-
+    var RELATED_NEWS = [
+        {
+            date: '09.02.2026',
+            text: 'Bithumb Accidentally Distributed Hundreds of Millions of Dollars in BTC to Users',
+            link: './news.html'
+        },
+        {
+            date: '01.02.2026',
+            text: 'BC Game Loses 92% of Deposits: Crypto Casino Market Results for January',
+            link: './news.html'
+        },
+        {
+            date: '29.01.2026',
+            text: 'Gwangju Prosecutors Lose Confiscated Bitcoins After Phishing Attack',
+            link: './news.html'
+        },
+        {
+            date: '29.01.2026',
+            text: 'Gwangju Prosecutors Lose Confiscated Bitcoins After Phishing Attack',
+            link: './news.html'
+        }
+    ]
+
+-
+    var SLOTS_PROVIDERS = [
+        {
+            tags: [
+                'Facebook'
+            ],
+            image: 'https://palai.media/wp-content/uploads/2025/12/black-logo_hell-partners-2-alexandra-k-1.png',
+            link: './news.html'
+        },
+        {
+            tags: [
+                'Facebook',
+                'IGaming'
+            ],
+            image: 'https://palai.media/wp-content/uploads/2025/12/logo-2-2-aleksandra-krasnoselska-1.png',
+            link: './news.html'
+        },
+        {
+            tags: [
+                'Facebook'
+            ],
+            image: 'https://palai.media/wp-content/uploads/2025/12/trinity_partners-h-b-1.png',
+            link: './news.html'
+        },
+        {
+            tags: [
+                'Facebook'
+            ],
+            image: 'https://palai.media/wp-content/uploads/2026/01/logo_dark-1.png',
+            link: './news.html'
+        }
+    ]

@@ -1,0 +1,14 @@
+-
+    var LANGUAGES = [
+        'EN',
+        'UA',
+        'DE'
+    ]
+
+mixin language
+    .language&attributes(attributes)
+        .language__wrapper
+            button(type="button" title=item aria-label=item).language__toggle.js-language-toggle= LANGUAGES[0]
+            .language__dropdown.js-language-dropdown
+                each item, index in LANGUAGES
+                    a(href=`./${item.toLowerCase()}` title=item aria-label=item).language__button.js-language-button= item

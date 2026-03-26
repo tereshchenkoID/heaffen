@@ -1,0 +1,24 @@
+mixin content-context
+    .content-context&attributes(attributes)
+        button(type="button" aria-label="Toggle" title="Toggle").content-context__toggle.js-content-context-toggle
+            | Contents
+            +icon('angle-right').content-context__angle
+        .content-context__dropdown.js-content-context-dropdown
+            ul.content-context__list
+                li.content-context__item
+                    span.content-context__count 1.
+                    a(href="#" aria-label="Context").content-context__link Context
+                    ul.content-context__list
+                        li.content-context__item
+                            span.content-context__count 2.1.
+                            a(href="#" aria-label="Campaign No.1 Results").content-context__link Campaign No.1 Results
+                li.content-context__item
+                    span.content-context__count 2.
+                    a(href="#" aria-label="Testing and Scaling").content-context__link Campaign No.1: Testing and Scaling
+                li.content-context__item
+                    span.content-context__count 3.
+                    a(href="#" aria-label="Working with Germany and SmartCRM").content-context__link Campaign No.2: Working with Germany and SmartCRM
+                    ul.content-context__list
+                        li.content-context__item
+                            span.content-context__count 3.1.
+                            a(href="#" aria-label="Technical Setup and Tracker").content-context__link Technical Setup and Tracker

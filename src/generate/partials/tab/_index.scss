@@ -1,0 +1,100 @@
+@use 'scss/config' as *;
+
+.tab {
+  @include size(100%, rem(40px));
+
+  position: relative;
+  z-index: $z-index-1;
+
+  &--active {
+    .tab {
+      &__dropdown {
+        @include flex(center, center, column);
+      }
+    }
+
+    .icon {
+      transform: rotateZ(180deg);
+    }
+  }
+
+  &__toggle,
+  &__item {
+    @include flex(null, center);
+    @include size(100%, rem(40px));
+
+    padding: rem(5px) rem(15px);
+    text-align: start;
+    font-size: rem(14px);
+    font-weight: var(--typography-bold);
+  }
+
+  &__toggle {
+    justify-content: space-between;
+    gap: rem(10px);
+
+    .icon {
+      @include size(24px);
+    }
+  }
+
+  &__wrapper {
+    @include flex($direction: column);
+
+    background-color: var(--color-white);
+    border: rem(1px) solid var(--color-neon-azure);
+    border-radius: rem(10px);
+    overflow: hidden;
+
+    @include media(tab-l) {
+      background-color: transparent;
+      border: 0;
+    }
+  }
+
+  &__dropdown {
+    display: none;
+
+    @include media(tab-l) {
+      @include flex(center, center, row);
+
+      gap: rem(24px);
+    }
+  }
+
+  &__toggle {
+    @include media(tab-l) {
+      display: none;
+    }
+  }
+
+  &__item {
+    @include media(tab-l) {
+      text-align: center;
+      justify-content: center;
+      padding: rem(13px);
+      flex: 1;
+      border-radius: rem(10px);
+      background-color: var(--color-white);
+      border: rem(1px) solid var(--color-stroke-polar);
+      font-size: rem(20px);
+      font-weight: var(--typography-semibold);
+      line-height: 1;
+
+      @include hover {
+        &:hover {
+          border-color: var(--color-neon-azure);
+        }
+      }
+    }
+
+    &--active {
+      @include media(tab-l) {
+        display: flex!important;
+        pointer-events: none;
+        background-color: var(--color-neon-azure);
+        color: var(--color-white);
+      }
+    }
+  }
+}

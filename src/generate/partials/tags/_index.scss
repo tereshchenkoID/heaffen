@@ -1,0 +1,11 @@
+@use 'scss/config' as *;
+
+.tags {
+  @include flex(null, center, null, wrap);
+
+  gap: rem(10px);
+
+  @include media(tab-l) {
+    gap: rem(12px);
+  }
+}

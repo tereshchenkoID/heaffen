@@ -1,0 +1,71 @@
+@use 'scss/config' as *;
+
+.slots-provider {
+  padding: rem(20px) rem(16px);
+  border-radius: rem(10px);
+  border: rem(1px) solid var(--color-stroke-polar);
+  background-color: var(--color-white);
+
+  &__header {
+    margin-bottom: rem(20px);
+  }
+
+  &__link {
+    @include flex(center, center);
+
+    @include hover {
+
+      &:hover {
+
+        .slots-provider {
+
+          &__img {
+            transform: scale(1.05);
+          }
+        }
+      }
+    }
+  }
+
+  &__img {
+    @include transition;
+  }
+
+  &__item {
+    display: grid;
+    grid-template-columns: rem(111px) 1fr rem(24px);
+    gap: rem(16px);
+    align-items: center;
+    padding: rem(20px);
+    background: rgba(234, 236, 255, 0.2);
+    border: rem(1px) solid var(--color-polar-white);
+    border-radius: rem(10px);
+
+    @include media(tab-l) {
+      gap: rem(42px);
+    }
+
+    &:not(:last-child) {
+      margin-bottom: rem(10px);
+    }
+  }
+
+  &__title {
+    font-weight: var(--typography-extrabold);
+    font-style: italic;
+    color: var(--color-neon-azure);
+  }
+
+  &__tags {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .tag {
+    width: 100%;
+  }
+
+  .icon {
+    @include size(rem(24px));
+  }
+}

@@ -1,0 +1,6 @@
+mixin button(text, type, icon)
+  button(type=type ? type : 'button').button&attributes(attributes)
+    if icon
+      +icon(icon)
+    if text
+      = text

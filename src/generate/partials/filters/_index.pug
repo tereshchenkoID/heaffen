@@ -1,0 +1,25 @@
+mixin filters
+    .filters&attributes(attributes)
+        .filters__header.js-filters-header
+            +icon('filter').filters__decor
+            p Filter
+            +icon('angle-right').filters__arrow
+        .filters__dropdown.js-filters-dropdown
+            .filters__body.js-filters-body
+                .filters__section.js-filters-section
+                    button(type="button" data-value="category" aria-label="Category" title="Category").filters__category.js-filters-category
+                        span Affiliate Networks
+                        +icon('angle-right').filters__angle
+                    .filters__list
+                      each item in CATEGORIES
+                          +checkox(item, item.toLowerCase()).filters__checkbox
+                .filters__section.js-filters-section
+                    button(type="button" data-value="country" aria-label="Country" title="Country").filters__category.js-filters-category
+                        span Country
+                        +icon('angle-right').filters__angle
+                    .filters__list
+                      each item in COUNTRIES
+                          +checkox(item, item.toLowerCase()).filters__checkbox
+            .filters__footer
+                a(aria-label="Apply" title="Apply filters").button.button--primary.button--sm.js-filters-apply Apply
+                +button('Reset', 'reset').button--outline.button--sm.js-filters-reset

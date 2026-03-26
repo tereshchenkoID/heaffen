@@ -1,0 +1,87 @@
+extends ../generate/layout/_layout
+
+block title
+  - var title = "Traffic Articles: Interviews, Case Studies, Guides"
+
+block content
+  main.main
+    +banner({
+      image: 'https://palai.media/wp-content/uploads/2022/07/1920x540_desktop-1.png'
+    }).banner--wide
+
+    section.section
+      .container-fluid
+        .container
+          +breadcrumbs([
+            {
+              text: 'Main page',
+              url: './'
+            },
+            {
+              text: 'Articles',
+              url: './articles.html'
+            },
+            {
+              text: 'Editor-in-Chief of Heaffen',
+              url: null
+            }
+          ])
+
+          .content.content--left
+            .content__header
+              h1.content__title= title
+              .text.content__text
+                p Up-to-date and practical content on affiliate marketing, crypto, and online business. Articles from industry practitioners, expert interviews, actionable guides on making money online, and other high-quality content. Read, apply, and #makemoney online!
+
+              // TODO Remove after
+              br
+
+              .content__meta
+                .grid
+                  .col-12.col-tab-s-6.col-desk-s-8
+                    .content__title
+                      .content__top
+                        +icon('top')
+                      h2.content__subtitle Editor-in-Chief of Heaffen
+                    .text
+                      p The leading Ukrainian media platform covering traffic arbitrage, crypto, and online money-making.
+                      p Only verified, high-quality content — no unnecessary words. Everything we do is designed to help you earn online. Join the community, explore our content, and start making money online
+                  .col-12.col-tab-s-5.offset-tab-s-7.col-desk-s-3.offset-desk-s-9
+                    h4.mb-10 Editor social media:
+                    +social.social--polar-white.mb-24
+                    +button('Lorem Ipsum').button--primary.button--md.button--wide
+
+            .content__left
+              +filters.js-filters
+            .content__center
+              .grid
+                each item, index in ARTICLES
+                  .col-12.col-mob-m-6.col-desk-s-4
+                    +article(item)
+                .col-12
+                  +pagination
+            .content__right
+              +banner({
+                image: 'https://palai.media/wp-content/uploads/2022/07/768h540-1.png'
+              })
+
+    section.section
+      .container-fluid
+        .container
+          +banner({
+            image: 'https://palai.media/wp-content/uploads/2022/07/1920x540_desktop-1.png'
+          })
+
+    section.section
+      .container-fluid
+        .container
+          .text
+            h3 Affiliate Program Ranking by “Heaffen” Media
+            br
+            p There are many CPA affiliate networks — several thousand — and their number continues to grow.
+            br
+            p Our team has prepared a list of top CPA networks, including affiliate programs from different verticals. The editorial team at “Heaffen” Media keeps a close eye on the market and works to update the affiliate program ranking as quickly as possible. So if you don’t find the one you need yet, feel free to contact us at admin@heaffen.media or on Telegram @heaffen_sales.
+            br
+            p Before starting to work with any CPA affiliate network from the list, we recommend reviewing information about the program, checking the company’s social media, and reading reviews. Remember, when choosing an affiliate network to run traffic, you are choosing a partner with whom you will earn money. So don’t neglect basic checks to ensure the company’s reliability and safety.
+            br
+            p Choose your top CPA network or affiliate program and start driving traffic with a cosmic ROI! 🚀

@@ -1,0 +1,27 @@
+@use 'scss/config' as *;
+
+.not-found-section {
+  padding-top: rem(117px);
+  max-width: rem(600px);
+  margin-inline: auto;
+  text-align: center;
+
+  @include media(tab-l) {
+    padding-top: rem(135px);
+  }
+
+  &__title {
+    margin-block: rem(30px) rem(40px);
+    font-size: rem(30px);
+    font-weight: var(--typography-extrabold);
+    font-style: italic;
+
+    @include media(tab-l) {
+      font-size: rem(40px);
+    }
+  }
+
+  &__button {
+    min-width: rem(252px);
+  }
+}

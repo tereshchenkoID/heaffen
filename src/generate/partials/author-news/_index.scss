@@ -1,0 +1,76 @@
+@use 'scss/config' as *;
+
+.author-news {
+  padding: rem(20px) rem(16px);
+  border-radius: rem(10px);
+  border: rem(1px) solid var(--color-stroke-polar);
+  background-color: var(--color-white);
+
+  @include media(tab-l) {
+    padding-inline: rem(20px);
+  }
+
+  &__header {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: rem(20px);
+    padding-bottom: rem(15px);
+    border-bottom: rem(1px) solid var(--color-category-grey);
+    margin-bottom: rem(24px);
+  }
+
+  &__title {
+    font-size: rem(18px);
+    font-weight: var(--typography-semibold);
+  }
+
+  &__top {
+    @include flex(center, center);
+    @include size(rem(50px));
+
+    flex-shrink: 0;
+    border-radius: 50%;
+    color: var(--color-white);
+    background-color: var(--color-neon-azure);
+
+    .icon {
+      @include size(rem(24px), rem(27px));
+    }
+  }
+
+  &__item {
+    padding-block: rem(20px);
+
+    &:not(:last-child) {
+      border-bottom: rem(1px) solid var(--color-category-grey);
+    }
+
+    &:first-child {
+      padding-top: 0;
+    }
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+
+  &__description {
+    @include line-clamp(2);
+
+    font-size: rem(14px);
+
+    @include media(tab-l) {
+      font-size: rem(18px);
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: rem(15px);
+    font-size: rem(18px);
+
+    @include media(tab-l) {
+      font-size: rem(20px);
+    }
+  }
+}

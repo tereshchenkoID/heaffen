@@ -1,0 +1,10 @@
+mixin game(data)
+    article.card.game&attributes(attributes)
+        a(href="./game.html" aria-label="Show more" title="Show more").game__picture
+            img(src=data.image decoding="async" fetchpriority="high" alt=data.title).game__img
+        .game__content
+            a(href="./game.html" aria-label="Show more" title="Show more").game__title
+                h3= data.title
+            p.game__description= data.text
+            a(href="./game.html" aria-label="Show more" title="Show more").button.button--primary.button--sm.game__details
+                | Details

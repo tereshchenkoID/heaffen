@@ -1,0 +1,18 @@
+mixin article(data)
+    article.card.article&attributes(attributes)
+        a(href="./article.html" aria-label="Show more" title="Show more").article__picture
+            img(src=data.image decoding="async" loading="lazy" alt=data.text).article__img
+        .article__content
+            +tags(data.tags).article__tags
+            a(href="./article.html" aria-label="Show more" title="Show more").article__description= data.title
+            footer.article__footer
+                a(href="./article.html" aria-label=data.author title=data.author).article__author= data.author
+                p.article__date= data.date
+
+mixin article-alt(data)
+    article.card.article&attributes(attributes)
+        .article__content
+            p.article__date= data.date
+            a(href="./article.html" aria-label="Show more" title="Show more").article__description= data.title
+            p.article__text= data.text
+            +tags(data.tags).article__tags

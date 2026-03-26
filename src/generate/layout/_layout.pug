@@ -1,0 +1,18 @@
+include ../components/index
+include ../sections/index
+include ../partials/index
+
+include _head
+include _data
+
+block title
+  title Heaffen
+
+doctype html
+html(lang="en")
+  +head(title)
+  body
+    //+nav
+    block content
+    +footer
+    script(src=require('js/app.js'))

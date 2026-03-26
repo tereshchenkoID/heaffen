@@ -1,0 +1,11 @@
+mixin pagination(data)
+    .pagination&attributes(attributes)
+        a(href='./' aria-label="Page 1").pagination__item.pagination__item--disabled
+            +icon('angle-left')
+        a(href='./' aria-label="Page 1").pagination__item.pagination__item--active 1
+        a(href='./' aria-label="Page 2").pagination__item 2
+        a(href='./' aria-label="Page 3").pagination__item 3
+        span.pagination__text ...
+        a(href='./' aria-label="Page 3").pagination__item 10
+        a(href='./' aria-label="Page 1").pagination__item
+            +icon('angle-right')

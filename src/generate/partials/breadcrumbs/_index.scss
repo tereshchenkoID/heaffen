@@ -1,0 +1,39 @@
+@use 'scss/config' as *;
+
+.breadcrumbs {
+  font-weight: var(--typography-semibold);
+  margin-bottom: rem(30px);
+
+  .icon {
+    @include size(rem(15px));
+  }
+
+  &__wrapper {
+    display: none;
+    gap: rem(10px);
+
+    @include media(tab-l) {
+      @include flex(null, center, null, wrap);
+    }
+  }
+
+  &__text {
+    color: var(--color-neon-azure);
+  }
+
+  &__back {
+    display: inline-grid;
+    grid-template-columns: rem(15px) 1fr;
+    align-items: center;
+    gap: rem(10px);
+    padding: rem(8px) rem(15px);
+    background-color: var(--color-white);
+    border-radius: rem(10px);
+    font-weight: var(--typography-semibold);
+    line-height: 1;
+
+    @include media(tab-l) {
+      display: none;
+    }
+  }
+}

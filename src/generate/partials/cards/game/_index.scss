@@ -1,0 +1,63 @@
+@use 'scss/config' as *;
+
+.game {
+  display: grid;
+  grid-template-rows: auto 1fr;
+
+  &__picture {
+    display: block;
+    aspect-ratio: 1.83 / 1;
+    overflow: hidden;
+
+    @include hover {
+      &:hover {
+        .game {
+          &__img {
+            transform: scale(1.05);
+          }
+        }
+      }
+    }
+  }
+
+  &__img {
+    @include transition;
+    @include size(100%);
+
+    object-fit: cover;
+  }
+
+  &__content {
+    @include flex(null, null, column);
+
+    gap: rem(10px);
+    padding: rem(12px) rem(16px);
+
+    @include media(tab-l) {
+      padding: rem(15px) rem(20px);
+    }
+  }
+
+  &__title {
+    margin-top: rem(5px);
+  }
+
+  &__description {
+    margin-bottom: rem(5px);
+    font-size: rem(14px);
+
+    @include media(tab-l) {
+      margin-bottom: rem(10px);
+    }
+  }
+
+  &__details {
+    margin-top: auto;
+  }
+
+  &__footer {
+    @include flex(null, center, null, wrap);
+
+    gap: rem(15px);
+  }
+}

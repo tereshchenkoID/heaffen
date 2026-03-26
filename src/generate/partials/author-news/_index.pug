@@ -1,0 +1,42 @@
+-
+    var AUTHOR_NEWS = [
+        {
+            date: '09.02.2026',
+            text: 'Bithumb Accidentally Distributed Hundreds of Millions of Dollars in BTC to Users',
+            link: './news.html'
+        },
+        {
+            date: '01.02.2026',
+            text: 'BC Game Loses 92% of Deposits: Crypto Casino Market Results for January',
+            link: './news.html'
+        },
+        {
+            date: '29.01.2026',
+            text: 'Gwangju Prosecutors Lose Confiscated Bitcoins After Phishing Attack',
+            link: './news.html'
+        },
+        {
+            date: '29.01.2026',
+            text: 'Gwangju Prosecutors Lose Confiscated Bitcoins After Phishing Attack',
+            link: './news.html'
+        }
+    ]
+
+mixin author-news
+    .author-news&attributes(attributes)
+        .author-news__header
+            .author-news__top
+                +icon('top')
+            p.author-news__title Editor-in-Chief of Heaffen
+
+        ul.author-news__list
+            each item, index in AUTHOR_NEWS
+                li.author-news__item
+                    if index === 0
+                        h4.author-news__subtitle Popular articles by the author:
+
+                    a(href=item.link rel="nofollow" title=item.icon aria-label=item.icon).author-news__link
+                        p.author-news__description= item.text
+            li.author-news__item
+                h4.author-news__subtitle The author’s social media:
+                +social.social--polar-white

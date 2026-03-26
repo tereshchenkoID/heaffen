@@ -1,0 +1,40 @@
+$font-path: '../assets/fonts/';
+
+@mixin font-face($name, $file, $weight: normal, $style: normal) {
+  @font-face {
+    font-family: "#{$name}";
+    font-weight: $weight;
+    font-style: $style;
+    font-display: swap;
+    src: url('#{$font-path}#{$file}.woff2') format('woff2');
+  }
+}
+
+// 400 - Regular
+@include font-face('Gilroy', 'Gilroy-Regular', 400, normal);
+@include font-face('Gilroy', 'Gilroy-RegularItalic', 400, italic);
+
+// 500 - Medium
+@include font-face('Gilroy', 'Gilroy-Medium', 500, normal);
+@include font-face('Gilroy', 'Gilroy-MediumItalic', 500, italic);
+
+// 600 - Semibold
+@include font-face('Gilroy', 'Gilroy-Semibold', 600, normal);
+@include font-face('Gilroy', 'Gilroy-SemiboldItalic', 600, italic);
+
+// 700 - Bold
+@include font-face('Gilroy', 'Gilroy-Bold', 700, normal);
+@include font-face('Gilroy', 'Gilroy-BoldItalic', 700, italic);
+
+// 800 - Extrabold
+@include font-face('Gilroy', 'Gilroy-Extrabold', 800, normal);
+@include font-face('Gilroy', 'Gilroy-ExtraboldItalic', 800, italic);
+
+// 900 - Black
+@include font-face('Gilroy', 'Gilroy-Black', 900, normal);
+@include font-face('Gilroy', 'Gilroy-BlackItalic', 900, italic);
+
+// 1000 - Heavy
+@include font-face('Gilroy', 'Gilroy-Heavy', 1000, normal);
+@include font-face('Gilroy', 'Gilroy-HeavyItalic', 1000, italic);
+

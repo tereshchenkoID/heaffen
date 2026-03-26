@@ -1,0 +1,13 @@
+mixin related-news(title)
+    .related-news&attributes(attributes)
+        .related-news__header
+            h3.related-news__title= title
+            +icon('top')
+        ul.related-news__list
+            each item in RELATED_NEWS
+                li.related-news__item
+                    a(href=item.link rel="nofollow" title=item.icon aria-label=item.icon).related-news__link
+                        p.related-news__date= item.date
+                        p.related-news__description= item.text
+            li.related-news__item
+                +more-link('./news.html', 'More in this category').related-news__more

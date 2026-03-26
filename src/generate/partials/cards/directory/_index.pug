@@ -1,0 +1,45 @@
+mixin directory(data)
+    article.card.directory&attributes(attributes)
+        a(href="./directory.html" aria-label="Show more").directory__picture
+            img(src=data.image decoding="async" alt="Image description").directory__img
+        .directory__content
+            +tags(data.tags).directory__tags
+            p.directory__description= data.text
+        footer.directory__footer
+            a(href="./directory.html" aria-label="Visit website" title="Visit website").button.button--secondary.button--sm
+                | Visit website
+            a(href="./directory.html" aria-label="See details" title="Details").button.button--primary.button--sm
+                | Details
+
+
+mixin directory-alt(data)
+    article.card.directory&attributes(attributes)
+        a(href="./directory.html" aria-label="Show more").directory__picture
+            img(src=data.image decoding="async" alt="Image description").directory__img
+        .directory__content
+            .directory__header
+                h3 GGBET Affiliates
+                +tags(data.tags).directory__tags
+            p.directory__description= data.text
+            .directory__list
+                .directory__item A reliable and well-known brand among players
+                .directory__item CPA up to $600, RS up to 60% + Hybrid, Fixed/Flat Fee
+                .directory__item Collaborations with top industry partners
+                .directory__item Maximum flexibility in terms and conditions
+        footer.directory__footer
+            a(href="./directory.html" aria-label="Visit website" title="Visit website").button.button--secondary.button--sm
+                | Registration
+            a(href="./directory.html" aria-label="See details" title="Details").button.button--primary.button--sm
+                | Details
+
+mixin directory-provider(data)
+    article.card.directory&attributes(attributes)
+        a(href="./directory.html" aria-label="Show more").directory__picture
+            img(src=data.image decoding="async" alt="Image description").directory__img
+        .directory__content
+            .directory__header
+                +tags(data.tags).directory__tags
+            p.directory__description= data.text
+        footer.directory__footer
+            a(href="./directory.html" aria-label="See details" title="Details").button.button--primary.button--sm
+                | Details

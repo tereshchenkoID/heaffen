@@ -1,0 +1,21 @@
+@use 'scss/config' as *;
+
+.nav {
+  @include flex(null, center);
+
+  position: sticky;
+  top: 0;
+  height: var(--nav-height);
+  background-color: var(--color-polar-white);
+  z-index: $z-index-10;
+
+  &__options {
+    @include flex(flex-end, center);
+
+    gap: rem(10px);
+  }
+
+  &__button {
+    flex-shrink: 0;
+  }
+}

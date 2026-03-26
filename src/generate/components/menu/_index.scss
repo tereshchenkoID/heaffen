@@ -1,0 +1,49 @@
+@use 'scss/config' as *;
+
+.menu {
+  @include flex(null, center);
+
+  margin: 0;
+  padding: 0;
+  gap: rem(35px);
+
+  &__link {
+    --link-width: 100%;
+
+    @include flex(null, center);
+
+    position: relative;
+    height: rem(36px);
+    gap: rem(2px);
+    font-size: rem(14px);
+    font-weight: var(--typography-semibold);
+
+    &:has(.icon) {
+      --link-width: calc(100% - 18px);
+    }
+
+    &::before {
+      @include size(0, rem(2px));
+      @include transition;
+
+      position: absolute;
+      inset-inline: 0;
+      inset-block-start: 100%;
+      border-radius: rem(2px);
+      background-color: var(--color-neon-azure);
+      content: '';
+    }
+
+    .icon {
+      @include size(rem(16px));
+    }
+
+    @include hover {
+      &:hover {
+        &::before {
+          width: var(--link-width);
+        }
+      }
+    }
+  }
+}

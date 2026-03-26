@@ -1,0 +1,23 @@
+$breakpoints: (
+  mob-s: 360px,
+  mob-m: 560px,
+  tab-s: 768px,
+  tab-m: 992px,
+  tab-l: 1024px,
+  desk-s: 1280px,
+  desk-m: 1440px
+);
+
+@mixin bp($name) {
+  $width: map-get($breakpoints, $name);
+
+  @if $width {
+    @media screen and (min-width: #{$width}) {
+      @content;
+    }
+  }
+
+  @else {
+    @warn "Брейкпоинт #{$name} не найден!";
+  }
+}

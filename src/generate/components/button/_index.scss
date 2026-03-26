@@ -1,0 +1,119 @@
+@use 'scss/config' as *;
+
+.button {
+  display: inline-flex;
+  place-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: rem(10px);
+  border: rem(1px) solid transparent;
+  font-weight: var(--typography-semibold);
+  gap: rem(10px);
+
+  &--sm {
+    padding-inline: rem(5px);
+    border-radius: rem(5px);
+    font-size: rem(14px);
+    height: rem(30px);
+
+    .icon {
+      @include size(16px);
+    }
+  }
+
+  &--md {
+    padding-inline: rem(10px);
+    font-size: rem(16px);
+    height: rem(40px);
+
+    .icon {
+      @include size(24px);
+    }
+  }
+
+  &--lg {
+    padding-inline: rem(13px);
+    font-size: rem(20px);
+    font-weight: var(--typography-semibold);
+    height: rem(46px);
+
+    .icon {
+      @include size(24px);
+    }
+  }
+
+  &--wide {
+    width: 100%;
+  }
+
+  &--square {
+    aspect-ratio: 1 / 1;
+  }
+
+  &--primary {
+    background-color: var(--color-neon-azure);
+    color: var(--color-white);
+
+    @include hover {
+      &:hover {
+        color: var(--color-white);
+        background-color: var(--color-stellar-blue);
+      }
+    }
+  }
+
+  &--secondary {
+    background-color: var(--color-category-grey);
+    color: var(--color-carbon-black);
+
+    @include hover {
+      &:hover {
+        color: var(--color-neon-azure);
+        border-color: var(--color-neon-azure);
+      }
+    }
+  }
+
+  &--outline {
+    background-color: var(--color-white);
+    border-color: var(--color-neon-azure);
+    color: var(--color-stellar-blue);
+
+    @include hover {
+      &:hover {
+        background-color: var(--color-polar-white);
+      }
+    }
+  }
+
+  &--blue {
+    background: linear-gradient(160.65deg, var(--color-electric-ocean) 0%, var(--color-neon-azure) 100%);
+    box-shadow: 0 rem(4px) rem(15px) 0 rgba(1, 88, 253, 0.25);
+    border: rem(1px) solid #356BFF;
+    color: var(--color-polar-white);
+
+    @include hover {
+      &:hover {
+        background: linear-gradient(180deg, var(--color-stellar-blue) 0%, var(--color-stellar-blue) 100%);
+        color: var(--color-polar-white);
+      }
+    }
+  }
+
+  &--white {
+    background-color: var(--color-white);
+
+    @include hover {
+      &:hover {
+        border-color: var(--color-neon-azure);
+      }
+    }
+  }
+
+  &:disabled,
+  &--disabled {
+    background-color: #C8C8C8;
+    pointer-events: none;
+  }
+}

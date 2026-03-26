@@ -1,0 +1,68 @@
+@use 'scss/config' as *;
+
+.language {
+  @include size(rem(40px));
+
+  position: relative;
+  z-index: $z-index-1;
+  cursor: pointer;
+
+  @include hover {
+    &:hover {
+      .language {
+        &__wrapper {
+          border-color: var(--color-neon-azure);
+        }
+      }
+    }
+  }
+
+  &--active {
+    .language {
+      &__wrapper {
+        border-color: var(--color-neon-azure);
+      }
+
+      &__dropdown {
+        @include flex(center, center, column);
+      }
+    }
+  }
+
+  &__wrapper {
+    @include transition;
+
+    display: grid;
+    align-items: flex-start;
+    border: rem(1px) solid var(--color-white);
+    border-radius: rem(10px);
+    background-color: var(--color-white);
+    overflow: hidden;
+  }
+
+  &__toggle,
+  &__button {
+    @include flex(center, center);
+
+    padding-top: rem(2px);
+    font-weight: var(--typography-semibold);
+    color: var(--color-stellar-blue);
+  }
+
+  &__toggle {
+    @include size(rem(40px));
+  }
+
+  &__button {
+    @include size(rem(20px));
+
+    flex-shrink: 0;
+  }
+
+  &__dropdown {
+    display: none;
+    gap: rem(10px);
+    background-color: var(--color-white);
+    padding-bottom: rem(10px);
+  }
+}

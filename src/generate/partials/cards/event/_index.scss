@@ -1,0 +1,157 @@
+@use 'scss/config' as *;
+
+.event {
+  display: grid;
+  grid-template-rows: auto 1fr;
+
+  &__header {
+    @include flex(space-between, center, null, wrap);
+
+    position: absolute;
+    inset-block-start: rem(16px);
+    inset-inline: rem(16px);
+    gap: rem(4px);
+    z-index: $z-index-1;
+
+    @include media(tab-l) {
+      inset-block-start: rem(20px);
+      inset-inline: rem(20px);
+    }
+  }
+
+  &__meta {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: rem(5px);
+    align-items: center;
+    background-color: var(--color-white);
+    border-radius: rem(5px);
+    border: rem(1px) solid var(--color-stroke-polar);
+    padding: rem(4px) rem(8px);
+    line-height: 1;
+    font-size: rem(12px);
+    font-weight: var(--typography-semibold);
+    color: var(--color-stellar-blue);
+
+    @include media(tab-l) {
+      padding: rem(5px) rem(10px);
+      font-size: rem(14px);
+    }
+
+    .icon {
+      @include size(rem(17px));
+
+      @include media(tab-l) {
+        @include size(rem(20px));
+      }
+    }
+  }
+
+  &__picture {
+    display: block;
+    aspect-ratio: 1.9 / 1;
+    overflow: hidden;
+
+    @include hover {
+      &:hover {
+        .event {
+          &__img {
+            transform: scale(1.05);
+          }
+        }
+      }
+    }
+  }
+
+  &__img {
+    @include transition;
+    @include size(100%);
+
+    object-fit: cover;
+  }
+
+  &__content {
+    @include flex(null, null, column);
+
+    gap: rem(5px);
+    padding: rem(20px);
+  }
+
+  &__title {
+    margin-top: rem(5px);
+  }
+
+  &__description {
+    @include line-clamp(2);
+
+    margin-bottom: rem(15px);
+    font-size: rem(14px);
+    line-height: 1;
+
+    @include media(tab-l) {
+      margin-bottom: rem(25px);
+      font-size: rem(16px);
+    }
+  }
+
+  &__details {
+    margin-top: auto;
+  }
+
+  &__footer {
+    @include flex(null, center, null, wrap);
+
+    gap: rem(15px);
+  }
+
+  &--alt {
+    padding: rem(20px) rem(16px);
+    gap: rem(24px);
+    grid-template-rows: 1fr;
+
+    @include media(tab-l) {
+      grid-template-columns: rem(316px) 1fr;
+      padding-inline: rem(20px);
+    }
+
+    .event {
+
+      &__description,
+      &__date {
+        font-size: rem(14px);
+        line-height: 1.3;
+      }
+
+      &__picture {
+        aspect-ratio: 1.6 / 1;
+        border-radius: rem(5px);
+      }
+
+      &__content {
+        padding: 0;
+      }
+
+      &__title {
+        margin-block: 0 rem(10px);
+        font-weight: var(--typography-bold);
+        color: var(--color-neon-azure);
+      }
+
+      &__description {
+        @include line-clamp(4);
+
+        margin-bottom: rem(10px);
+      }
+
+      &__tags {
+        margin-bottom: rem(5px);
+        justify-content: flex-start;
+      }
+
+      &__details {
+        margin-top: 0;
+        min-width: rem(176px);
+      }
+    }
+  }
+}

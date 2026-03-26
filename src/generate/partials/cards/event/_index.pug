@@ -1,0 +1,32 @@
+mixin event(data)
+    article.card.event&attributes(attributes)
+        .event__header
+            .event__meta
+                +icon('calendar')
+                p= data.date
+            .event__meta
+                +icon('location')
+                p= data.location
+        a(href="./event.html" aria-label="Show more" title="Show more").event__picture
+            img(src=data.image decoding="async" fetchpriority="high" alt=data.title).event__img
+        .event__content
+            +tags(data.tags).event__tags
+            a(href="./event.html" aria-label="Show more" title="Show more").event__title
+                h3= data.title
+            p.event__description= data.text
+            a(href="./event.html" aria-label="Show more" title="Show more").button.button--primary.button--sm.event__details
+                | Details
+
+mixin event-alt(data)
+    article.card.event&attributes(attributes)
+        a(href="./event.html" aria-label="Show more" title="Show more").event__picture
+            img(src=data.image decoding="async" fetchpriority="high" alt=data.title).event__img
+        .event__content
+            a(href="./event.html" aria-label="Show more" title="Show more").event__title
+                h3= data.title
+            +tags(data.tags).event__tags
+            p.event__description= data.text
+            .event__footer
+                a(href="./event.html" aria-label="Show more" title="Show more").button.button--primary.button--sm.event__details
+                    | Details
+                p.event__date= data.date

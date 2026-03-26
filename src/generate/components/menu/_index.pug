@@ -1,0 +1,7 @@
+mixin menu
+    menu.menu&attributes(attributes)
+        each item in MENU
+            a(href=item.link arial-label=item.text data-value=item.slug).menu__link.js-menu-link
+                = item.text
+                if item.submenu
+                  +icon('angle-down')

@@ -1,0 +1,19 @@
+@use 'scss/config' as *;
+
+.logo {
+  display: grid;
+
+  @include media(desk-s) {
+    grid-template-columns: rem(30px) auto;
+    align-items: center;
+    gap: rem(10px);
+  }
+
+  &__right {
+    display: none;
+
+    @include media(desk-s) {
+      display: inline-grid;
+    }
+  }
+}

@@ -1,0 +1,8 @@
+@use 'scss/config' as *;
+
+.icon {
+  @include transition;
+
+  display: inline-block;
+  fill: currentColor;
+}

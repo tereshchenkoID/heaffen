@@ -1,0 +1,126 @@
+extends ../generate/layout/_layout
+
+block title
+  - var title = "HEAFFEN | Strategic Intelligence for Global Affiliates"
+
+block content
+  main.main
+    +banner({
+      image: 'https://palai.media/wp-content/uploads/2022/07/1920x540_desktop-1.png'
+    }).banner--wide
+
+    section.section
+      .container-fluid
+        .container
+          +breadcrumbs([
+            {
+              text: 'Main page',
+              url: './'
+            },
+            {
+              text: 'About',
+              url: null
+            }
+          ])
+
+          .content.content--right
+            .content__header
+              h1 HEAFFEN | Strategic Intelligence for Global Affiliates
+
+            .content__center
+              .post-single.mb-0
+                .post-single__wrapper
+                  .about-section
+                    img(src="./img/about.webp" alt="Post title" loading="eager" fetchpriority="high")
+
+                    .content-section
+                      h2.text-italic About us
+                      p
+                        strong Heaffen
+                        |  is a premier B2B media ecosystem dedicated to the elite tiers of Affiliate Marketing, iGaming, and AI-driven technologies. We transcend traditional reporting by providing high-fidelity intelligence, institutional-grade analysis, and strategic blueprints for the world’s most ambitious media buyers and digital advertisers.
+                    .content-section
+                      p Our mission is simple:
+                        strong  To bridge the gap between ambitious media buyers and top-tier advertising opportunities through expert-led content.
+
+                    .content-section
+                      h2.text-italic The Heaffen Standard: Accuracy Above All
+                      p The "Heaffen" name reflects our commitment to being a sanctuary for reliable information. We don’t just report on trends; we dissect them. Our content framework is built on three pillars:
+
+                    .content-blocks
+                      .content-block
+                        h4 Verified Expertise
+                        p Every guide and case study is vetted by practitioners with years of hands-on experience in iGaming, Nutra, E-commerce, and Finance.
+                      .content-block
+                        h4 Editorial Neutrality
+                        p We maintain strict independence. Our reviews of affiliate networks and SaaS tools are unbiased, focusing on real-world utility and performance.
+                      .content-block
+                        h4 Global Perspective
+                        p While our roots are deep, our vision is global. We track traffic shifts from Tier-1 markets to emerging regions, ensuring our audience stays ahead of the curve.
+
+                    .content-section
+                      h2.text-italic Decoding the Affiliate Ecosystem
+                      p Heaffen serves as a strategic resource and infrastructure hub for solo webmasters, media buying teams, and direct advertisers.
+
+                    .content-characters
+                      +character('Market Intelligence', 'In-depth analysis of traffic sources (Meta, Google, TikTok, Search, ASO/ASA, SEO) and legislative shifts.')
+                      +character('Tech Stack Reviews', 'Unbiased testing of anti-detect browsers, trackers, and automation tools.')
+                      +character('Directories', 'A curated catalog of verified services, networks, and tools powering the digital economy.')
+                      +character('Offer Engine (API)', 'Real-time, aggregated feed of high-converting offers integrated directly from top-tier partners.')
+                      +character('Career Center', 'A dedicated gateway for talent acquisition, featuring executive-level vacancies and professional CVs.')
+                      +character('Global Events', 'An interactive roadmap of worldwide affiliate conferences, meetups, and private networking events.')
+                      +character('Growth Guides', 'Step-by-step blueprints for scaling campaigns and optimizing ROI.')
+
+                    .content-section
+                      h2.text-italic Driven by Practitioners
+                      p We don’t hide behind logos. Heaffen is a collective of media buyers, developers, and journalists who have navigated the complexities of the affiliate landscape. Our authors are regular contributors to major industry events, ensuring our content is never theoretical—only practical.
+
+                    .content-quote-card
+                      p "We built Heaffen to be the resource we wished we had when we started—a place where data speaks louder than hype."
+
+                    .content-section
+                      h2 A Trusted Voice in the Industry
+                      p We are an integral part of the global affiliate infrastructure. Our credibility is reinforced by long-term collaborations with industry leaders and global event organizers.
+
+                    .content-section
+                      h4 Official Media Partners
+                      p Heaffen is proud to be the official media voice for the world’s premier affiliate and digital marketing summits.
+
+                    .content-section
+                      h4 Trusted by Industry Leaders
+                      p We collaborate with top-tier affiliate networks and SaaS providers to deliver exclusive insights and transparent market data.
+
+                    .content-brands
+                      - for (var x = 0; x < 23; x++)
+                        .content-brand
+                          img(src=`img/brands/${x + 1}.svg`)
+                      .content-brand.content-brand--blue
+                        p And 100+ more brands
+
+                    .content-section
+                      h2 Partner with Heaffen
+                      p We are more than a media outlet; we are an ecosystem.
+
+                    .content-blocks
+                      .content-block.content-block--blue.content-block--center
+                        h4 For Advertisers
+                        p Access a highly targeted B2B audience of professional media buyers.
+                        a(href="./").button.button--md.button--secondary.button--wide Media Kit
+                      .content-block.content-block--blue.content-block--center
+                        h4 For Experts
+                        p Share your expertise and build your authority within our growing community.
+                        a(href="./").button.button--md.button--secondary.button--wide Write for Us
+                      .content-block.content-block--blue.content-block--center
+                        h4 Stay Informed
+                        p oin 10,000+ professionals in our Telegram community. Subscribe us:
+                        +social.social--polar-white
+
+            .content__left
+              +banner({
+                image: 'https://palai.media/wp-content/uploads/2022/07/768h540-1.png'
+              })
+    section.section
+      .container-fluid
+        .container
+          +banner({
+            image: 'https://palai.media/wp-content/uploads/2022/07/1920x540_desktop-1.png'
+          })

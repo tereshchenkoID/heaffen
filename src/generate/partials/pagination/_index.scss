@@ -1,0 +1,33 @@
+@use 'scss/config' as *;
+
+.pagination {
+  @include flex(center, center);
+
+  .icon {
+    @include size(rem(16px));
+  }
+
+  &__item,
+  &__text {
+    @include flex(center, center);
+    @include size(rem(30px));
+
+    border-radius: rem(6px);
+    background-color: transparent;
+    flex-shrink: 0;
+    line-height: 1;
+  }
+
+  &__item {
+    &--active {
+      color: var(--color-white);
+      background-color: var(--color-neon-azure);
+      pointer-events: none;
+    }
+
+    &--disabled {
+      opacity: 0.5;
+      pointer-events: none;
+    }
+  }
+}

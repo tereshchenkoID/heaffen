@@ -1,0 +1,107 @@
+extends ../generate/layout/_layout
+
+block title
+  - var title = "Makeberry"
+
+block content
+  main.main
+    +banner({
+      image: 'https://palai.media/wp-content/uploads/2022/07/1920x540_desktop-1.png'
+    }).banner--wide
+
+    section.section
+      .container-fluid
+        .container
+          +breadcrumbs([
+            {
+              text: 'Main page',
+              url: './'
+            },
+            {
+              text: 'Directories',
+              url: './directories.html'
+            },
+            {
+              text: 'Slot Providers',
+              url: './providers.html'
+            },
+            {
+              text: 'Makeberry',
+              url: null
+            }
+          ])
+
+          .content.content--right
+            .content__header
+              +directory-meta
+
+            .content__left
+              +banner({
+                image: 'https://palai.media/wp-content/uploads/2022/07/768h540-1.png'
+              })
+              +slots-provider
+            .content__center
+              .post-single
+                .post-single__wrapper
+                  .info-section
+                    h2 How its works?
+                    p
+                      a(href="#" aria-label="Makeberry Affiliates") Makeberry Affiliates
+                      |  is an affiliate network in the iGaming vertical, providing access to over 500 offers with global coverage and acting as a direct advertiser for WinSpirit Casino and RocketPlay Casino.
+                    br
+                    p With access to in-house media buying, Makeberry Affiliates independently generates high-quality traffic for offers across Tier 1, 2, and 3 GEOs, ensuring partners achieve predictable results from the very start.
+                    p In the area of licensing and compliance, multiple new licenses were issued during the reporting period, generating substantial contributions to the state budget. In parallel, several licenses were revoked due to violations of regulatory requirements. As a result of inspections, a number of gambling operators were fined for non-compliance, with total penalties amounting to several million in national currency.
+                    br
+                    p A key milestone during this period was the adoption of a government resolution required to launch a centralized online monitoring system for gambling activities. The system is designed to ensure real-time oversight of the legal market, improve transparency, and strengthen control over licensed operators through automated reporting and data collection.
+                    p Additionally, in January, the authority completed the selection process for lottery operators. Several winners were approved to operate under updated regulatory conditions, including mandatory electronic reporting and regular license fee payments. These measures are expected to further increase market transparency and contribute additional revenue to the public budget.
+                    br
+                    img(src="https://palai.media/wp-content/uploads/2026/03/palai-cover-860x416_11zon-9.webp" alt="Post title")
+                    br
+                    blockquote
+                      p At the same time, enforcement actions against the illegal market were intensified. Throughout January, the monitoring system identified and blocked a significant number of unlicensed websites offering prohibited gambling activities. Overall, during the first months of the system’s operation, thousands of online resources providing illegal services were taken down as part of coordinated efforts with digital platforms and service providers.
+                    br
+                    p In January 2026, the regulatory authority continued strengthening its efforts to implement state policy in the area of gambling and lottery market oversight. As part of the campaign against illegal advertising, the highest number of violations was identified on social media platforms. In particular, dozens of accounts were reported for blocking due to the promotion of unauthorized gambling services. Several profiles were removed on major social networks, while access restrictions for multiple video channels are expected to be introduced in specific regions.
+                    br
+                    .content-quote-card
+                      p “At the same time, enforcement actions against the illegal market were intensified. Throughout January, the monitoring system identified and blocked a significant number of unlicensed websites offering prohibited gambling activities.”
+                    br
+                    p At the same time, enforcement actions against the illegal market were intensified. Throughout January, the monitoring system identified and blocked a significant number of unlicensed websites offering prohibited gambling activities. Overall, during the first months of the system’s operation, thousands of online resources providing illegal services were taken down as part of coordinated efforts with digital platforms and service providers.
+
+
+                  .swiper.js-slider(data-slider-type="games")
+                    .title.title--italic
+                      h2.title__text Best Ezugi Games
+                      .swiper-navigation.js-slider-navigation
+                        button(type="button" aria-label="Slider prev" title="Slider prev").swiper-navigation-prev.js-slider-prev
+                          +icon('arrow-left-circle')
+                        button(type="button" aria-label="Slider next" title="Slider next").swiper-navigation-next.js-slider-next
+                          +icon('arrow-right-circle')
+                    .swiper-wrapper
+                      each item in GAMES
+                        .swiper-slide
+                          +game(item)
+                    .swiper-pagination
+
+                .post-single__footer.post-single__footer--right
+                  .post-single__social
+                    p Share to:
+                    +social.social--polar-white
+              +banner({
+                image: 'https://palai.media/wp-content/uploads/2022/07/1920x540_desktop-1.png'
+              })
+
+    section.section.section--overflow
+      .container-fluid
+        .container
+          .title.title--italic
+            h2.title__text News
+            +more-link('./news.html', 'More news').title__link
+          .swiper.js-slider(data-slider-type="default")
+            .swiper-wrapper
+              .swiper-slide
+                +related-news('Affiliate')
+              .swiper-slide
+                +related-news('IGaming')
+              .swiper-slide
+                +related-news('AI')
+            .swiper-pagination

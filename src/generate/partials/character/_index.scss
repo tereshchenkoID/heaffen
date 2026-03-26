@@ -1,0 +1,47 @@
+@use 'scss/config' as *;
+
+.character {
+  @include flex(null, null, column);
+
+  position: relative;
+  padding: rem(8px) rem(20px);
+  column-gap: rem(10px);
+  row-gap: rem(5px);
+  border-radius: rem(5px);
+  font-size: rem(14px);
+  font-weight: var(--typography-semibold);
+  text-align: start;
+  overflow: hidden;
+  background-color: var(--color-polar-white);
+
+  &::before {
+    position: absolute;
+    inset-block: 0;
+    inset-inline-start: 0;
+    width: rem(5px);
+    background-color: var(--color-neon-azure);
+    content: '';
+  }
+
+  &__key {
+    display: block;
+    font-size: rem(18px);
+    font-weight: var(--typography-bold);
+  }
+
+  &__value {
+    font-size: rem(14px);
+
+    @include media(tab-l) {
+      font-size: rem(16px);
+    }
+  }
+
+  &--row {
+    padding-block: rem(11px);
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
+

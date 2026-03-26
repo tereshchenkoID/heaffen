@@ -1,0 +1,80 @@
+@use 'scss/config' as *;
+
+.container-fluid {
+  position: relative;
+  width: 100%;
+}
+
+.container {
+  position: relative;
+  margin-inline: auto;
+  width: 100%;
+  padding-inline: rem(16px);
+  max-width: rem(1440px);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--grid-gap);
+
+  &--align-start {
+    align-items: start;
+  }
+
+  &--align-center {
+    align-items: center;
+  }
+
+  &--align-end {
+    align-items: end;
+  }
+
+  &--align-stretch {
+    align-items: stretch;
+  }
+
+  &--justify-start {
+    justify-items: start;
+  }
+
+  &--justify-center {
+    justify-items: center;
+  }
+
+  &--justify-end {
+    justify-items: end;
+  }
+
+  &--justify-stretch {
+    justify-items: stretch;
+  }
+
+  @for $i from 1 through 12 {
+    .col-#{$i} {
+      grid-column-end: span #{$i};
+    }
+  }
+
+  @for $i from 0 through 11 {
+    .offset-#{$i} {
+      grid-column-start: #{$i + 1};
+    }
+  }
+
+  @each $key, $val in $breakpoints {
+    @media (min-width: $val) {
+      @for $i from 1 through 12 {
+        .col-#{$key}-#{$i} {
+          grid-column-end: span #{$i};
+        }
+      }
+
+      @for $i from 0 through 11 {
+        .offset-#{$key}-#{$i} {
+          grid-column-start: #{$i + 1};
+        }
+      }
+    }
+  }
+}

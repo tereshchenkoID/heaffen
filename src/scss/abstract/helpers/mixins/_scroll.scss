@@ -1,0 +1,56 @@
+@use 'rem-converter' as *;
+
+@mixin scroll-y {
+  overflow-y: auto;
+  background-clip: content-box;
+  overscroll-behavior: none;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-y: contain;
+
+  &::-webkit-scrollbar {
+    width: rem(8px);
+  }
+
+  &::-webkit-scrollbar-corner {
+    background-color: var(--color-polar-white);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border: rem(1px) solid var(--color-stroke-polar);
+    border-radius: rem(100px);
+    background-color: var(--color-stroke-polar);
+    background-clip: content-box;
+  }
+
+  &::-webkit-scrollbar-track {
+    border-radius: rem(100px);
+    background-color: var(--color-polar-white);
+  }
+}
+
+@mixin scroll-x {
+  //padding-bottom: var(--gap-16);
+  //overflow-x: auto;
+  //background-clip: content-box;
+  //scroll-behavior: smooth;
+  //overscroll-behavior-x: contain;
+  //-webkit-overflow-scrolling: touch;
+  //
+  //&::-webkit-scrollbar {
+  //  height: rem(4px);
+  //}
+  //
+  //&::-webkit-scrollbar-track {
+  //  background: transparent;
+  //}
+  //
+  //&::-webkit-scrollbar-thumb {
+  //  border-radius: var(--border-radius-4);
+  //  background-color: var(--material-hover);
+  //}
+  //
+  //&::-webkit-scrollbar-thumb:hover {
+  //  background-color: var(--material-hover);
+  //}
+}

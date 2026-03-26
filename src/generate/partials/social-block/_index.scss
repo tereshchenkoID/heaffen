@@ -1,0 +1,55 @@
+@use 'scss/config' as *;
+
+.social-block {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: rem(20px);
+  align-items: center;
+
+  &__avatar {
+    @include size(rem(63px));
+
+    position: relative;
+  }
+
+  &__img {
+    @include size(100%);
+
+    border-radius: 50%;
+    object-fit: cover;
+    overflow: hidden;
+  }
+
+  &__icon {
+    @include flex(center, center);
+    @include size(rem(22px));
+
+    position: absolute;
+    bottom: rem(-2px);
+    inset-inline-end: rem(-2px);
+    border-radius: 50%;
+    color: var(--color-white);
+    background-color: var(--color-neon-azure);
+
+    .icon {
+      @include size(rem(12px));
+    }
+  }
+
+  &__title {
+    margin-bottom: rem(5px);
+    font-weight: var(--typography-semibold);
+
+    @include media(tab-l) {
+      font-size: rem(18px);
+    }
+  }
+
+  &__text {
+    font-size: rem(14px);
+
+    @include media(tab-l) {
+      font-size: rem(16px);
+    }
+  }
+}

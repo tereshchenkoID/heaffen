@@ -1,0 +1,37 @@
+@use 'scss/config' as *;
+
+.social {
+  --social-color: var(--color-neon-azure);
+  --social-background: var(--color-white);
+  --social-background-hover: var(--color-neon-azure);
+  --social-color-hover: var(--color-polar-white);
+
+  @include flex(null, center);
+
+  gap: rem(10px);
+
+  .icon {
+    @include size(rem(20px));
+  }
+
+  &__link {
+    @include flex(center, center);
+    @include size(rem(35px));
+
+    background-color: var(--social-background);
+    border-radius: 50%;
+    color: var(--social-color);
+
+    @include hover {
+      &:hover {
+        background-color: var(--social-background-hover);
+        color: var(--social-color-hover);
+      }
+    }
+  }
+
+  &--polar-white {
+    --social-color: var(--color-neon-azure);
+    --social-background: var(--color-polar-white);
+  }
+}
