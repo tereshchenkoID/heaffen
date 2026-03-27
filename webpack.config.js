@@ -1,12 +1,13 @@
 const path = require('path');
 const fs = require('fs');
 const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
-const PugPlugin = require('pug-plugin'); // Заменяет HtmlWebpackPlugin и MiniCssExtractPlugin
+const PugPlugin = require('pug-plugin');
 const StylelintPlugin = require('stylelint-webpack-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const FileManagerPlugin = require('filemanager-webpack-plugin');
 const ImageminWebpWebpackPlugin = require('imagemin-webp-webpack-plugin');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const config = require('./config');
 
 const getTemplateFiles = (templateDir) => {
@@ -173,7 +174,21 @@ module.exports = {
   ],
 
   optimization: {
-    minimizer: [new TerserPlugin()],
+    minimize: process.env.NODE_ENV === 'production',
+    minimizer: [
+      new TerserPlugin(),
+      new CssMinimizerPlugin({
+        exclude: /custom\.css$/,
+        minimizerOptions: {
+          preset: [
+            'default',
+            {
+              discardComments: { removeAll: true },
+            },
+          ],
+        },
+      }),
+    ],
     splitChunks: {
       cacheGroups: {
         vendor: {

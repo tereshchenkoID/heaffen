@@ -1,0 +1,16 @@
+@use 'scss/config' as *;
+
+.mb {
+
+  &-10 {
+    margin-bottom: rem(10px);
+  }
+
+  &-16 {
+    margin-bottom: rem(16px);
+  }
+
+  &-24 {
+    margin-bottom: rem(24px);
+  }
+}

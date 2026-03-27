@@ -84,6 +84,9 @@ block content
                     .content-section
                       h4 Official Media Partners
                       p Heaffen is proud to be the official media voice for the world’s premier affiliate and digital marketing summits.
+                      .content-partner
+                        img(src="img/brands/24.svg" alt="Sigma")
+                        img(src="img/brands/25.svg" alt="AWC")
 
                     .content-section
                       h4 Trusted by Industry Leaders
@@ -92,7 +95,7 @@ block content
                     .content-brands
                       - for (var x = 0; x < 23; x++)
                         .content-brand
-                          img(src=`img/brands/${x + 1}.svg`)
+                          img(src=`img/brands/${x + 1}.svg` alt=`Brand ${x + 1}`)
                       .content-brand.content-brand--blue
                         p And 100+ more brands
 

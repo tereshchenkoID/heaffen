@@ -1,13 +1,11 @@
 @use 'scss/config' as *;
 
 .post-single {
-  margin-bottom: rem(30px);
   padding: rem(20px) rem(16px);
   border-radius: rem(10px);
   background-color: var(--color-white);
 
   @include media(tab-l) {
-    margin-bottom: rem(40px);
     padding: rem(20px) rem(30px);
   }
 
