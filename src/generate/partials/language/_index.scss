@@ -38,6 +38,7 @@
     border-radius: rem(10px);
     background-color: var(--color-white);
     overflow: hidden;
+    height: fit-content;
   }
 
   &__toggle,
@@ -47,16 +48,15 @@
     padding-top: rem(2px);
     font-weight: var(--typography-semibold);
     color: var(--color-stellar-blue);
+    flex-shrink: 0;
   }
 
   &__toggle {
-    @include size(rem(40px));
+    @include size(rem(39px));
   }
 
   &__button {
     @include size(rem(20px));
-
-    flex-shrink: 0;
   }
 
   &__dropdown {

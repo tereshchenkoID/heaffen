@@ -5,9 +5,7 @@ block title
 
 block content
   main.main
-    +banner({
-      image: 'https://palai.media/wp-content/uploads/2022/07/1920x540_desktop-1.png'
-    }).banner--wide
+    +banner.banner--wide
 
     section.section
       .container-fluid
@@ -69,14 +67,10 @@ block content
                   .post-single__social
                     p Share to:
                     +social.social--polar-white
-              +banner({
-                image: 'https://palai.media/wp-content/uploads/2022/07/1920x540_desktop-1.png'
-              })
+              +banner
             .content__right
               +author-news
-              +banner({
-                image: 'https://palai.media/wp-content/uploads/2022/07/768h540-1.png'
-              })
+              +banner
               +related-news('Related news').related-news--active
 
     section.section.section--overflow

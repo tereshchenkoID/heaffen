@@ -1,0 +1,49 @@
+mixin submenu-desk
+    .submenu-desk&attributes(attributes)
+        .container-fluid.submenu-desk__top
+            .container
+                .grid
+                    .col-12.col-tab-l-7
+                        .submenu-desk__step(data-step="1").js-submenu-desk-step
+                            each item in MENU
+                                if item.submenu
+                                    .submenu-desk__wrapper(data-category=item.slug).js-submenu-desk-wrapper
+                                        .grid
+                                            each columns in item.submenu
+                                                .col-12.col-tab-l-4
+                                                    each link in columns
+                                                        a(href="./" aria-label=link).submenu-desk__link= link
+                        .submenu-desk__step(data-step="2").js-submenu-desk-step
+                            form.submenu-desk__search.js-submenu-desk-search
+                                +icon('search')
+                                input(type="text" placeholder="Search news, articles, and directories…").submenu-desk__field
+
+                            .submenu-desk__results.js-submenu-desk-results
+                                .submenu-desk__success.js-results-success
+                                    p.text
+                                        | Found
+                                        span.js-results-count
+                                        | results for “
+                                        span.js-results-query
+                                        | ...”
+                                    a(href="./search.html" aria-label="Search").button.button--primary.button--sm.js-results-link Search
+
+                                .submenu-desk__empty.js-results-empty
+                                    p.text.js-results-empty-text Try a different keyword or check spelling
+                                    +button('Search').button--primary.button--disabled.button--sm
+
+                    .col-12.col-tab-l-5
+                        .submenu-desk__video
+                            +video(VIDEOS[0])
+                            p.text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam asperiores consectetur corporis, debitis delectus eveniet hic magni minima molestiae optio quasi repellat, sequi unde? Aperiam beatae, ipsum. Laudantium, praesentium sequi.
+        .container-fluid.submenu-desk__bottom
+            .container
+                .grid.grid--align-center
+                    .col-12.col-tab-l-3
+                        a(href="./" aria-label="About the Heaffen").link About the Heaffen
+                    .col-12.col-tab-l-3
+                        a(href="./" aria-label="Advertising on the Website").link Advertising on the Website
+                    .col-12.col-tab-l-3
+                        a(href="./" aria-label="Contact Us").link Contact Us
+                    .col-12.col-tab-l-3
+                        +social

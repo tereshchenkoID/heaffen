@@ -15,7 +15,86 @@
     gap: rem(10px);
   }
 
+  &__option,
   &__button {
     flex-shrink: 0;
+    border-radius: rem(8px);
+
+    @include media(tab-l) {
+      border-radius: rem(10px);
+    }
+  }
+
+  &__language {
+    display: none;
+
+    @include media(tab-l) {
+      display: grid;
+    }
+  }
+
+  &__button {
+    height: rem(30px);
+    font-size: rem(12px);
+
+    @include media(tab-l) {
+      height: rem(40px);
+      font-size: rem(16px);
+    }
+  }
+
+  &__option,
+  &__toggle {
+    @include size(rem(30px));
+
+    @include media(tab-l) {
+      @include size(rem(40px));
+    }
+  }
+
+  &__option {
+    display: none;
+
+    @include media(tab-l) {
+      display: inline-flex;
+    }
+
+    .icon {
+      @include size(rem(24px));
+    }
+  }
+
+  &__toggle {
+    @include flex(center, center, column);
+
+    gap: rem(4px);
+
+    @include media(tab-l) {
+      display: none;
+    }
+
+    span {
+      @include transition;
+      @include size(rem(18px), rem(2px));
+
+      background-color: currentColor;
+      border-radius: rem(4px);
+    }
+
+    &--active {
+      span {
+        &:nth-child(1) {
+          transform: translateY(rem(6px)) rotate(45deg);
+        }
+
+        &:nth-child(2) {
+          transform: translateX(150%);
+        }
+
+        &:nth-child(3) {
+          transform: translateY(rem(-6px)) rotate(-45deg);
+        }
+      }
+    }
   }
 }

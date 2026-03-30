@@ -1,3 +1,6 @@
-mixin banner(data)
-    a(href="/" aria-label="Batter label" title="Banner title").banner&attributes(attributes)
-        img(src=data.image loading="eager" fetchpriority="high" alt="Banner title").banner__image
+mixin banner
+    a(href="./" aria-label="Batter label" title="Banner title").banner&attributes(attributes)
+        picture
+            source(media='(min-width: 1200px)' srcset='https://palai.media/wp-content/uploads/2022/07/1920h540-1.png')
+            source(media='(min-width: 768px)' srcset='https://palai.media/wp-content/uploads/2022/07/768h540-1.png')
+            img(src='https://palai.media/wp-content/uploads/2022/07/360h430-1.png' fetchpriority='high' loading='eager' alt='Join now').banner__image

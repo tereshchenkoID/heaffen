@@ -1,0 +1,79 @@
+@use 'scss/config' as *;
+
+.offer {
+  display: grid;
+
+  align-items: center;
+  padding: rem(14px) rem(16px);
+  font-weight: var(--typography-semibold);
+
+  @include media(tab-l) {
+    grid-template-columns: auto 1fr;
+  }
+
+  &::before {
+    position: absolute;
+    inset-block: 0;
+    inset-inline-start: 0;
+    background-color: var(--color-neon-azure);
+    width: 0;
+    content: '';
+  }
+
+  &__meta,
+  &__options{
+    display: grid;
+    align-items: center;
+  }
+
+  &__meta {
+    grid-template-columns: rem(60px) rem(235px);
+  }
+
+  &__options {
+    grid-template-columns: repeat(5, 1fr) rem(24px)
+  }
+
+  &__picture {
+    padding: rem(5px);
+    border: rem(1px) dashed var(--color-neon-azure);
+    border-radius: rem(5px);
+  }
+
+  &__cell {
+    padding: rem(15px);
+  }
+
+  &__link {
+    @include size(rem(24px));
+
+    color: var(--color-neon-azure);
+  }
+
+  &__geos {
+    @include flex(null, center);
+  }
+
+  &__geo {
+    @include size(rem(25px));
+
+    border: rem(1px) solid var(--color-category-grey);
+    border-radius: 50%;
+
+    &:not(:first-child) {
+      margin-inline-start: rem(-10px);
+    }
+  }
+
+  .icon {
+    @include size(100%);
+  }
+
+  &--active {
+    border-color: var(--color-neon-azure);
+
+    &::before {
+      width: rem(5px);
+    }
+  }
+}

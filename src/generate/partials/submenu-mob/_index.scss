@@ -1,32 +1,26 @@
 @use 'scss/config' as *;
 
 .submenu-mob {
-  @include scroll-y;
+  &--active {
+    display: block;
 
-  display: none;
-  position: absolute;
-  inset-block-start: 100%;
-  inset-inline: 0;
-  max-height: calc(100dvh - var(--nav-height));
-  border: 1px solid #f00;
-  background-color: var(--color-polar-white);
+    @include media(tab-l) {
+      display: none !important;
+    }
+  }
+
+  &__step {
+    margin-bottom: rem(16px);
+  }
 
   &__search {
-    @include flex(null, center);
     @include size(100%, rem(40px));
 
-    gap: rem(10px);
-    flex-shrink: 0;
     padding-inline: rem(10px);
-    min-width: rem(40px);
     border-radius: rem(10px);
-    font-size: rem(14px);
-    font-weight: var(--typography-semibold);
     background-color: var(--color-white);
-
-    .icon {
-      @include size(24px);
-    }
+    min-width: rem(40px);
+    font-size: rem(14px);
   }
 
   &__toggle {
@@ -35,29 +29,18 @@
   }
 
   &__field {
-    width: 100%;
-    border: 0;
     font-size: rem(14px);
-    font-weight: var(--typography-semibold);
-
-    &::placeholder {
-      color: var(--color-carbon-black);
-    }
-
-    &:focus {
-      outline: none;
-    }
   }
 
   &__results {
-    @include flex(center, null, column);
+    @include flex(flex-end, null, column);
 
     gap: rem(12px);
     min-height: rem(158px);
-    margin-bottom: rem(16px);
     padding: rem(15px) rem(16px);
     border-radius: rem(10px);
     background-color: var(--color-white);
+    margin-top: rem(16px);
 
     .text {
       margin-top: auto;
@@ -74,23 +57,11 @@
   }
 
   &__top {
-    padding-block: rem(16px) rem(30px);
+    padding-bottom: rem(30px);
   }
 
   &__bottom {
     padding-block: rem(15px) rem(40px);
-    background-color: #E7E8F4;
-
-    .link {
-      font-size: rem(14px);
-      text-decoration: underline;
-      text-underline-offset: rem(3px);
-      color: var(--color-electric-ocean);
-    }
-
-    .social {
-      justify-content: flex-end;
-    }
   }
 
   &__header {
@@ -159,23 +130,20 @@
   }
 
   &__video {
-    display: grid;
-    gap: rem(15px);
     margin-top: rem(16px);
     padding: rem(15px);
-    border-radius: rem(5px);
-    background-color: var(--color-white);
+  }
 
-    .video {
-      border-radius: rem(5px);
-    }
+  &__success,
+  &__empty {
+    display: none;
 
     .text {
-      @include line-clamp(2);
-
-      font-size: rem(16px);
-      font-weight: var(--typography-semibold);
-      line-height: 1;
+      margin-bottom: rem(12px);
     }
+  }
+
+  &__default {
+    margin: auto;
   }
 }

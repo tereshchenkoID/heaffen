@@ -1,11 +1,15 @@
 @use 'scss/config' as *;
 
 .menu {
-  @include flex(null, center);
-
+  display: none;
   margin: 0;
   padding: 0;
-  gap: rem(35px);
+  gap: clamp(rem(16px), 2vw, rem(35px));
+  line-height: 1;
+
+  @include media(tab-l) {
+    @include flex(space-between, center);
+  }
 
   &__link {
     --link-width: 100%;
@@ -17,6 +21,7 @@
     gap: rem(2px);
     font-size: rem(14px);
     font-weight: var(--typography-semibold);
+    white-space: nowrap;
 
     &:has(.icon) {
       --link-width: calc(100% - 18px);
@@ -34,16 +39,22 @@
       content: '';
     }
 
-    .icon {
-      @include size(rem(16px));
+    &--active {
+      color: var(--color-neon-azure);
+
+      &::before {
+        width: var(--link-width);
+      }
+
+      .icon {
+        transform: rotateZ(180deg);
+      }
     }
 
-    @include hover {
-      &:hover {
-        &::before {
-          width: var(--link-width);
-        }
-      }
+    .icon {
+      @include size(rem(16px));
+
+      flex-shrink: 0;
     }
   }
 }

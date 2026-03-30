@@ -5,9 +5,7 @@ block title
 
 block content
   main.main
-    +banner({
-      image: 'https://palai.media/wp-content/uploads/2022/07/1920x540_desktop-1.png'
-    }).banner--wide
+    +banner.banner--wide
 
     section.section
       .container-fluid
@@ -18,9 +16,7 @@ block content
                 .col-12
                   +post(POSTS[0]).post--lg
                 .col-12
-                  +banner({
-                    image: 'https://palai.media/wp-content/uploads/2022/07/1920x540_desktop-1.png'
-                  })
+                  +banner
             .col-12.col-tab-l-6
               .grid
                 .col-12.col-tab-l-6
@@ -49,9 +45,7 @@ block content
     section.section
       .container-fluid
         .container
-          +banner({
-            image: 'https://palai.media/wp-content/uploads/2022/07/1920h540-1.png'
-          })
+          +banner
 
     section.section.section--black
       .container-fluid
@@ -87,9 +81,7 @@ block content
                 +article(item)
               if index === 1
                 .col-12.col-mob-m-6.col-desk-s-4
-                  +banner({
-                    image: 'https://palai.media/wp-content/uploads/2022/07/768h540-1.png'
-                  })
+                  +banner
 
     section.section
       .container-fluid
@@ -126,10 +118,7 @@ block content
     section.section
       .container-fluid
         .container
-          +banner({
-            image: 'https://palai.media/wp-content/uploads/2022/07/1920h540-1.png'
-          })
-
+          +banner
     section.section.section--overflow
       .container-fluid
         .container

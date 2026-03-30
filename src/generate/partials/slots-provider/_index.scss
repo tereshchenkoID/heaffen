@@ -61,11 +61,26 @@
     align-items: stretch;
   }
 
-  .tag {
-    width: 100%;
+  &__icon {
+    @include size(rem(24px));
   }
 
   .icon {
-    @include size(rem(24px));
+    @include size(100%);
+  }
+
+  &--alt {
+
+    .slots-provider {
+
+      &__header {
+        margin-bottom: rem(14px);
+      }
+
+      &__item {
+        padding: rem(10px);
+        gap: rem(13px);
+      }
+    }
   }
 }

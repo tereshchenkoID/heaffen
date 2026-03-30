@@ -3,44 +3,20 @@ mixin nav
         .container-fluid
             .container
                 .grid.grid--align-center
-                    .col-12.col-tab-l-1.col-desk-s-2
+                    .col-2.col-tab-l-1.col-desk-s-2
                         +logo
-                    .col-12.col-tab-l-9.col-desk-s-8
+                    .col-1.col-tab-l-7.col-desk-s-7
                         +menu
-                    .col-12.col-tab-l-2.col-desk-s-2
+                    .col-9.col-tab-l-4.col-desk-s-3
                         .nav__options
-                            +language.js-language
+                            +language.nav__language.js-language
                             a(href="./" aria-label="Trusted BIN'S for Ads").button.button--blue.button--md.nav__button
                                 | Trusted BIN'S for Ads
-                            +button(null, null, 'search').button--white.button--md.button--square.nav__button.js-nav-search
+                            +button(null, null, 'search').button--white.button--square.nav__option.js-nav-search
+                            button(type="button" aria-label="Toggle menu").button.button--white.button--square.nav__toggle.js-nav-toggle
+                                span
+                                span
+                                span
 
-        +submenu-mob
-
-        //.submenu-desk.js-submenu-desk
-        //    .container-fluid.submenu-desk__top
-        //        .container
-        //            .grid
-        //                .col-12.col-tab-l-7
-        //                    each item in MENU
-        //                        if item.submenu
-        //                            .submenu-desk__wrapper(data-category=item.slug).js-submenu-desk-wrapper
-        //                                .grid
-        //                                    each columns in item.submenu
-        //                                        .col-12.col-tab-l-4
-        //                                            each link in columns
-        //                                                a(href="./" aria-label=link).submenu-desk__link= link
-        //                .col-12.col-tab-l-5
-        //                    .submenu-desk__video
-        //                        +video(VIDEOS[0])
-        //                        p.text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam asperiores consectetur corporis, debitis delectus eveniet hic magni minima molestiae optio quasi repellat, sequi unde? Aperiam beatae, ipsum. Laudantium, praesentium sequi.
-        //    .container-fluid.submenu-desk__bottom
-        //        .container
-        //            .grid.grid--align-center
-        //                .col-12.col-tab-l-3
-        //                    a(href="./" aria-label="About the Heaffen").link About the Heaffen
-        //                .col-12.col-tab-l-3
-        //                    a(href="./" aria-label="Advertising on the Website").link Advertising on the Website
-        //                .col-12.col-tab-l-3
-        //                    a(href="./" aria-label="Contact Us").link Contact Us
-        //                .col-12.col-tab-l-3
-        //                    +social
+        +submenu-mob.js-submenu-mob
+        +submenu-desk.js-submenu-desk

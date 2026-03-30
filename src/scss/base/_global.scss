@@ -342,19 +342,18 @@ blockquote {
   }
 }
 
+.submenu-mob,
 .submenu-desk {
+  @include scroll-y;
+
   display: none;
   position: absolute;
   inset-block-start: 100%;
   inset-inline: 0;
+  max-height: calc(100dvh - var(--nav-height));
   background-color: var(--color-polar-white);
 
-  &__top {
-    padding-block: rem(16px) rem(32px);
-  }
-
   &__bottom {
-    padding-block: rem(8px);
     background-color: #E7E8F4;
 
     .link {
@@ -369,13 +368,41 @@ blockquote {
     }
   }
 
+  &__field {
+    width: 100%;
+    padding: 0;
+    border: 0;
+    font-weight: var(--typography-semibold);
+    line-height: 1;
+    background-color: transparent;
+
+    &::placeholder {
+      color: var(--color-carbon-black);
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__search {
+    @include flex(null, center);
+    @include size(100%, rem(40px));
+
+    gap: rem(10px);
+    flex-shrink: 0;
+    font-weight: var(--typography-semibold);
+
+    .icon {
+      @include size(24px);
+
+      flex-shrink: 0;
+    }
+  }
+
   &__video {
     display: grid;
-    grid-template-columns: rem(230px) 1fr;
     gap: rem(15px);
-    align-items: flex-start;
-    padding: rem(10px);
-    border: rem(1px) solid var(--color-polar-white);
     border-radius: rem(5px);
     background-color: var(--color-white);
 
@@ -390,27 +417,5 @@ blockquote {
       font-weight: var(--typography-semibold);
       line-height: 1;
     }
-  }
-
-  &__wrapper {
-    display: none;
-
-    &--active {
-      display: block;
-    }
-  }
-
-  &__link {
-    display: block;
-    font-size: rem(18px);
-    font-weight: var(--typography-semibold);
-
-    &:not(:last-child) {
-      margin-bottom: rem(30px);
-    }
-  }
-
-  &--active {
-    display: block;
   }
 }

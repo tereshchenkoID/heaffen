@@ -1,9 +1,56 @@
 extends ../generate/layout/_layout
 
 block title
-  - var title = "Offers"
+  - var title = "Offers: CPA, RevShare & Hybrid Deals"
 
 block content
   main.main
-    h1= title
+    +banner.banner--wide
 
+    section.section
+      .container-fluid
+        .container
+          +breadcrumbs([
+            {
+              text: 'Main page',
+              url: './'
+            },
+            {
+              text: 'Offers list',
+              url: null
+            }
+          ])
+
+          .content.content--left
+            .content__header
+              h1.content__title= title
+              .text.content__text
+                p Explore a curated list of affiliate offers across iGaming, betting, crypto, and digital services. Compare payout models, GEOs, and traffic requirements to find the right offer for your strategy. Choose smarter. Scale faster.
+            .content__left
+              +filters.js-filters
+            .content__center
+              .grid
+                each item, index in OFFERS
+                  .col-12
+                    +offer(item)(class=`${item.active ? 'offer--active' : ''}`)
+                .col-12
+                  +more-button('Load more')
+                .col-12
+                  +banner
+            .content__right
+              +banner
+              +slots-provider.slots-provider--alt
+
+    section.section
+      .container-fluid
+        .container
+          .text
+            h3 Affiliate Program Ranking by “Heaffen” Media
+            br
+            p There are many CPA affiliate networks — several thousand — and their number continues to grow.
+            br
+            p Our team has prepared a list of top CPA networks, including affiliate programs from different verticals. The editorial team at “Heaffen” Media keeps a close eye on the market and works to update the affiliate program ranking as quickly as possible. So if you don’t find the one you need yet, feel free to contact us at admin@heaffen.media or on Telegram @heaffen_sales.
+            br
+            p Before starting to work with any CPA affiliate network from the list, we recommend reviewing information about the program, checking the company’s social media, and reading reviews. Remember, when choosing an affiliate network to run traffic, you are choosing a partner with whom you will earn money. So don’t neglect basic checks to ensure the company’s reliability and safety.
+            br
+            p Choose your top CPA network or affiliate program and start driving traffic with a cosmic ROI! 🚀

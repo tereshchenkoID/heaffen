@@ -1,0 +1,83 @@
+@use 'scss/config' as *;
+
+.submenu-desk {
+  &--active {
+    @include media(tab-l) {
+      display: block;
+    }
+  }
+
+  &__top {
+    padding-bottom: rem(32px);
+  }
+
+  &__bottom {
+    padding-block: rem(8px);
+  }
+
+  &__video {
+    grid-template-columns: rem(230px) 1fr;
+    align-items: flex-start;
+    margin-top: rem(16px);
+    padding: rem(10px);
+    border: rem(1px) solid var(--color-polar-white);
+  }
+
+  &__wrapper {
+    display: none;
+    padding-top: rem(16px);
+
+    &--active {
+      display: block;
+    }
+  }
+
+  &__step {
+    display: none;
+    height: 100%;
+
+    &--active {
+      @include flex(null, null, column);
+    }
+  }
+
+  &__link {
+    display: block;
+    font-size: rem(18px);
+    font-weight: var(--typography-semibold);
+
+    &:not(:last-child) {
+      margin-bottom: rem(30px);
+    }
+  }
+
+  &__search {
+    @include size(100%, rem(51px));
+
+    padding-inline: rem(4px);
+    border-bottom: rem(1px) solid var(--color-carbon-black);
+    font-size: rem(14px);
+  }
+
+  &__field {
+    font-size: rem(18px);
+  }
+
+  &__results {
+    margin-top: auto;
+
+    .text {
+      margin-bottom: rem(12px);
+      font-size: rem(14px);
+    }
+
+    .button {
+      min-width: rem(132px);
+    }
+  }
+
+  &__success,
+  &__empty {
+    display: none;
+  }
+}

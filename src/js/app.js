@@ -153,52 +153,52 @@ const initScrollTop = () => {
 
 // --- Language switch ---
 const initLanguageSwitcher = () => {
-  const langBlock = document.querySelector('.js-language')
-  if (!langBlock) return
+  const langBlocks = document.querySelectorAll('.js-language');
 
-  const toggle = langBlock.querySelector('.js-language-toggle')
-  const buttons = langBlock.querySelectorAll('.js-language-button')
+  if (langBlocks.length === 0) return;
 
-  const updateList = () => {
-    const currentLang = toggle.textContent.trim()
+  langBlocks.forEach((langBlock) => {
+    const toggle = langBlock.querySelector('.js-language-toggle');
+    const buttons = langBlock.querySelectorAll('.js-language-button');
 
-    buttons.forEach((btn) => {
-      if (btn.textContent.trim() === currentLang) {
-        btn.style.display = 'none'
-      } else {
-        btn.style.display = ''
+    if (!toggle) return;
+
+    const updateList = () => {
+      const currentLang = toggle.textContent.trim();
+      buttons.forEach((btn) => {
+        btn.style.display = btn.textContent.trim() === currentLang ? 'none' : '';
+      });
+    };
+
+    langBlock.addEventListener('click', (e) => {
+      const btn = e.target.closest('.js-language-button');
+      const isToggle = e.target.closest('.js-language-toggle');
+
+      if (btn) {
+        e.preventDefault();
+        toggle.textContent = btn.textContent;
+        updateList();
+        langBlock.classList.remove('language--active');
+        return;
       }
-    })
-  }
 
-  const handleClick = (e) => {
-    const btn = e.target.closest('.js-language-button')
-    const isToggle = e.target.closest('.js-language-toggle')
+      if (isToggle) {
+        e.stopPropagation();
 
-    if (btn) {
-      e.preventDefault()
-      toggle.textContent = btn.textContent
+        langBlocks.forEach((el) => {
+          if (el !== langBlock) el.classList.remove('language--active');
+        });
+        langBlock.classList.toggle('language--active');
+      }
+    });
 
-      updateList()
-
-      langBlock.classList.remove('language--active')
-      return
-    }
-
-    if (isToggle) {
-      e.stopPropagation()
-      langBlock.classList.toggle('language--active')
-    }
-  }
-
-  updateList()
-
-  langBlock.addEventListener('click', handleClick)
+    updateList();
+  });
 
   document.addEventListener('click', () => {
-    langBlock.classList.remove('language--active')
-  })
-}
+    langBlocks.forEach((block) => block.classList.remove('language--active'));
+  });
+};
 
 // --- Tab switch ---
 const initTabSwitcher = () => {
@@ -272,51 +272,239 @@ const initContentContext = () => {
   });
 }
 
-const initSubmenu = () => {
-  const menuLinks = document.querySelectorAll('.js-menu-link');
-  const submenuDesk = document.querySelector('.js-submenu-desk');
-  const wrappers = document.querySelectorAll('.js-submenu-wrapper');
+const initDesktopSubmenu = () => {
+  const submenu = document.querySelector('.js-submenu-desk');
+  if (!submenu) return;
 
-  if (!submenuDesk) return;
+  const steps = submenu.querySelectorAll('.js-submenu-desk-step');
+  const wrappers = submenu.querySelectorAll('.js-submenu-desk-wrapper');
+  const navLinks = document.querySelectorAll('.js-menu-link');
+  const navSearch = document.querySelector('.js-nav-search');
+  const searchForm = submenu.querySelector('.js-submenu-desk-search');
+  const resultsContainer = submenu.querySelector('.js-submenu-desk-results');
+  const searchInput = searchForm?.querySelector('input');
 
-  const closeAll = () => {
-    submenuDesk.classList.remove('submenu-desk--active');
-    wrappers.forEach((w) => w.classList.remove('submenu-desk__wrapper--active'));
-    menuLinks.forEach((l) => l.classList.remove('menu__link--active'));
+  const stepSearch = Array.from(steps).find((s) => s.dataset.step === '2');
+
+  const toggleSearchIcon = (isOpen) => {
+    const useElement = navSearch?.querySelector('use');
+    if (!useElement) return;
+    const icon = isOpen ? 'img/sprite.svg#close' : 'img/sprite.svg#search';
+    useElement.setAttribute('xlink:href', icon);
   };
 
-  menuLinks.forEach((link) => {
+  const switchStep = (stepNumber) => {
+    steps.forEach((step) => {
+      const isTarget = parseInt(step.dataset.step, 10) === stepNumber;
+      step.classList.toggle('submenu-desk__step--active', isTarget);
+
+      if (isTarget && stepNumber === 2) {
+        setTimeout(() => searchInput?.focus(), 100);
+      }
+    });
+  };
+
+  const openMenu = (step = 1) => {
+    submenu.classList.add('submenu-desk--active');
+    switchStep(step);
+  };
+
+  const closeMenu = () => {
+    submenu.classList.remove('submenu-desk--active');
+    navLinks.forEach((l) => l.classList.remove('menu__link--active'));
+    toggleSearchIcon(false);
+  };
+
+  const showCategory = (slug) => {
+    openMenu(1);
+    wrappers.forEach((wrapper) => {
+      wrapper.classList.toggle('submenu-desk__wrapper--active', wrapper.dataset.category === slug);
+    });
+  };
+
+  navSearch?.addEventListener('click', (e) => {
+    e.preventDefault();
+    const isSearchActive = submenu.classList.contains('submenu-desk--active')
+      && stepSearch?.classList.contains('submenu-desk__step--active');
+
+    if (isSearchActive) {
+      closeMenu();
+    } else {
+      navLinks.forEach((l) => l.classList.remove('menu__link--active'));
+      toggleSearchIcon(true);
+      openMenu(2);
+    }
+  });
+
+  navLinks?.forEach((link) => {
     link.addEventListener('click', (e) => {
       const slug = link.dataset.value;
-      const targetWrapper = document.querySelector(`.js-submenu-desk-wrapper[data-category="${slug}"]`);
+      const hasContent = [...wrappers].some((w) => w.dataset.category === slug);
 
-      if (targetWrapper) {
-        e.preventDefault();
+      if (!hasContent) return;
+      e.preventDefault();
 
-        if (targetWrapper.classList.contains('submenu-desk__wrapper--active')) {
-          closeAll();
-          return;
-        }
-
-        closeAll();
-        submenuDesk.classList.add('submenu-desk--active');
-        targetWrapper.classList.add('submenu-desk__wrapper--active');
+      if (link.classList.contains('menu__link--active')) {
+        closeMenu();
+      } else {
+        navLinks.forEach((l) => l.classList.remove('menu__link--active'));
         link.classList.add('menu__link--active');
+        toggleSearchIcon(false);
+        showCategory(slug);
       }
     });
   });
 
   document.addEventListener('click', (e) => {
-    const isClickInsideMenu = e.target.closest('.js-menu-link');
-    const isClickInsideSubmenu = e.target.closest('.js-submenu-desk');
-
-    if (!isClickInsideMenu && !isClickInsideSubmenu) {
-      closeAll();
-    }
+    if (!submenu.classList.contains('submenu-desk--active')) return;
+    const isTrigger = e.target.closest('.js-menu-link') || e.target.closest('.js-nav-search');
+    if (!submenu.contains(e.target) && !isTrigger) closeMenu();
   });
 
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') closeAll();
+  searchForm?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const query = searchInput.value.trim();
+    if (query.length < 3) return;
+
+    const container = resultsContainer;
+    const successBlock = container.querySelector('.js-results-success');
+    const emptyBlock = container.querySelector('.js-results-empty');
+    const countLabel = container.querySelector('.js-results-count');
+    const queryLabel = container.querySelector('.js-results-query');
+    const searchLink = container.querySelector('.js-results-link');
+
+    container.style.display = 'block';
+
+    try {
+      const response = await fetch(`http://srv1505475.hstgr.cloud/api/search/quick-count?q=${encodeURIComponent(query)}`, {
+        headers: { Accept: 'application/json' },
+      });
+
+      if (!response.ok) throw new Error();
+      const data = await response.json();
+
+      if (data.total > 0) {
+        countLabel.textContent = data.total;
+        queryLabel.textContent = query;
+        searchLink.href = `./search.html?q=${encodeURIComponent(query)}`;
+
+        successBlock.style.display = 'block';
+        emptyBlock.style.display = 'none';
+      } else {
+        successBlock.style.display = 'none';
+        emptyBlock.style.display = 'block';
+      }
+    } catch (err) { /* empty */ }
+  });
+};
+
+const initMobileSubmenu = () => {
+  const submenu = document.querySelector('.js-submenu-mob');
+  if (!submenu) return;
+
+  const steps = submenu.querySelectorAll('.js-submenu-mob-step');
+  const navToggle = document.querySelector('.js-nav-toggle');
+  const navSearch = document.querySelector('.js-nav-search');
+
+  const toggleBtn = submenu.querySelector('.js-submenu-mob-toggle');
+  const hideBtn = submenu.querySelector('.js-submenu-mob-hide');
+
+  const searchForm = submenu.querySelector('.js-submenu-mob-search');
+  const searchInput = searchForm?.querySelector('input');
+
+  const resDefault = submenu.querySelector('.js-mob-results-default');
+  const resSuccess = submenu.querySelector('.js-mob-results-success');
+  const resEmpty = submenu.querySelector('.js-mob-results-empty');
+
+  const countLabel = submenu.querySelector('.js-mob-count');
+  const queryLabel = submenu.querySelector('.js-mob-query');
+  const searchLink = submenu.querySelector('.js-mob-link');
+
+  const switchStep = (stepNumber) => {
+    steps.forEach((step) => {
+      const isTarget = parseInt(step.dataset.step, 10) === stepNumber;
+      step.style.display = isTarget ? 'block' : 'none';
+      if (isTarget && stepNumber === 2) setTimeout(() => searchInput?.focus(), 150);
+    });
+  };
+
+  const openMenu = () => {
+    submenu.classList.add('submenu-mob--active');
+    navToggle.classList.add('nav__toggle--active');
+  };
+
+  const closeMenu = () => {
+    submenu.classList.remove('submenu-mob--active');
+    navToggle.classList.remove('nav__toggle--active');
+  };
+
+  navToggle?.addEventListener('click', (e) => {
+    e.preventDefault();
+    // eslint-disable-next-line no-unused-expressions
+    submenu.classList.contains('submenu-mob--active') ? closeMenu() : (openMenu(), switchStep(1));
+  });
+
+  navSearch?.addEventListener('click', (e) => {
+    e.preventDefault();
+    openMenu();
+    switchStep(2);
+  });
+
+  toggleBtn?.addEventListener('click', (e) => {
+    e.preventDefault();
+    switchStep(2);
+  });
+
+  hideBtn?.addEventListener('click', (e) => {
+    e.preventDefault();
+    switchStep(1);
+  });
+
+  searchForm?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const query = searchInput.value.trim();
+    if (query.length < 3) return;
+
+    try {
+      const response = await fetch(`http://srv1505475.hstgr.cloud/api/search/quick-count?q=${encodeURIComponent(query)}`, {
+        headers: { Accept: 'application/json' },
+      });
+
+      if (!response.ok) throw new Error();
+      const data = await response.json();
+
+      resDefault.style.display = 'none';
+      resSuccess.style.display = 'none';
+      resEmpty.style.display = 'none';
+
+      if (data.total > 0) {
+        if (countLabel) countLabel.textContent = data.total;
+        if (queryLabel) queryLabel.textContent = query;
+        if (searchLink) searchLink.href = `./search.html?q=${encodeURIComponent(query)}`;
+
+        resSuccess.style.display = 'block';
+      } else {
+        resEmpty.style.display = 'block';
+      }
+    } catch (err) { /* empty */ }
+  });
+
+  submenu.addEventListener('click', (e) => {
+    const link = e.target.closest('.js-submenu-mob-link');
+    if (!link) return;
+
+    e.preventDefault();
+
+    const currentDropdown = link.closest('.js-submenu-mob-dropdown');
+    const allDropdowns = submenu.querySelectorAll('.js-submenu-mob-dropdown');
+
+    allDropdowns.forEach((dropdown) => {
+      if (dropdown === currentDropdown) {
+        dropdown.classList.toggle('submenu-mob__dropdown--active');
+      } else {
+        dropdown.classList.remove('submenu-mob__dropdown--active');
+      }
+    });
   });
 };
 
@@ -328,7 +516,8 @@ const initApp = () => {
   initFilters()
   initBackNavigation()
   initContentContext()
-  initSubmenu()
+  initDesktopSubmenu()
+  initMobileSubmenu()
 }
 
 document.addEventListener('DOMContentLoaded', initApp)

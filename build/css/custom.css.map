@@ -1,1 +1,0 @@
-{"version":3,"sources":["webpack://./src/scss/custom.scss"],"names":[],"mappings":"AAIE;EACE,uBAAA;AAHJ;AAME;EACE,mBAAA;AAJJ;AAOE;EACE,qBAAA;AALJ","sourcesContent":["@use 'scss/config' as *;\n\n.mb {\n\n  &-10 {\n    margin-bottom: rem(10px);\n  }\n\n  &-16 {\n    margin-bottom: rem(16px);\n  }\n\n  &-24 {\n    margin-bottom: rem(24px);\n  }\n}\n"],"sourceRoot":""}
