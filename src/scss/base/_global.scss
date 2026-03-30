@@ -224,6 +224,10 @@ blockquote {
     }
   }
 
+  &__label {
+    color: var(--color-neon-azure);
+  }
+
   &__meta {
     padding: rem(20px);
     border-radius: rem(10px);
@@ -265,6 +269,17 @@ blockquote {
 
     @include media(tab-l) {
       font-size: rem(20px);
+    }
+  }
+
+  &__section {
+
+    &:not(:last-child) {
+      margin-bottom: rem(80px);
+
+      @include media(tab-l) {
+        margin-bottom: rem(60px);
+      }
     }
   }
 
