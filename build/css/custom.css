@@ -7,4 +7,92 @@
 .mb-24 {
   margin-bottom: 1.5rem;
 }
+
+.d-none {
+  display: none !important;
+}
+
+@media (min-width: 360px) {
+  .d-mob-s-none {
+    display: none !important;
+  }
+}
+
+@media (min-width: 360px) {
+  .d-mob-s-block {
+    display: block !important;
+  }
+}
+
+@media (min-width: 560px) {
+  .d-mob-m-none {
+    display: none !important;
+  }
+}
+
+@media (min-width: 560px) {
+  .d-mob-m-block {
+    display: block !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .d-tab-s-none {
+    display: none !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .d-tab-s-block {
+    display: block !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .d-tab-m-none {
+    display: none !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .d-tab-m-block {
+    display: block !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .d-tab-l-none {
+    display: none !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .d-tab-l-block {
+    display: block !important;
+  }
+}
+
+@media (min-width: 1280px) {
+  .d-desk-s-none {
+    display: none !important;
+  }
+}
+
+@media (min-width: 1280px) {
+  .d-desk-s-block {
+    display: block !important;
+  }
+}
+
+@media (min-width: 1440px) {
+  .d-desk-m-none {
+    display: none !important;
+  }
+}
+
+@media (min-width: 1440px) {
+  .d-desk-m-block {
+    display: block !important;
+  }
+}
 /*# sourceMappingURL=custom.css.map */

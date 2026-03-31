@@ -426,7 +426,8 @@
                 <div class="text content__text">
                   <p>Explore a curated list of affiliate offers across iGaming, betting, crypto, and digital services.
                     Compare payout models, GEOs, and traffic requirements to find the right offer for your strategy.
-                    Choose smarter. Scale faster.</p>
+                    Choose smarter. Scale faster.</p><a class="button button--primary button--md" href="#">Add
+                    offers</a>
                 </div>
               </div>
               <div class="content__left">
@@ -512,18 +513,34 @@
                 </div>
               </div>
               <div class="content__center">
-                <div class="grid">
+                <div class="grid grid--gap-16">
                   <div class="col-12">
-                    <article class="card offer offer--active">
-                      <div class="offer__meta"><a class="offer__picture" href="./offer.html" aria-label="Show more"><img
-                            class="offer__img"
+                    <div class="offer-search"><svg class="icon offer-search__icon">
+                        <use xlink:href="img/sprite.svg#search"></use>
+                      </svg><input class="offer-search__input" type="text" placeholder="Search offers"></div>
+                  </div>
+                  <div class="col-12 d-none d-desk-s-block">
+                    <div class="card offer-headline">
+                      <div class="offer-headline__cell"></div>
+                      <div class="offer-headline__cell">Offer</div>
+                      <div class="offer-headline__cell">Verticals</div>
+                      <div class="offer-headline__cell">Payout</div>
+                      <div class="offer-headline__cell">Payout type</div>
+                      <div class="offer-headline__cell">Geos</div>
+                      <div class="offer-headline__cell">Network</div>
+                      <div class="offer-headline__cell"></div>
+                    </div>
+                  </div>
+                  <div class="col-12"><a class="card offer offer--active" href="./offer.html">
+                      <div class="offer__meta">
+                        <div class="offer__picture"><img class="offer__img"
                             src="https://biovit.ua/image/cache/catalog/california-gold-nutrition/cgn02332/cgn02332-600x600.webp"
-                            decoding="async" alt="Image description"></a>
+                            decoding="async" alt="Image description"></div>
                         <div class="offer__cell">Mykonosil Meridian - native bio cream against fungus 139 rub(CPL)</div>
                       </div>
                       <div class="offer__options">
-                        <div class="offer__cell">Nutra</div>
-                        <div class="offer__cell">UAH 239,00</div>
+                        <div class="offer__cell offer__cell--verticals">Nutra</div>
+                        <div class="offer__cell offer__cell--payout">UAH 239,00</div>
                         <div class="offer__cell">CPA</div>
                         <div class="offer__cell">
                           <div class="offer__geos">
@@ -535,24 +552,22 @@
                                 alt="Image description"></div>
                           </div>
                         </div>
-                        <div class="offer__cell">Traffic Light</div><a class="offer__link" href="./" rel="nofollow"
-                          title="Title" aria-label="Aria label"><svg class="icon">
+                        <div class="offer__cell">Traffic Light</div>
+                        <div class="offer__link"><svg class="icon">
                             <use xlink:href="img/sprite.svg#arrow-right-circle"></use>
-                          </svg></a>
+                          </svg></div>
                       </div>
-                    </article>
-                  </div>
-                  <div class="col-12">
-                    <article class="card offer">
-                      <div class="offer__meta"><a class="offer__picture" href="./offer.html" aria-label="Show more"><img
-                            class="offer__img"
+                    </a></div>
+                  <div class="col-12"><a class="card offer" href="./offer.html">
+                      <div class="offer__meta">
+                        <div class="offer__picture"><img class="offer__img"
                             src="https://biovit.ua/image/cache/catalog/now-Foods/now01648/now01648-170x170.webp"
-                            decoding="async" alt="Image description"></a>
+                            decoding="async" alt="Image description"></div>
                         <div class="offer__cell">Libidovital</div>
                       </div>
                       <div class="offer__options">
-                        <div class="offer__cell">Prostatitis</div>
-                        <div class="offer__cell">USD 17.00</div>
+                        <div class="offer__cell offer__cell--verticals">Prostatitis</div>
+                        <div class="offer__cell offer__cell--payout">USD 17.00</div>
                         <div class="offer__cell">CPA</div>
                         <div class="offer__cell">
                           <div class="offer__geos">
@@ -564,27 +579,70 @@
                                 alt="Image description"></div>
                           </div>
                         </div>
-                        <div class="offer__cell">dr.cash</div><a class="offer__link" href="./" rel="nofollow"
-                          title="Title" aria-label="Aria label"><svg class="icon">
+                        <div class="offer__cell">dr.cash</div>
+                        <div class="offer__link"><svg class="icon">
                             <use xlink:href="img/sprite.svg#arrow-right-circle"></use>
-                          </svg></a>
+                          </svg></div>
                       </div>
-                    </article>
-                  </div>
+                    </a></div>
+                  <div class="col-12"><a class="card offer offer--active" href="./offer.html">
+                      <div class="offer__meta">
+                        <div class="offer__picture"><img class="offer__img"
+                            src="https://biovit.ua/image/cache/catalog/california-gold-nutrition/cgn02332/cgn02332-600x600.webp"
+                            decoding="async" alt="Image description"></div>
+                        <div class="offer__cell">Mykonosil Meridian - native bio cream against fungus 139 rub(CPL)</div>
+                      </div>
+                      <div class="offer__options">
+                        <div class="offer__cell offer__cell--verticals">Nutra</div>
+                        <div class="offer__cell offer__cell--payout">UAH 239,00</div>
+                        <div class="offer__cell">CPA</div>
+                        <div class="offer__cell">
+                          <div class="offer__geos">
+                            <div class="offer__geo"><img class="offer__img"
+                                src="https://hatscripts.github.io/circle-flags/flags/language/pl.svg" decoding="async"
+                                alt="Image description"></div>
+                            <div class="offer__geo"><img class="offer__img"
+                                src="https://hatscripts.github.io/circle-flags/flags/language/uk.svg" decoding="async"
+                                alt="Image description"></div>
+                          </div>
+                        </div>
+                        <div class="offer__cell">Traffic Light</div>
+                        <div class="offer__link"><svg class="icon">
+                            <use xlink:href="img/sprite.svg#arrow-right-circle"></use>
+                          </svg></div>
+                      </div>
+                    </a></div>
+                  <div class="col-12"><a class="card offer" href="./offer.html">
+                      <div class="offer__meta">
+                        <div class="offer__picture"><img class="offer__img"
+                            src="https://biovit.ua/image/cache/catalog/now-Foods/now01648/now01648-170x170.webp"
+                            decoding="async" alt="Image description"></div>
+                        <div class="offer__cell">Libidovital</div>
+                      </div>
+                      <div class="offer__options">
+                        <div class="offer__cell offer__cell--verticals">Prostatitis</div>
+                        <div class="offer__cell offer__cell--payout">USD 17.00</div>
+                        <div class="offer__cell">CPA</div>
+                        <div class="offer__cell">
+                          <div class="offer__geos">
+                            <div class="offer__geo"><img class="offer__img"
+                                src="https://hatscripts.github.io/circle-flags/flags/language/pl.svg" decoding="async"
+                                alt="Image description"></div>
+                            <div class="offer__geo"><img class="offer__img"
+                                src="https://hatscripts.github.io/circle-flags/flags/language/uk.svg" decoding="async"
+                                alt="Image description"></div>
+                          </div>
+                        </div>
+                        <div class="offer__cell">dr.cash</div>
+                        <div class="offer__link"><svg class="icon">
+                            <use xlink:href="img/sprite.svg#arrow-right-circle"></use>
+                          </svg></div>
+                      </div>
+                    </a></div>
                   <div class="col-12">
                     <div class="more-button"><button class="button button--outline more-button__item" type="button">Load
                         more</button></div>
                   </div>
-                  <div class="col-12"><a class="banner" href="./" aria-label="Batter label" title="Banner title">
-                      <picture>
-                        <source media="(min-width: 1200px)"
-                          srcset="https://palai.media/wp-content/uploads/2022/07/1920h540-1.png">
-                        <source media="(min-width: 768px)"
-                          srcset="https://palai.media/wp-content/uploads/2022/07/768h540-1.png"><img
-                          class="banner__image" src="https://palai.media/wp-content/uploads/2022/07/360h430-1.png"
-                          fetchpriority="high" loading="eager" alt="Join now">
-                      </picture>
-                    </a></div>
                 </div>
               </div>
               <div class="content__right"><a class="banner" href="./" aria-label="Batter label" title="Banner title">

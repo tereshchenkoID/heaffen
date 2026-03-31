@@ -14,3 +14,21 @@
     margin-bottom: rem(24px);
   }
 }
+
+.d-none {
+  display: none !important;
+}
+
+@each $name, $value in $breakpoints {
+  .d-#{$name}-none {
+    @include media($name) {
+      display: none !important;
+    }
+  }
+
+  .d-#{$name}-block {
+    @include media($name) {
+      display: block !important;
+    }
+  }
+}

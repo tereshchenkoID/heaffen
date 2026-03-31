@@ -36,6 +36,19 @@ button {
   @include reset-button;
 }
 
+input {
+  width: 100%;
+  padding: 0;
+  border: 0;
+  font-weight: var(--typography-semibold);
+  line-height: 1;
+  background-color: transparent;
+
+  &:focus {
+    outline: none;
+  }
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -178,7 +191,8 @@ blockquote {
 
   &__left,
   &__right {
-    display: grid;
+    @include flex(null, null, column);
+
     gap: var(--grid-gap);
   }
 
@@ -219,8 +233,22 @@ blockquote {
   }
 
   &__text {
-    @include media(tab-l) {
-      max-width: 50%;
+
+    &:has(a, button) {
+      display: grid;
+      gap: rem(13px);
+      align-items: flex-end;
+
+      @include media(tab-l) {
+        grid-template-columns: 50% rem(150px);
+        justify-content: space-between;
+      }
+    }
+
+    &:not(:has(.button)) {
+      @include media(tab-l) {
+        max-width: 50%;
+      }
     }
   }
 
@@ -384,19 +412,9 @@ blockquote {
   }
 
   &__field {
-    width: 100%;
-    padding: 0;
-    border: 0;
-    font-weight: var(--typography-semibold);
-    line-height: 1;
-    background-color: transparent;
 
     &::placeholder {
       color: var(--color-carbon-black);
-    }
-
-    &:focus {
-      outline: none;
     }
   }
 
@@ -431,6 +449,45 @@ blockquote {
       font-size: rem(16px);
       font-weight: var(--typography-semibold);
       line-height: 1;
+    }
+  }
+}
+
+.offer-headline {
+  display: grid;
+  grid-template-columns: rem(60px) rem(235px) repeat(5, 1fr) rem(24px);
+  padding: rem(6px) rem(15px);
+  font-size: rem(14px);
+  color: var(--color-neon-azure);
+
+  &__cell {
+    padding-inline: rem(15px);
+  }
+}
+
+.offer-search {
+  @include size(100%, rem(52px));
+
+  display: grid;
+  grid-template-columns: rem(24px) 1fr;
+  gap: rem(10px);
+  padding-inline: rem(15px);
+  align-items: center;
+  margin-bottom: rem(8px);
+  border-radius: rem(10px);
+  background-color: var(--color-white);
+
+  &__icon {
+    @include size(24px);
+
+    color: var(--color-neon-azure);
+  }
+
+  &__input {
+    font-size: rem(18px);
+
+    &::placeholder {
+      color: var(--color-dark-grey);
     }
   }
 }

@@ -14,11 +14,8 @@
     @include flex(center, center);
 
     @include hover {
-
       &:hover {
-
         .slots-provider {
-
           &__img {
             transform: scale(1.05);
           }
@@ -79,7 +76,7 @@
 
       &__item {
         padding: rem(10px);
-        gap: rem(13px);
+        gap: rem(10px);
       }
     }
   }

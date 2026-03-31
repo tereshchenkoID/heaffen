@@ -18,6 +18,10 @@
   grid-template-columns: repeat(12, 1fr);
   gap: var(--grid-gap);
 
+  &--gap-16 {
+    --grid-gap: 16px;
+  }
+
   &--align-start {
     align-items: start;
   }

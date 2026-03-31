@@ -1,7 +1,7 @@
 @use 'scss/config' as *;
 
 .tag {
-  padding: rem(3px) rem(16px);
+  padding: rem(3px) rem(12px);
   background-color: var(--color-category-grey);
   border-radius: rem(100px);
   color: var(--color-stellar-blue);
@@ -18,12 +18,7 @@
   }
 
   @include media(tab-l) {
-    padding: rem(4px) rem(20px);
+    padding: rem(4px) rem(16px);
     font-size: rem(14px);
-  }
-
-  &:active {
-    color: var(--color-white);
-    background-color: var(--color-neon-azure);
   }
 }

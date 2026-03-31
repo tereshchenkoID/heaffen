@@ -1,12 +1,12 @@
 mixin offer(data)
-    article.card.offer&attributes(attributes)
+    a(href="./offer.html").card.offer&attributes(attributes)
         .offer__meta
-            a(href="./offer.html" aria-label="Show more").offer__picture
+            .offer__picture
                 img(src=data.image decoding="async" alt="Image description").offer__img
             .offer__cell= data.offer
         .offer__options
-            .offer__cell= data.verticals
-            .offer__cell= data.payout
+            .offer__cell.offer__cell--verticals= data.verticals
+            .offer__cell.offer__cell--payout= data.payout
             .offer__cell= data.payout_type
             .offer__cell
                 .offer__geos
@@ -14,5 +14,5 @@ mixin offer(data)
                         .offer__geo
                             img(src=`https://hatscripts.github.io/circle-flags/flags/language/${item}.svg` decoding="async" alt="Image description").offer__img
             .offer__cell= data.network
-            a(href="./" rel="nofollow" title="Title" aria-label="Aria label").offer__link
+            .offer__link
                 +icon('arrow-right-circle')
