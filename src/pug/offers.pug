@@ -47,7 +47,7 @@ block content
                     .offer-headline__cell
                 each item, index in OFFERS
                   .col-12
-                    +offer(item)(class=`${item.active ? 'offer--active' : ''}`)
+                    +offer(item)
                 .col-12
                   +more-button('Load more')
             .content__right

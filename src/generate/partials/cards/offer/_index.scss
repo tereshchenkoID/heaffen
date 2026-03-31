@@ -50,10 +50,10 @@
   }
 
   &__cell {
-    padding: rem(15px);
+    padding: rem(15px) rem(10px);
 
     @include media(desk-s) {
-      padding-block: 0;
+      padding: 0 rem(15px);
     }
 
     &--verticals {

@@ -1,0 +1,105 @@
+extends ../generate/layout/_layout
+
+block title
+  - var title = "Makeberry"
+
+block content
+  main.main
+    +banner.banner--wide
+
+    section.section
+      .container-fluid
+        .container
+          +breadcrumbs([
+            {
+              text: 'Main page',
+              url: './'
+            },
+            {
+              text: 'Offers list',
+              url: './offers.html'
+            },
+            {
+              text: 'Traffic Light',
+              url: './offers.html'
+            },
+            {
+              text: 'Mykonosil Meridian - native bio cream against fungus 139 rub(CPL)',
+              url: null
+            }
+          ])
+
+          // If need change width of column: --right-column: 310px
+          .content.content--right(style="--right-column: 310px")
+            .content__center
+              .card.offer-content
+                .offer-content__header
+                  .offer-content__left
+                    .offer-content__picture
+                      img(src="https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/images/cgn/cgn02272/v/13.jpg" alt="Description").offer-content__img
+                      span.offer-content__status Active
+                  .offer-content__right
+                    h2.offer-content__title Mykonosil Meridian - native bio cream against fungus 139 rub(CPL)
+
+                    .offer-content__list
+                      .offer-content__meta
+                        strong Verticals:
+                        span  Nutra
+                      .offer-content__meta
+                        strong Payout:
+                        span  UAH 239,00
+                      .offer-content__meta
+                        strong Payout type:
+                        span  CPA
+                      .offer-content__meta
+                        strong Geos:
+                        span  Ukraine
+
+                    strong.offer-content__provider
+                      | Offer provided by:
+                      a(href="./offer.html" aria-label="Traffic Light")  Traffic Light
+
+                    +button('Run Offer').button--primary.button--md.button--wide.offer-content__button
+                .offer-content__footer
+                  .offer-content__description.js-offer-content-description
+                    strong Mykonosil Meridian
+                    | is an affiliate network with more than 500 gambling and betting offers. A direct advertiser for WinSpirit Casino and RocketPlay Casino. In-house media buying and strong expertise across Tier-1 and Tier-2 markets, as well as a wide selection of offers in Tier-3 countries. A powerful analytics system allows campaign optimization and revenue maximization. is an affiliate network with more than 500 gambling and betting offers. A direct advertiser for WinSpirit Casino and RocketPlay Casino. In-house media buying and strong expertise across Tier-1 and Tier-2 markets, as well as a wide selection of offers in Tier-3 countries. A powerful analytics system allows campaign optimization and revenue maximization.
+                  button(type="button" title="More").offer-content__more.js-offer-content-more
+                    | More
+                    +icon('arrow-down-circle')
+
+              .grid.grid--gap-16
+                .col-12.d-none.d-desk-s-block
+                  .card.offer-headline
+                    .offer-headline__cell
+                    .offer-headline__cell Offer
+                    .offer-headline__cell Verticals
+                    .offer-headline__cell Payout
+                    .offer-headline__cell Payout type
+                    .offer-headline__cell Geos
+                    .offer-headline__cell Network
+                    .offer-headline__cell
+                each item, index in OFFERS
+                  .col-12
+                    +offer(item)
+                .col-12
+                  +more-button('Load more')
+            .content__left
+              +banner
+              +slots-provider.slots-provider--alt
+
+    section.section.section--overflow
+      .container-fluid
+        .container
+          .title.title--italic
+            h2.title__text News
+            +more-link('./news.html', 'More news').title__link
+          .swiper.js-slider(data-slider-type="default")
+            .swiper-wrapper
+              .swiper-slide
+                +related-news('Affiliate')
+              .swiper-slide
+                +related-news('IGaming')
+              .swiper-slide
+                +related-news('AI')
+            .swiper-pagination

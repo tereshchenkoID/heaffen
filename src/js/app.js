@@ -508,6 +508,20 @@ const initMobileSubmenu = () => {
   });
 };
 
+const initOfferExpand = () => {
+  const moreBtn = document.querySelector('.js-offer-content-more');
+  const description = document.querySelector('.js-offer-content-description');
+
+  if (!moreBtn || !description) return;
+
+  moreBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    moreBtn.classList.toggle('offer-content__more--active');
+    description.classList.toggle('offer-content__description--active');
+  });
+};
+
 const initApp = () => {
   initSliders()
   initScrollTop()
@@ -518,6 +532,7 @@ const initApp = () => {
   initContentContext()
   initDesktopSubmenu()
   initMobileSubmenu()
+  initOfferExpand()
 }
 
 document.addEventListener('DOMContentLoaded', initApp)
