@@ -1,0 +1,24 @@
+mixin job(data)
+    article.card.job&attributes(attributes)
+        .job__header
+            +tags(data.tags).job__tags
+            .job__meta
+                a(href="./job.html" aria-label=data.company).job__company= data.company
+                p.job__date.d-tab-l-none= data.date
+        .job__body
+            a(href="./job.html" aria-label="Show more" title="Show more").job__link
+                h2.job__title= data.title
+        .job__footer
+            .job__list
+                .job__item
+                    +icon('dollar').job__icon
+                    .job__description= data.salary
+                .job__item
+                    +icon('location').job__icon
+                    .job__description
+                        each item, index in data.location
+                            = item
+                            if index < data.location.length - 1
+                                hr.job__hr
+
+            p.job__date.d-none.d-tab-l-block= data.date

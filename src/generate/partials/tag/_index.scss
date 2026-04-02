@@ -21,4 +21,8 @@
     padding: rem(4px) rem(16px);
     font-size: rem(14px);
   }
+
+  &--disabled {
+    pointer-events: none;
+  }
 }
