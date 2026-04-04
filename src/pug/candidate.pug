@@ -1,0 +1,131 @@
+extends ../generate/layout/_layout
+
+block title
+  - var title = "SMM Specialist"
+
+block content
+  main.main
+    +banner.banner--wide
+
+    section.section
+      .container-fluid
+        .container
+          +breadcrumbs([
+            {
+              text: 'Main page',
+              url: './'
+            },
+            {
+              text: 'Candidate Profiles',
+              url: './candidates.html'
+            },
+            {
+              text: 'SMM Specialist',
+              url: null
+            },
+          ])
+
+          .content.content--right
+            .content__center
+              .post-single
+                .post-single__wrapper
+                  h1.post-single__title= title
+
+                  .post-single__list
+                    .post-single__item
+                      strong Experience:
+                      span.color-neon-azure 4+ years
+                    .post-single__item
+                      strong Languages:
+                      span EN, UA, RU
+                    .post-single__item
+                      strong Location:
+                      span Warsaw
+                    .post-single__item
+                      strong Experience Level:
+                      span Middle
+                    .post-single__item
+                      strong Published:
+                      span 24.02.2026
+                    .post-single__item
+                      strong Salary:
+                      strong.color-neon-azure $2,000–$2,500 + performance bonuses
+
+                  .info-section
+                    h2 About Me:
+                    p I have been working in marketing for over 4 years, specializing in performance-driven strategies across multiple industries. My experience covers iGaming, crypto, e-commerce, and other competitive verticals where data, speed, and optimization directly impact revenue.
+                    br
+                    p Throughout my career, I have managed advertising budgets, built funnels from scratch, tested creatives, optimized conversion rates, and scaled campaigns based on real performance metrics. I focus on measurable growth — improving ROI, reducing CPA, increasing LTV, and identifying scalable traffic opportunities.
+                    br
+                    p I have worked with different traffic sources and business models, adapting quickly to new markets and regulations. My background includes both highly competitive digital niches such as gambling and crypto, as well as more traditional industries like office furniture and regulated cannabis markets (including legal operations in Thailand). This diverse experience allows me to quickly understand new products, audiences, and positioning strategies.
+                    br
+                    h2 Key Hard Skills
+                    ul
+                      li Media buying on Meta & Google Ads
+                      li Performance marketing strategy
+                      li Funnel building & optimization
+                      li A/B testing & CRO
+                      li CPA / ROI optimization
+                      li Budget scaling up to $200K/month
+                      li Analytics & attribution modeling
+                    br
+                    h2 Tools & Platforms
+                    ul
+                      li Meta Ads Manager
+                      li Google Ads
+                      li TikTok Ads
+                      li Keitaro / Binom
+                      li Google Analytics 4
+                      li Voluum
+                      li Looker Studio
+                      li Hotjar
+                    br
+                    h2 Soft Skills
+                    ul
+                      li Strategic thinking
+                      li Team leadership
+                      li Analytical mindset
+                      li Strong communication
+                      li Time management
+                      li Problem-solving
+                      li Cross-team collaboratio
+                    br
+                    h2 Main Achievements
+                    ul
+                      li Scaled Meta campaigns from $20K to $180K/month with stable ROI 145%
+                      li Reduced CPA by 37% through funnel optimization
+                      li Generated $1.2M+ revenue in iGaming vertical within 12 months
+                      li Increased conversion rate by 22% through landing page testing
+                      li Built and managed a team of 3 junior media buyers
+                    br
+                    p You can download my CV to review detailed information about my professional experience, responsibilities, and measurable results across different projects and industries.
+                    br
+                    p For a deeper understanding of my work, please feel free to explore the portfolio and case studies linked below. They include campaign breakdowns, performance metrics, growth strategies, and real examples of optimization and scaling.
+
+                .post-single__footer
+                  .post-single__social
+                    p Candidate social media:
+                    +social.social--polar-white
+                  +button('Download CV').button--primary.button--md.post-single__button
+            .content__right
+              +related-news('Related Candidates').related-news--active
+              +banner
+
+    section.section
+      .container-fluid
+        .container
+          +banner
+
+    section.section.section--overflow
+      .container-fluid
+        .container
+          .title.title--italic
+            h2.title__text Upcoming Events
+            +more-link('./events.html', 'View all').title__link
+
+          .swiper.js-slider(data-slider-type="default")
+            .swiper-wrapper
+              each item in EVENTS
+                .swiper-slide
+                  +event(item)
+            .swiper-pagination

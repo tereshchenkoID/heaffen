@@ -35,6 +35,10 @@
       border-radius: 50%;
       background-color: var(--color-black);
       content: '';
+
+      @include media(tab-l) {
+        top: rem(10px);
+      }
     }
   }
 

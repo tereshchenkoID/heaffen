@@ -1,7 +1,7 @@
 extends ../generate/layout/_layout
 
 block title
-  - var title = "Offers: CPA, RevShare & Hybrid Deals"
+  - var title = "Candidate Profiles: Get Hired in Affiliate & Digital"
 
 block content
   main.main
@@ -16,7 +16,7 @@ block content
               url: './'
             },
             {
-              text: 'Offers list',
+              text: 'Candidate Profiles',
               url: null
             }
           ])
@@ -25,36 +25,29 @@ block content
             .content__header
               h1.content__title= title
               .text.content__text
-                p Explore a curated list of affiliate offers across iGaming, betting, crypto, and digital services. Compare payout models, GEOs, and traffic requirements to find the right offer for your strategy. Choose smarter. Scale faster.
-                a(href="#").button.button--primary.button--md Add offers
+                div
+                  p Looking for new opportunities in affiliate marketing, iGaming, crypto, or digital business?
+                  br
+                  p Submit your resume and get featured in our candidate database. Verified companies can review your profile and contact you directly.
+                  br
+                  p Ready to take the next step in your career?
+                a(href="#").button.button--primary.button--md Submit Resume
             .content__left
               +filters.js-filters
             .content__center
-              .grid.grid--gap-16
-                .col-12
-                  .offer-search
-                    +icon('search').offer-search__icon
-                    input(type="text" placeholder="Search offers").offer-search__input
-                .col-12.d-none.d-desk-s-block
-                  .card.offer-headline
-                    .offer-headline__cell
-                    .offer-headline__cell Offer
-                    .offer-headline__cell Verticals
-                    .offer-headline__cell Payout
-                    .offer-headline__cell Payout type
-                    .offer-headline__cell Geos
-                    .offer-headline__cell Network
-                    .offer-headline__cell
-                .col-12
-                  +related-offers('Related Offers')
-                each item, index in OFFERS
+              .grid
+                each item, index in CANDIDATES
                   .col-12
-                    +offer(item)
+                    +job(item)
                 .col-12
-                  +more-button('Load more')
+                  +more-button
             .content__right
               +banner
-              +slots-provider.slots-provider--alt
+
+    section.section
+      .container-fluid
+        .container
+          +banner
 
     section.section
       .container-fluid

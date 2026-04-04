@@ -5,6 +5,7 @@
   align-items: center;
   padding: rem(14px) rem(16px);
   border: 0;
+  position: relative;
   font-weight: var(--typography-semibold);
 
   @include media(desk-s) {
@@ -94,6 +95,16 @@
     }
   }
 
+  &__id {
+    display: none;
+    position: absolute;
+    inset-block: 0;
+    inset-inline-start: 0;
+    width: rem(39px);
+    font-size: rem(20px);
+    color: var(--color-neon-azure);
+  }
+
   .icon {
     @include size(100%);
   }
@@ -107,6 +118,22 @@
 
         @include media(desk-s) {
           border-left-width: rem(5px);
+        }
+      }
+    }
+  }
+
+  &--alt {
+    .offer {
+      &__id {
+        @include media(desk-s) {
+          @include flex(center, center);
+        }
+      }
+
+      &__meta {
+        @include media(desk-s) {
+          padding-left: rem(22px);
         }
       }
     }

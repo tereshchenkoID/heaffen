@@ -85,6 +85,10 @@
     background-color: var(--color-polar-white);
     border: rem(1px) solid var(--color-stroke-polar);
 
+    a {
+      color: var(--color-neon-azure);
+    }
+
     &--active {
       border-color: var(--color-neon-azure);
     }

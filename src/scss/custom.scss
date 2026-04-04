@@ -15,8 +15,23 @@
   }
 }
 
+.text-decoration {
+
+  &-underline {
+    text-decoration: underline !important;
+  }
+
+  &-none {
+    text-decoration: none !important;
+  }
+}
+
 .d-none {
   display: none !important;
+}
+
+.color-neon-azure {
+  color: var(--color-neon-azure);
 }
 
 @each $name, $value in $breakpoints {

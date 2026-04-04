@@ -38,7 +38,18 @@
     font-weight: var(--typography-semibold);
   }
 
-  .icon {
+  &__meta {
+    margin-top: rem(5px);
+    font-size: rem(14px);
+    font-weight: var(--typography-semibold);
+    color: var(--color-dark-grey);
+
+    @include media(tab-l) {
+      font-size: rem(16px);
+    }
+  }
+
+  &__icon {
     @include size(rem(18px), rem(20px));
 
     color: var(--color-stroke-polar);
@@ -47,8 +58,11 @@
   &--active {
     border-color: var(--color-neon-azure);
 
-    .icon {
-      color: var(--color-neon-azure);
+    .related-news {
+
+      &__icon {
+        color: var(--color-neon-azure);
+      }
     }
   }
 }

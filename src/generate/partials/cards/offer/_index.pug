@@ -1,6 +1,8 @@
-mixin offer(data)
+mixin offer(data, index)
     a(href="./offer.html").card.offer&attributes(attributes)
         .offer__meta
+            if index
+                strong.offer__id= index
             .offer__picture
                 img(src=data.image decoding="async" alt="Image description").offer__img
             .offer__cell= data.offer

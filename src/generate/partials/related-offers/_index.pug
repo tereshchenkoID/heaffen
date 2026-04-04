@@ -1,0 +1,8 @@
+mixin related-offers(title)
+    .related-offers&attributes(attributes)
+        .related-offers__header
+            h4.related-offers__title= title
+            +icon('top').related-offers__icon
+        .related-offers__list
+            each item, index in OFFERS.slice(0, 3)
+              +offer(item, index + 1).offer--alt

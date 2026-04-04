@@ -1,0 +1,131 @@
+extends ../generate/layout/_layout
+
+block title
+  - var title = "Business x & Partnership Manager (iGaming)"
+
+block content
+  main.main
+    +banner.banner--wide
+
+    section.section
+      .container-fluid
+        .container
+          +breadcrumbs([
+            {
+              text: 'Main page',
+              url: './'
+            },
+            {
+              text: 'Jobs',
+              url: './jobs.html'
+            },
+            {
+              text: 'Business Developer & Partnership Manager',
+              url: null
+            },
+          ])
+
+          .content.content--right
+            .content__center
+              .post-single
+                .post-single__wrapper
+                  h1.post-single__title= title
+
+                  .post-single__list
+                    .post-single__item
+                      strong Company:
+                      a(href="./" aria-label="RevDuck") RevDuck
+                    .post-single__item
+                      strong Industry:
+                      span iGaming / Affiliate Marketing
+                    .post-single__item
+                      strong Location:
+                      span Remote (Europe)
+                    .post-single__item
+                      strong Employment Type:
+                      span Full-time
+                    .post-single__item
+                      strong Experience Level:
+                      span Middle
+                    .post-single__item
+                      strong Payment Structure:
+                      span Monthly
+                    .post-single__item
+                      strong Published:
+                      span 24.02.2026
+                    .post-single__item.post-single__item--active
+                      strong Salary:
+                      strong.color-neon-azure $2,000–$2,500 + performance bonuses
+
+                  .info-section
+                    h2 About the Company
+                    p RevDuck is an affiliate marketing company operating in the iGaming and betting verticals. The company has been on the market for over 5 years, working with Tier-1 and Tier-2 GEOs across Europe and LATAM.
+                    br
+                    p With a team of 40+ professionals, RevDuck focuses on performance marketing, strategic partnerships, and long-term growth. The company prioritizes data-driven decision-making and scalable traffic solutions.
+                    br
+                    h2 About the Role
+                    p We are looking for a Business Developer & Partnership Manager to expand our partner network and strengthen relationships with affiliate programs, advertisers, and media buying teams. 
+                    br
+                    p You will play a key role in identifying new business opportunities, negotiating deals, and managing ongoing collaborations.
+                    br
+                    h2 Responsibilities
+                    ul
+                      li Identify and onboard new affiliate and advertising partners
+                      li Maintain and develop long-term partner relationships
+                      li Negotiate commercial terms and partnership agreements
+                      li Analyze traffic performance and optimize cooperation strategies
+                      li Monitor market trends and competitor activity
+                      li Coordinate with media buying and analytics teams
+                      li Track KPIs and ensure revenue growth
+                      li Represent the company at industry events and conferences
+                    br
+                    h2 Requirements
+                    ul
+                      li 2+ years of experience in affiliate marketing or iGaming
+                      li Strong understanding of CPA, RevShare, and Hybrid models
+                      li Experience working with Tier-1 and Tier-2 GEOs
+                      li Excellent negotiation and communication skills
+                      li Analytical mindset and ability to work with performance metrics
+                      li English proficiency (B2+ or higher)
+                      li Self-organized and result-oriented
+                    br
+                    h2 What We Offer
+                    ul
+                      li Competitive salary with performance bonuses
+                      li Fully remote work
+                      li Flexible schedule
+                      li Clear KPIs and transparent growth system
+                      li Opportunity to attend international conferences
+                      li Work with a professional and ambitious team
+                      li Real career growth opportunities
+                    br
+                    p How to Apply
+                    p Send your CV and a short introduction to:
+                    a(href="mailto:test@gmail.com").text-decoration-none 📩 hr@revduck.com
+
+                .post-single__footer.post-single__footer--right
+                  .post-single__social
+                    p Share to:
+                    +social.social--polar-white
+            .content__right
+              +related-news('Related Jobs').related-news--active
+              +banner
+
+    section.section
+      .container-fluid
+        .container
+          +banner
+
+    section.section.section--overflow
+      .container-fluid
+        .container
+          .title.title--italic
+            h2.title__text Upcoming Events
+            +more-link('./events.html', 'View all').title__link
+
+          .swiper.js-slider(data-slider-type="default")
+            .swiper-wrapper
+              each item in EVENTS
+                .swiper-slide
+                  +event(item)
+            .swiper-pagination

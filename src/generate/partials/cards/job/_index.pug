@@ -6,13 +6,17 @@ mixin job(data)
                 a(href="./job.html" aria-label=data.company).job__company= data.company
                 p.job__date.d-tab-l-none= data.date
         .job__body
-            a(href="./job.html" aria-label="Show more" title="Show more").job__link
+            a(href=`${data.experience ? './candidate.html' : './job.html'}` aria-label="Show more" title="Show more").job__link
                 h2.job__title= data.title
         .job__footer
             .job__list
                 .job__item
                     +icon('dollar').job__icon
                     .job__description= data.salary
+                if data.experience
+                    .job__item
+                        +icon('briefcase').job__icon
+                        .job__description= data.experience
                 .job__item
                     +icon('location').job__icon
                     .job__description
