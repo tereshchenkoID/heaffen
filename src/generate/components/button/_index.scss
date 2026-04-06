@@ -7,9 +7,11 @@
   position: relative;
   overflow: hidden;
   border-radius: rem(10px);
+  gap: rem(10px);
   border: rem(1px) solid transparent;
   font-weight: var(--typography-semibold);
-  gap: rem(10px);
+  line-height: 1;
+  text-align: center;
 
   &--sm {
     padding-inline: rem(5px);

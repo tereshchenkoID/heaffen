@@ -250,7 +250,7 @@ blockquote {
       align-items: flex-end;
 
       @include media(tab-l) {
-        grid-template-columns: 50% rem(150px);
+        grid-template-columns: 50% minmax(rem(150px), auto);
         justify-content: space-between;
       }
     }
