@@ -1,0 +1,7 @@
+mixin notification
+    .notification&attributes(attributes)
+        +icon('top').notification__icon
+        h3.notification__title Something went wrong
+        p.notification__text We were unable to submit your candidate profile.
+        p.notification__text Please check the required fields and try again.
+        +button('Try Again').button--primary.button--md.button--wide.notification__button

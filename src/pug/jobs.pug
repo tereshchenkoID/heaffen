@@ -29,7 +29,7 @@ block content
                   p Discover open roles across affiliate marketing, iGaming, crypto, and digital business. Browse opportunities by department, experience level, and work format.
                   br
                   p Want to publish a job listing? Submit your vacancy through the form on our website.
-                a(href="#").button.button--primary.button--md Post a Job
+                +button('Post a Job').button--primary.button--md.js-post-job
             .content__left
               +filters.js-filters
             .content__center
@@ -60,3 +60,18 @@ block content
             p Before starting to work with any CPA affiliate network from the list, we recommend reviewing information about the program, checking the company’s social media, and reading reviews. Remember, when choosing an affiliate network to run traffic, you are choosing a partner with whom you will earn money. So don’t neglect basic checks to ensure the company’s reliability and safety.
             br
             p Choose your top CPA network or affiliate program and start driving traffic with a cosmic ROI! 🚀
+
+    // TODO toggle class for activate modal .job-add--active
+    +job-add
+
+    // TODO toggle class for activate modal .modal--active
+    .modal.modal--notification
+      .modal__content
+        +button(null, null, 'close').button--square.button--transparent.modal__close
+        +notification.notification--error
+
+    // TODO toggle class for activate modal .modal--active
+    .modal.modal--notification
+      .modal__content
+        +button(null, null, 'close').button--square.button--transparent.modal__close
+        +notification.notification--success

@@ -4,7 +4,7 @@
   display: none;
   margin: 0;
   padding: 0;
-  gap: clamp(rem(16px), 2vw, rem(35px));
+  gap: clamp(rem(8px), 0.8vw, rem(35px));
   line-height: 1;
 
   @include media(tab-l) {

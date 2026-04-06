@@ -6,6 +6,7 @@
   position: relative;
   z-index: $z-index-1;
   cursor: pointer;
+  flex-shrink: 0;
 
   @include hover {
     &:hover {

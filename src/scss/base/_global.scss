@@ -609,3 +609,49 @@ blockquote {
     }
   }
 }
+
+.modal {
+  @include scroll-y;
+
+  display: none;
+  position: fixed;
+  z-index: $z-index-11;
+  align-items: center;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-clip: unset;
+
+  &__content {
+    width: 100%;
+    padding: rem(20px);
+    border: rem(1px) solid var(--color-stroke-polar);
+    border-radius: rem(10px);
+    text-align: end;
+    background-color: var(--color-white);
+    margin-inline: auto;
+  }
+
+  &__close {
+    @include size(rem(24px));
+
+    margin-inline: auto 0;
+
+    .icon {
+      @include size(100%);
+    }
+  }
+
+  &--active {
+    display: grid;
+  }
+
+  &--notification {
+
+    .modal {
+
+      &__content {
+        max-width: rem(550px);
+      }
+    }
+  }
+}

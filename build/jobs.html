@@ -429,7 +429,7 @@
                     <p>Discover open roles across affiliate marketing, iGaming, crypto, and digital business. Browse
                       opportunities by department, experience level, and work format.</p><br>
                     <p>Want to publish a job listing? Submit your vacancy through the form on our website.</p>
-                  </div><a class="button button--primary button--md" href="#">Post a Job</a>
+                  </div><button class="button button--primary button--md js-post-job" type="button">Post a Job</button>
                 </div>
               </div>
               <div class="content__left">
@@ -640,7 +640,423 @@
             </div>
           </div>
         </div>
-      </section>
+      </section><!-- TODO toggle class for activate modal .job-add--active-->
+      <div class="job-add"><button class="button button--square button--transparent job-add__close" type="button"><svg
+            class="icon">
+            <use xlink:href="img/sprite.svg#close"></use>
+          </svg></button><!-- TODO job-add__steps--1, job-add__steps--2, job-add__steps--3-->
+        <div class="job-add__steps job-add__steps--1"><button class="job-add__item" type="button" aria-label="Step 1"
+            data-step="1"><span class="job-add__value">1</span><span class="job-add__scale"></span></button><button
+            class="job-add__item" type="button" aria-label="Step 2" data-step="2"><span
+              class="job-add__value">2</span><span class="job-add__scale"></span></button><button class="job-add__item"
+            type="button" aria-label="Step 3" data-step="3"><span class="job-add__value">3</span><span
+              class="job-add__scale"></span></button></div>
+        <div class="job-add__content">
+          <div class="job-add__step" data-content="1">
+            <div class="job-add__block">
+              <h3 class="job-add__title">Personal & Professional Details</h3>
+              <p class="job-add__subtitle">Tell us who you are and what role you're looking for.</p>
+            </div>
+            <div class="job-add__block"><label class="job-add__label" for="full_name">Full Name*</label><input
+                class="job-add__field" type="text" placeholder="Name Surname" id="full_name"></div>
+            <div class="job-add__block">
+              <div class="job-add__tooltip"><label class="job-add__label" for="professional_title">Professional
+                  Title*</label>
+                <p class="job-add__rule">Format: Level + Role + Specialization</p>
+              </div><input class="job-add__field" type="text"
+                placeholder="Example: Senior Media Buyer (Meta / Google Ads)" id="professional_title">
+            </div>
+            <div class="job-add__block"><label class="job-add__label" for="location">Current Location*</label><input
+                class="job-add__field job-add__field--error" type="text" placeholder="City, Country" id="location">
+            </div>
+            <div class="job-add__block">
+              <p class="job-add__label">Work Format Preference*</p><label class="checkbox"><input
+                  class="checkbox__input" type="checkbox" data-value="remote" checked><span
+                  class="checkbox__label">Remote</span></label><label class="checkbox"><input class="checkbox__input"
+                  type="checkbox" data-value="hybrid"><span class="checkbox__label">Hybrid</span></label><label
+                class="checkbox"><input class="checkbox__input" type="checkbox" data-value="office" checked><span
+                  class="checkbox__label">Office</span></label><label class="checkbox"><input class="checkbox__input"
+                  type="checkbox" data-value="relocation_possible"><span class="checkbox__label">Relocation
+                  possible</span></label>
+            </div>
+            <div class="job-add__block"><label class="job-add__label" for="english_level">English Level*</label><select
+                class="job-add__select" id="english_level">
+                <option>Choose english Level</option>
+                <option value="1">Value 1</option>
+                <option value="2">Value 2</option>
+              </select></div>
+            <div class="job-add__block"><label class="job-add__label" for="main_specialization">Main
+                Specialization*</label><select class="job-add__select" id="main_specialization">
+                <option>Choose specialization</option>
+                <option value="1">Value 1</option>
+                <option value="2">Value 2</option>
+              </select></div><button class="button button--md button--outline button--wide job-add__button"
+              type="button">Continue</button>
+          </div>
+          <div class="job-add__step" data-content="2">
+            <div class="job-add__block">
+              <h3 class="job-add__title">Experience & Expertise</h3>
+              <p class="job-add__subtitle">Highlight your skills, tools, and measurable achievements.</p>
+            </div>
+            <div class="job-add__block">
+              <p class="job-add__label">Candidate Level *</p><label class="checkbox"><input class="checkbox__input"
+                  type="checkbox" data-value="trainee" checked><span
+                  class="checkbox__label">Trainee</span></label><label class="checkbox"><input class="checkbox__input"
+                  type="checkbox" data-value="junior"><span class="checkbox__label">Junior</span></label><label
+                class="checkbox"><input class="checkbox__input" type="checkbox" data-value="middle"><span
+                  class="checkbox__label">Middle</span></label><label class="checkbox"><input class="checkbox__input"
+                  type="checkbox" data-value="senior"><span class="checkbox__label">Senior</span></label><label
+                class="checkbox"><input class="checkbox__input" type="checkbox" data-value="lead"><span
+                  class="checkbox__label">Lead</span></label><label class="checkbox"><input class="checkbox__input"
+                  type="checkbox" data-value="c-level"><span class="checkbox__label">C-level</span></label>
+            </div>
+            <div class="job-add__block"><label class="job-add__label" for="commercial_experience">Total Commercial
+                Experience*</label><select class="job-add__select" id="commercial_experience">
+                <option>Choose commercial experience</option>
+                <option value="1">Value 1</option>
+                <option value="2">Value 2</option>
+              </select></div>
+            <div class="job-add__block">
+              <p class="job-add__label">Key Hard Skills*</p>
+              <div class="job-add__list"><input class="job-add__field job-add__field--md" type="text" data-index="1">
+              </div>
+              <div class="job-add__list"><input class="job-add__field job-add__field--md" type="text" data-index="2">
+              </div>
+              <div class="job-add__list"><input class="job-add__field job-add__field--md" type="text" data-index="3">
+              </div>
+              <div class="job-add__list"><input class="job-add__field job-add__field--md" type="text" data-index="4">
+              </div>
+              <div class="job-add__list"><input class="job-add__field job-add__field--md" type="text" data-index="5">
+              </div><button class="button button--sm button--secondary button--wide job-add__add"
+                type="button">+</button>
+            </div>
+            <div class="job-add__block">
+              <p class="job-add__label">Tools / Platforms You Work With*</p>
+              <div class="job-add__list"><input class="job-add__field job-add__field--md" type="text" data-index="1">
+              </div>
+              <div class="job-add__list"><input class="job-add__field job-add__field--md" type="text" data-index="2">
+              </div>
+              <div class="job-add__list"><input class="job-add__field job-add__field--md" type="text" data-index="3">
+              </div>
+              <div class="job-add__list"><input class="job-add__field job-add__field--md" type="text" data-index="4">
+              </div>
+              <div class="job-add__list"><input class="job-add__field job-add__field--md" type="text" data-index="5">
+              </div><button class="button button--sm button--secondary button--wide job-add__add"
+                type="button">+</button>
+            </div>
+            <div class="job-add__block">
+              <p class="job-add__label">Soft Skills</p>
+              <div class="job-add__list"><input class="job-add__field job-add__field--md" type="text" data-index="1">
+              </div>
+              <div class="job-add__list"><input class="job-add__field job-add__field--md" type="text" data-index="2">
+              </div>
+              <div class="job-add__list"><input class="job-add__field job-add__field--md" type="text" data-index="3">
+              </div>
+              <div class="job-add__list"><input class="job-add__field job-add__field--md" type="text" data-index="4">
+              </div>
+              <div class="job-add__list"><input class="job-add__field job-add__field--md" type="text" data-index="5">
+              </div><button class="button button--sm button--secondary button--wide job-add__add"
+                type="button">+</button>
+            </div>
+            <div class="job-add__block">
+              <div class="job-add__tooltip"><label class="job-add__label" for="main_achievements">Main
+                  Achievements</label>
+                <p class="job-add__rule">with numbers</p>
+              </div><textarea class="job-add__textarea"
+                placeholder="Must include measurable results (ROI, revenue, CPA reduction, traffic volume, etc.)"
+                id="main_achievements"></textarea>
+            </div><button class="button button--md button--primary button--wide job-add__button"
+              type="button">Continue</button>
+          </div>
+          <div class="job-add__step" data-content="3">
+            <div class="job-add__block">
+              <h3 class="job-add__title">Salary & Contact Information</h3>
+              <p class="job-add__subtitle">Set your expectations and provide contact details for employers.</p>
+            </div>
+            <div class="job-add__block">
+              <div class="job-add__tooltip"><label class="job-add__label" for="salary">Salary *</label>
+                <p class="job-add__rule">Must be specified in USD</p>
+              </div><input class="job-add__field" type="text" placeholder="$3000 to $5000 + %" id="salary">
+            </div>
+            <div class="job-add__block">
+              <div>
+                <p>Format examples:</p>
+                <ul class="job-add__ul">
+                  <li class="job-add__li">$1500</li>
+                  <li class="job-add__li">$2000–3000</li>
+                  <li class="job-add__li">$1000 + %</li>
+                </ul>
+              </div>
+            </div>
+            <div class="job-add__block">
+              <p class="job-add__label">Payment Preference*</p><label class="checkbox"><input class="checkbox__input"
+                  type="checkbox" data-value="fixed" checked><span class="checkbox__label">Fixed</span></label><label
+                class="checkbox"><input class="checkbox__input" type="checkbox" data-value="fixed_plus"><span
+                  class="checkbox__label">Fixed + %</span></label><label class="checkbox"><input class="checkbox__input"
+                  type="checkbox" data-value="performance_based"><span
+                  class="checkbox__label">Performance-based</span></label>
+            </div>
+            <div class="job-add__block"><label class="job-add__label" for="contact_email">Contact email</label><input
+                class="job-add__field" type="email" placeholder="template@gmail.com" id="contact_email"></div>
+            <div class="job-add__block"><label class="job-add__label" for="social">Telegram / WhatsApp</label><input
+                class="job-add__field" type="text" placeholder="Optional" id="social"></div>
+            <div class="job-add__block"><label class="job-add__label" for="linkedin">LinkedIn</label><input
+                class="job-add__field" type="text" placeholder="Optional" id="linkedin"></div>
+            <div class="job-add__block"><label class="job-add__label" for="portfolio">Portfolio / Case Studies
+                Links</label><input class="job-add__field" type="text" placeholder="Optional" id="portfolio"></div>
+            <div class="job-add__block">
+              <p class="job-add__label">Upload CV</p>
+              <div class="uploaded"><svg class="icon uploaded__icon">
+                  <use xlink:href="img/sprite.svg#file"></use>
+                </svg>
+                <p class="uploaded__text">test-file.pdf</p><button
+                  class="button button--square button--transparent uploaded__button" type="button"><svg class="icon">
+                    <use xlink:href="img/sprite.svg#close"></use>
+                  </svg></button>
+              </div>
+            </div>
+            <div class="job-add__block">
+              <div class="job-add__tooltip">
+                <p class="job-add__label">Upload CV</p>
+                <p class="job-add__rule">Must be PDF format</p>
+              </div><label class="upload job-add__upload" for="cv"><svg class="icon upload__icon">
+                  <use xlink:href="img/sprite.svg#upload"></use>
+                </svg>
+                <p class="upload__title">Upload Your CV (PDF)</p>
+                <p class="upload__description">Drag & drop your CV here or click to browse files. Please upload your
+                  resume in PDF format only. Max size: 10MB.</p><input class="upload__input" type="file" id="cv"
+                  accept=".pdf">
+              </label>
+            </div><button class="button button--md button--primary button--wide job-add__button" type="button">Submit
+              Job</button>
+          </div>
+          <div class="job-add__step" data-content="1">
+            <div class="job-add__block">
+              <h3 class="job-add__title">Company & Job Overview</h3>
+              <p class="job-add__subtitle">Basic information about your company and the position.</p>
+            </div>
+            <div class="job-add__block"><label class="job-add__label" for="contact_email">Contact email</label><input
+                class="job-add__field" type="email" placeholder="template@gmail.com" id="contact_email"></div>
+            <div class="job-add__block">
+              <div class="job-add__tooltip"><label class="job-add__label" for="job_title">Job Title *</label>
+                <p class="job-add__rule">Format: Level + Role + Specialization</p>
+              </div><input class="job-add__field" type="text"
+                placeholder="Example: Middle Media Buyer (Meta / Google Ads)" id="job_title">
+            </div>
+            <div class="job-add__block"><label class="job-add__label" for="company_name">Company Name *</label><input
+                class="job-add__field job-add__field--error" type="text" placeholder="Legal or brand name"
+                id="company_name"></div>
+            <div class="job-add__block"><label class="job-add__label" for="company_website">Company
+                Website</label><input class="job-add__field" type="text" placeholder="template.com"
+                id="company_website"></div>
+            <div class="job-add__block">
+              <p class="job-add__label">Location *</p><label class="checkbox"><input class="checkbox__input"
+                  type="checkbox"><span class="checkbox__label">Remote</span></label>
+              <div class="job-add__wrapper"><label class="checkbox"><input class="checkbox__input" type="checkbox"><span
+                    class="checkbox__label">Hybrid</span></label><input
+                  class="job-add__field job-add__field--sm job-add__field--border" type="text" placeholder="city"
+                  id="hybrid"></div>
+              <div class="job-add__wrapper"><label class="checkbox"><input class="checkbox__input" type="checkbox"><span
+                    class="checkbox__label">Office</span></label><input
+                  class="job-add__field job-add__field--sm job-add__field--border" type="text"
+                  placeholder="city, country" id="office"></div>
+            </div>
+            <div class="job-add__block">
+              <p class="job-add__label">Employment Type *</p><label class="checkbox"><input class="checkbox__input"
+                  type="checkbox" data-value="full_time"><span class="checkbox__label">Full-time</span></label><label
+                class="checkbox"><input class="checkbox__input" type="checkbox" data-value="part_time"><span
+                  class="checkbox__label">Part-time</span></label><label class="checkbox"><input class="checkbox__input"
+                  type="checkbox" data-value="contract"><span class="checkbox__label">Contract</span></label><label
+                class="checkbox"><input class="checkbox__input" type="checkbox" data-value="project_based"><span
+                  class="checkbox__label">Project-based</span></label><label class="checkbox"><input
+                  class="checkbox__input" type="checkbox" data-value="internship"><span
+                  class="checkbox__label">Internship</span></label>
+            </div>
+            <div class="job-add__block"><label class="job-add__label" for="contact">Contact Person Name</label><input
+                class="job-add__field" type="text" placeholder="Name Surname" id="contact"></div>
+            <div class="job-add__block"><label class="job-add__label" for="send_cv">Where to Send CV</label><input
+                class="job-add__field" type="text" placeholder="Email or your Telegram" id="send_cv"></div><button
+              class="button button--md button--outline button--wide job-add__button" type="button">Continue</button>
+          </div>
+          <div class="job-add__step" data-content="2">
+            <div class="job-add__block">
+              <h3 class="job-add__title">Role Details & Conditions</h3>
+              <p class="job-add__subtitle">Define the role, experience level, and compensation structure.</p>
+            </div>
+            <div class="job-add__block"><label class="job-add__label" for="industry">Industry / Business Direction
+                *</label><select class="job-add__select" id="industry">
+                <option>Choose industry</option>
+                <option value="1">Value 1</option>
+                <option value="2">Value 2</option>
+              </select></div>
+            <div class="job-add__block">
+              <p class="job-add__label">Candidate Level *</p><label class="checkbox"><input class="checkbox__input"
+                  type="checkbox" data-value="trainee" checked><span
+                  class="checkbox__label">Trainee</span></label><label class="checkbox"><input class="checkbox__input"
+                  type="checkbox" data-value="junior"><span class="checkbox__label">Junior</span></label><label
+                class="checkbox"><input class="checkbox__input" type="checkbox" data-value="middle"><span
+                  class="checkbox__label">Middle</span></label><label class="checkbox"><input class="checkbox__input"
+                  type="checkbox" data-value="senior"><span class="checkbox__label">Senior</span></label><label
+                class="checkbox"><input class="checkbox__input" type="checkbox" data-value="lead"><span
+                  class="checkbox__label">Lead</span></label><label class="checkbox"><input class="checkbox__input"
+                  type="checkbox" data-value="c-level"><span class="checkbox__label">C-level</span></label>
+            </div>
+            <div class="job-add__block">
+              <p class="job-add__label">Minimum Commercial Experience *</p><label class="checkbox"><input
+                  class="checkbox__input" type="checkbox" data-value="no_experience" checked><span
+                  class="checkbox__label">No experience</span></label><label class="checkbox"><input
+                  class="checkbox__input" type="checkbox" data-value="1_year"><span class="checkbox__label">1
+                  year</span></label><label class="checkbox"><input class="checkbox__input" type="checkbox"
+                  data-value="2_year"><span class="checkbox__label">2 years</span></label><label class="checkbox"><input
+                  class="checkbox__input" type="checkbox" data-value="3_year"><span class="checkbox__label">3
+                  years</span></label><label class="checkbox"><input class="checkbox__input" type="checkbox"
+                  data-value="4_more_year"><span class="checkbox__label">4+ years</span></label>
+            </div>
+            <div class="job-add__block">
+              <div class="job-add__tooltip"><label class="job-add__label" for="salary">Salary *</label>
+                <p class="job-add__rule">Must be specified in USD</p>
+              </div><input class="job-add__field" type="text" placeholder="from $3000 to $5000 + %" id="salary">
+            </div>
+            <div class="job-add__block">
+              <div>
+                <p>Format examples:</p>
+                <ul class="job-add__ul">
+                  <li class="job-add__li">Fixed: $1500</li>
+                  <li class="job-add__li">Range: $2000–3000</li>
+                  <li class="job-add__li">Fixed + %: $1000 + %</li>
+                  <li class="job-add__li">Fixed + bonuses</li>
+                </ul>
+              </div>
+            </div>
+            <div class="job-add__block">
+              <p class="job-add__label">Payment Structure</p><label class="checkbox"><input class="checkbox__input"
+                  type="checkbox" data-value="monthly" checked><span
+                  class="checkbox__label">Monthly</span></label><label class="checkbox"><input class="checkbox__input"
+                  type="checkbox" data-value="weekly"><span class="checkbox__label">Weekly</span></label><label
+                class="checkbox"><input class="checkbox__input" type="checkbox" data-value="performance_based"><span
+                  class="checkbox__label">Performance-based</span></label>
+            </div><button class="button button--md button--outline button--wide job-add__button"
+              type="button">Continue</button>
+          </div>
+          <div class="job-add__step" data-content="3">
+            <div class="job-add__block">
+              <h3 class="job-add__title">Job Description & Final Details</h3>
+              <p class="job-add__subtitle">Describe the role, responsibilities, requirements, and what you offer.</p>
+            </div>
+            <div class="job-add__block">
+              <div class="job-add__tooltip"><label class="job-add__label" for="company_description">Short Company
+                  Description</label>
+                <p class="job-add__rule">3–4 sentences</p>
+              </div>
+              <div class="field-group"><textarea class="job-add__textarea field-group__input"
+                  id="company_description"></textarea>
+                <div class="field-group__placeholder">
+                  <p>Include:</p>
+                  <ul class="job-add__ul">
+                    <li class="job-add__li">What the company does</li>
+                    <li class="job-add__li">Years on the market</li>
+                    <li class="job-add__li">Team size</li>
+                    <li class="job-add__li">Geography</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="job-add__block">
+              <div class="job-add__tooltip"><label class="job-add__label" for="job_description">Short Job Description
+                  *</label>
+                <p class="job-add__rule">3–4 sentences</p>
+              </div>
+              <div class="field-group field-group--error"><textarea class="job-add__textarea field-group__input"
+                  id="job_description"></textarea>
+                <div class="field-group__placeholder">
+                  <p>Include:</p>
+                  <ul class="job-add__ul">
+                    <li class="job-add__li">What the company does</li>
+                    <li class="job-add__li">Years on the market</li>
+                    <li class="job-add__li">Team size</li>
+                    <li class="job-add__li">Geography</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="job-add__block">
+              <p class="job-add__label">Responsibilities *</p>
+              <div class="job-add__list"><input class="job-add__field job-add__field--md" type="text" data-index="1">
+              </div>
+              <div class="job-add__list"><input class="job-add__field job-add__field--md" type="text" data-index="2">
+              </div>
+              <div class="job-add__list"><input class="job-add__field job-add__field--md" type="text" data-index="3">
+              </div>
+              <div class="job-add__list"><input class="job-add__field job-add__field--md" type="text" data-index="4">
+              </div>
+              <div class="job-add__list"><input class="job-add__field job-add__field--md" type="text" data-index="5">
+              </div><button class="button button--sm button--secondary button--wide job-add__add"
+                type="button">+</button>
+            </div>
+            <div class="job-add__block">
+              <p class="job-add__label">Requirements *</p>
+              <div class="job-add__list"><input class="job-add__field job-add__field--md" type="text" data-index="1">
+              </div>
+              <div class="job-add__list"><input class="job-add__field job-add__field--md" type="text" data-index="2">
+              </div>
+              <div class="job-add__list"><input class="job-add__field job-add__field--md" type="text" data-index="3">
+              </div>
+              <div class="job-add__list"><input class="job-add__field job-add__field--md" type="text" data-index="4">
+              </div>
+              <div class="job-add__list"><input class="job-add__field job-add__field--md" type="text" data-index="5">
+              </div><button class="button button--sm button--secondary button--wide job-add__add"
+                type="button">+</button>
+            </div>
+            <div class="job-add__block">
+              <p class="job-add__label">What You Offer *</p>
+              <div class="job-add__list"><input class="job-add__field job-add__field--md" type="text" data-index="1">
+              </div>
+              <div class="job-add__list"><input class="job-add__field job-add__field--md" type="text" data-index="2">
+              </div>
+              <div class="job-add__list"><input class="job-add__field job-add__field--md" type="text" data-index="3">
+              </div>
+              <div class="job-add__list"><input class="job-add__field job-add__field--md" type="text" data-index="4">
+              </div>
+              <div class="job-add__list"><input class="job-add__field job-add__field--md" type="text" data-index="5">
+              </div><button class="button button--sm button--secondary button--wide job-add__add"
+                type="button">+</button>
+            </div><button class="button button--md button--primary button--wide job-add__button" type="button">Submit
+              Job</button>
+          </div>
+        </div>
+      </div><!-- TODO toggle class for activate modal .modal--active-->
+      <div class="modal modal--notification">
+        <div class="modal__content"><button class="button button--square button--transparent modal__close"
+            type="button"><svg class="icon">
+              <use xlink:href="img/sprite.svg#close"></use>
+            </svg></button>
+          <div class="notification notification--error"><svg class="icon notification__icon">
+              <use xlink:href="img/sprite.svg#top"></use>
+            </svg>
+            <h3 class="notification__title">Something went wrong</h3>
+            <p class="notification__text">We were unable to submit your candidate profile.</p>
+            <p class="notification__text">Please check the required fields and try again.</p><button
+              class="button button--primary button--md button--wide notification__button" type="button">Try
+              Again</button>
+          </div>
+        </div>
+      </div><!-- TODO toggle class for activate modal .modal--active-->
+      <div class="modal modal--notification">
+        <div class="modal__content"><button class="button button--square button--transparent modal__close"
+            type="button"><svg class="icon">
+              <use xlink:href="img/sprite.svg#close"></use>
+            </svg></button>
+          <div class="notification notification--success"><svg class="icon notification__icon">
+              <use xlink:href="img/sprite.svg#top"></use>
+            </svg>
+            <h3 class="notification__title">Something went wrong</h3>
+            <p class="notification__text">We were unable to submit your candidate profile.</p>
+            <p class="notification__text">Please check the required fields and try again.</p><button
+              class="button button--primary button--md button--wide notification__button" type="button">Try
+              Again</button>
+          </div>
+        </div>
+      </div>
     </main>
     <footer class="footer">
       <div class="container-fluid">

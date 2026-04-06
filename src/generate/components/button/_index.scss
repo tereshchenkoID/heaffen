@@ -111,6 +111,14 @@
     }
   }
 
+  &--transparent {
+    @include hover {
+      &:hover {
+        color: var(--color-neon-azure);
+      }
+    }
+  }
+
   &:disabled,
   &--disabled {
     background-color: #C8C8C8;

@@ -1,6 +1,8 @@
 @use 'scss/config' as *;
 
 .related-news {
+  @include flex(null, null, column);
+
   padding: rem(28px) rem(20px);
   border-radius: rem(10px);
   border: rem(1px) solid var(--color-stroke-polar);
@@ -13,6 +15,12 @@
     gap: rem(8px);
   }
 
+  &__list {
+    @include flex(null, null, column);
+
+    flex-grow: 1;
+  }
+
   &__item {
     padding-block: rem(20px);
 
@@ -22,6 +30,7 @@
 
     &:last-child {
       padding-bottom: 0;
+      margin-top: auto;
     }
   }
 

@@ -1,0 +1,37 @@
+@use 'scss/config' as *;
+
+.upload {
+  display: grid;
+  justify-items: center;
+  gap: rem(10px);
+  padding: rem(15px);
+  position: relative;
+  border: rem(1px) dashed var(--color-neon-azure);
+  border-radius: rem(5px);
+  font-size: rem(14px);
+  text-align: center;
+  cursor: pointer;
+
+  &__icon {
+    @include size(rem(24px));
+
+    color: var(--color-neon-azure);
+  }
+
+  &__title {
+    font-weight: var(--typography-semibold);
+  }
+
+  &__description {
+    max-width: rem(310px);
+    color: var(--color-storm-grey);
+  }
+
+  &__input {
+    @include size(0);
+
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+  }
+}

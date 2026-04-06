@@ -1,0 +1,38 @@
+@use 'scss/config' as *;
+
+.notification {
+  text-align: center;
+
+  &__icon {
+    @include size(rem(116px), rem(130px));
+
+    margin-bottom: rem(20px);
+    color: currentColor;
+  }
+
+  &__title {
+    margin-bottom: rem(5px);
+    color: currentColor;
+  }
+
+  &__text {
+    font-size: rem(14px);
+    color: var(--color-dark-grey);
+
+    @include media(tab-l) {
+      font-size: rem(16px);
+    }
+  }
+
+  &__button {
+    margin-top: rem(30px);
+  }
+
+  &--error {
+    color: var(--color-alert);
+  }
+
+  &--success {
+    color: var(--color-neon-azure);
+  }
+}

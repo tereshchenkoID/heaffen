@@ -1,0 +1,291 @@
+mixin job-1
+    .job-add__step(data-content='1')&attributes(attributes)
+        .job-add__block
+            h3.job-add__title Company & Job Overview
+            p.job-add__subtitle Basic information about your company and the position.
+        .job-add__block
+            label(for="contact_email").job-add__label Contact email
+            input(type="email" placeholder="template@gmail.com" id="contact_email").job-add__field
+        .job-add__block
+            .job-add__tooltip
+                label(for="job_title").job-add__label Job Title *
+                p.job-add__rule Format: Level + Role + Specialization
+            input(type="text" placeholder="Example: Middle Media Buyer (Meta / Google Ads)" id="job_title").job-add__field
+        .job-add__block
+            label(for="company_name").job-add__label Company Name *
+            input(type="text" placeholder="Legal or brand name" id="company_name").job-add__field.job-add__field--error
+        .job-add__block
+            label(for="company_website").job-add__label Company Website
+            input(type="text" placeholder="template.com" id="company_website").job-add__field
+        .job-add__block
+            p.job-add__label Location *
+            +checkox('Remote')
+            .job-add__wrapper
+                +checkox('Hybrid')
+                input(type="text" placeholder="city" id="hybrid").job-add__field.job-add__field--sm.job-add__field--border
+            .job-add__wrapper
+                +checkox('Office')
+                input(type="text" placeholder="city, country" id="office").job-add__field.job-add__field--sm.job-add__field--border
+        .job-add__block
+            p.job-add__label Employment Type *
+            +checkox('Full-time', 'full_time')
+            +checkox('Part-time', 'part_time')
+            +checkox('Contract', 'contract')
+            +checkox('Project-based', 'project_based')
+            +checkox('Internship', 'internship')
+        .job-add__block
+            label(for="contact").job-add__label Contact Person Name
+            input(type="text" placeholder="Name Surname" id="contact").job-add__field
+        .job-add__block
+            label(for="send_cv").job-add__label Where to Send CV
+            input(type="text" placeholder="Email or your Telegram" id="send_cv").job-add__field
+        +button('Continue').button--md.button--outline.button--wide.job-add__button
+
+mixin job-2
+    .job-add__step(data-content='2')&attributes(attributes)
+        .job-add__block
+            h3.job-add__title Role Details & Conditions
+            p.job-add__subtitle Define the role, experience level, and compensation structure.
+        .job-add__block
+            label(for="industry").job-add__label Industry / Business Direction *
+            select(id="industry").job-add__select
+                option Choose industry
+                option(value="1") Value 1
+                option(value="2") Value 2
+        .job-add__block
+            p.job-add__label Candidate Level *
+            +checkox('Trainee', 'trainee', true)
+            +checkox('Junior', 'junior')
+            +checkox('Middle', 'middle')
+            +checkox('Senior', 'senior')
+            +checkox('Lead', 'lead')
+            +checkox('C-level', 'c-level')
+        .job-add__block
+            p.job-add__label Minimum Commercial Experience *
+            +checkox('No experience', 'no_experience', true)
+            +checkox('1 year', '1_year')
+            +checkox('2 years', '2_year')
+            +checkox('3 years', '3_year')
+            +checkox('4+ years', '4_more_year')
+        .job-add__block
+            .job-add__tooltip
+                label(for="salary").job-add__label Salary *
+                p.job-add__rule Must be specified in USD
+            input(type="text" placeholder="from $3000 to $5000 + %" id="salary").job-add__field
+        .job-add__block
+            div
+                p Format examples:
+                ul.job-add__ul
+                    li.job-add__li Fixed: $1500
+                    li.job-add__li Range: $2000–3000
+                    li.job-add__li Fixed + %: $1000 + %
+                    li.job-add__li Fixed + bonuses
+        .job-add__block
+            p.job-add__label Payment Structure
+            +checkox('Monthly', 'monthly', true)
+            +checkox('Weekly', 'weekly')
+            +checkox('Performance-based', 'performance_based')
+        +button('Continue').button--md.button--outline.button--wide.job-add__button
+
+mixin job-3
+    .job-add__step(data-content='3')&attributes(attributes)
+        .job-add__block
+            h3.job-add__title Job Description & Final Details
+            p.job-add__subtitle Describe the role, responsibilities, requirements, and what you offer.
+        .job-add__block
+            .job-add__tooltip
+                label(for="company_description").job-add__label Short Company Description
+                p.job-add__rule 3–4 sentences
+            .field-group
+                textarea(id="company_description").job-add__textarea.field-group__input
+                .field-group__placeholder
+                    p Include:
+                    ul.job-add__ul
+                        li.job-add__li What the company does
+                        li.job-add__li Years on the market
+                        li.job-add__li Team size
+                        li.job-add__li Geography
+        .job-add__block
+            .job-add__tooltip
+                label(for="job_description").job-add__label Short Job Description *
+                p.job-add__rule 3–4 sentences
+            .field-group.field-group--error
+                textarea(id="job_description").job-add__textarea.field-group__input
+                .field-group__placeholder
+                    p Include:
+                    ul.job-add__ul
+                        li.job-add__li What the company does
+                        li.job-add__li Years on the market
+                        li.job-add__li Team size
+                        li.job-add__li Geography
+        .job-add__block
+            p.job-add__label Responsibilities *
+            each el in [1, 2, 3, 4, 5]
+                .job-add__list
+                    input(type="text" data-index=el).job-add__field.job-add__field--md
+            +button('+').button--sm.button--secondary.button--wide.job-add__add
+        .job-add__block
+            p.job-add__label Requirements *
+            each el in [1, 2, 3, 4, 5]
+                .job-add__list
+                    input(type="text" data-index=el).job-add__field.job-add__field--md
+            +button('+').button--sm.button--secondary.button--wide.job-add__add
+        .job-add__block
+            p.job-add__label What You Offer *
+            each el in [1, 2, 3, 4, 5]
+                .job-add__list
+                    input(type="text" data-index=el).job-add__field.job-add__field--md
+            +button('+').button--sm.button--secondary.button--wide.job-add__add
+        +button('Submit Job').button--md.button--primary.button--wide.job-add__button
+
+
+mixin candidate-1
+    .job-add__step(data-content='1')&attributes(attributes)
+        .job-add__block
+            h3.job-add__title Personal & Professional Details
+            p.job-add__subtitle Tell us who you are and what role you're looking for.
+        .job-add__block
+            label(for="full_name").job-add__label Full Name*
+            input(type="text" placeholder="Name Surname" id="full_name").job-add__field
+        .job-add__block
+            .job-add__tooltip
+                label(for="professional_title").job-add__label Professional Title*
+                p.job-add__rule Format: Level + Role + Specialization
+            input(type="text" placeholder="Example: Senior Media Buyer (Meta / Google Ads)" id="professional_title").job-add__field
+        .job-add__block
+            label(for="location").job-add__label Current Location*
+            input(type="text" placeholder="City, Country" id="location").job-add__field.job-add__field--error
+        .job-add__block
+            p.job-add__label Work Format Preference*
+            +checkox('Remote', 'remote', true)
+            +checkox('Hybrid', 'hybrid')
+            +checkox('Office', 'office', true)
+            +checkox('Relocation possible', 'relocation_possible')
+        .job-add__block
+            label(for="english_level").job-add__label English Level*
+            select(id="english_level").job-add__select
+                option Choose english Level
+                option(value="1") Value 1
+                option(value="2") Value 2
+        .job-add__block
+            label(for="main_specialization").job-add__label Main Specialization*
+            select(id="main_specialization").job-add__select
+                option Choose specialization
+                option(value="1") Value 1
+                option(value="2") Value 2
+        +button('Continue').button--md.button--outline.button--wide.job-add__button
+
+mixin candidate-2
+    .job-add__step(data-content='2')&attributes(attributes)
+        .job-add__block
+            h3.job-add__title Experience & Expertise
+            p.job-add__subtitle Highlight your skills, tools, and measurable achievements.
+        .job-add__block
+            p.job-add__label Candidate Level *
+            +checkox('Trainee', 'trainee', true)
+            +checkox('Junior', 'junior')
+            +checkox('Middle', 'middle')
+            +checkox('Senior', 'senior')
+            +checkox('Lead', 'lead')
+            +checkox('C-level', 'c-level')
+        .job-add__block
+            label(for="commercial_experience").job-add__label Total Commercial Experience*
+            select(id="commercial_experience").job-add__select
+                option Choose commercial experience
+                option(value="1") Value 1
+                option(value="2") Value 2
+        .job-add__block
+            p.job-add__label Key Hard Skills*
+            each el in [1, 2, 3, 4, 5]
+                .job-add__list
+                    input(type="text" data-index=el).job-add__field.job-add__field--md
+            +button('+').button--sm.button--secondary.button--wide.job-add__add
+        .job-add__block
+            p.job-add__label Tools / Platforms You Work With*
+            each el in [1, 2, 3, 4, 5]
+                .job-add__list
+                    input(type="text" data-index=el).job-add__field.job-add__field--md
+            +button('+').button--sm.button--secondary.button--wide.job-add__add
+        .job-add__block
+            p.job-add__label Soft Skills
+            each el in [1, 2, 3, 4, 5]
+                .job-add__list
+                    input(type="text" data-index=el).job-add__field.job-add__field--md
+            +button('+').button--sm.button--secondary.button--wide.job-add__add
+        .job-add__block
+            .job-add__tooltip
+                label(for="main_achievements").job-add__label Main Achievements
+                p.job-add__rule with numbers
+            textarea(placeholder="Must include measurable results (ROI, revenue, CPA reduction, traffic volume, etc.)" id="main_achievements").job-add__textarea
+        +button('Continue').button--md.button--primary.button--wide.job-add__button
+
+mixin candidate-3
+    .job-add__step(data-content='3')&attributes(attributes)
+        .job-add__block
+            h3.job-add__title Salary & Contact Information
+            p.job-add__subtitle Set your expectations and provide contact details for employers.
+        .job-add__block
+            .job-add__tooltip
+                label(for="salary").job-add__label Salary *
+                p.job-add__rule Must be specified in USD
+            input(type="text" placeholder="$3000 to $5000 + %" id="salary").job-add__field
+        .job-add__block
+            div
+                p Format examples:
+                ul.job-add__ul
+                    li.job-add__li $1500
+                    li.job-add__li $2000–3000
+                    li.job-add__li $1000 + %
+        .job-add__block
+            p.job-add__label Payment Preference*
+            +checkox('Fixed', 'fixed', true)
+            +checkox('Fixed + %', 'fixed_plus')
+            +checkox('Performance-based', 'performance_based')
+        .job-add__block
+            label(for="contact_email").job-add__label Contact email
+            input(type="email" placeholder="template@gmail.com" id="contact_email").job-add__field
+        .job-add__block
+            label(for="social").job-add__label Telegram / WhatsApp
+            input(type="text" placeholder="Optional" id="social").job-add__field
+        .job-add__block
+            label(for="linkedin").job-add__label LinkedIn
+            input(type="text" placeholder="Optional" id="linkedin").job-add__field
+        .job-add__block
+            label(for="portfolio").job-add__label Portfolio / Case Studies Links
+            input(type="text" placeholder="Optional" id="portfolio").job-add__field
+        .job-add__block
+            p.job-add__label Upload CV
+            .uploaded
+                +icon('file').uploaded__icon
+                p.uploaded__text test-file.pdf
+                +button(null, null, 'close').button--square.button--transparent.uploaded__button
+        .job-add__block
+            .job-add__tooltip
+                p.job-add__label Upload CV
+                p.job-add__rule Must be PDF format
+            +upload('cv').job-add__upload
+        +button('Submit Job').button--md.button--primary.button--wide.job-add__button
+
+mixin job-add
+    .job-add&attributes(attributes)
+        +button(null, null, 'close').button--square.button--transparent.job-add__close
+        // TODO job-add__steps--1, job-add__steps--2, job-add__steps--3
+        .job-add__steps.job-add__steps--1
+            button(type="button" aria-label="Step 1" data-step="1").job-add__item
+                span.job-add__value 1
+                span.job-add__scale
+            button(type="button" aria-label="Step 2" data-step="2").job-add__item
+                span.job-add__value 2
+                span.job-add__scale
+            button(type="button" aria-label="Step 3" data-step="3").job-add__item
+                span.job-add__value 3
+                span.job-add__scale
+
+        .job-add__content
+            +candidate-1
+            +candidate-2
+            +candidate-3
+
+            +job-1
+            +job-2
+            +job-3

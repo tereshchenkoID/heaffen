@@ -1,4 +1,4 @@
-mixin checkox(placeholder, value)
+mixin checkox(placeholder, value, isChecked)
   label.checkbox&attributes(attributes)
-    input(type="checkbox" data-value=value).checkbox__input
+    input(type="checkbox" data-value=value checked=isChecked).checkbox__input
     span.checkbox__label= placeholder
