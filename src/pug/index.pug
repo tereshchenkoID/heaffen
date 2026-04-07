@@ -76,7 +76,7 @@ block content
             +more-link('./articles.html', 'View all articles').title__link
 
           .grid
-            each item, index in ARTICLES
+            each item, index in ARTICLES.slice(0, 5)
               .col-12.col-mob-m-6.col-desk-s-4
                 +article(item)
               if index === 1

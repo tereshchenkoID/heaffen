@@ -1,11 +1,27 @@
 .mb-10 {
   margin-bottom: 0.625rem;
 }
-.mb-16 {
-  margin-bottom: 1rem;
-}
 .mb-24 {
   margin-bottom: 1.5rem;
+}
+
+.text-italic {
+  font-style: italic;
+}
+.text-medium {
+  font-weight: var(--typography-medium);
+}
+.text-semibold {
+  font-weight: var(--typography-semibold);
+}
+.text-bold {
+  font-weight: var(--typography-bold);
+}
+.text-extrabold {
+  font-weight: var(--typography-extrabold);
+}
+.text-black {
+  font-weight: var(--typography-black);
 }
 
 .text-decoration-underline {

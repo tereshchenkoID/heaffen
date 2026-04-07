@@ -1,6 +1,7 @@
 @use 'scss/config' as *;
 
 .icon {
+  @include size(100%);
   @include transition;
 
   display: inline-block;

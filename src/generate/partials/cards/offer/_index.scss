@@ -105,10 +105,6 @@
     color: var(--color-neon-azure);
   }
 
-  .icon {
-    @include size(100%);
-  }
-
   @include hover {
     &:hover {
       color: var(--color-carbon-black);

@@ -62,10 +62,6 @@
     @include size(rem(24px));
   }
 
-  .icon {
-    @include size(100%);
-  }
-
   &--alt {
 
     .slots-provider {

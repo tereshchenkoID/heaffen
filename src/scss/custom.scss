@@ -6,14 +6,38 @@
     margin-bottom: rem(10px);
   }
 
-  &-16 {
-    margin-bottom: rem(16px);
-  }
-
   &-24 {
     margin-bottom: rem(24px);
   }
 }
+
+.text {
+
+  &-italic {
+    font-style: italic;
+  }
+
+  &-medium {
+    font-weight: var(--typography-medium);
+  }
+
+  &-semibold {
+    font-weight: var(--typography-semibold);
+  }
+
+  &-bold {
+    font-weight: var(--typography-bold);
+  }
+
+  &-extrabold {
+    font-weight: var(--typography-extrabold);
+  }
+
+  &-black {
+    font-weight: var(--typography-black);
+  }
+}
+
 
 .text-decoration {
 

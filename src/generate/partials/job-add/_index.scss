@@ -22,10 +22,6 @@
     @include size(rem(24px));
 
     margin-inline: auto 0;
-
-    .icon {
-      @include size(100%);
-    }
   }
 
   &__steps {
