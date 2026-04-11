@@ -14,6 +14,7 @@
     .filters {
       &__dropdown {
         display: block;
+        animation: slideIn 0.3s forwards;
       }
 
       &__arrow {
@@ -32,9 +33,11 @@
 
   &__dropdown {
     display: none;
+    opacity: 0;
 
     @include media(tab-l) {
       display: block;
+      opacity: 1;
     }
   }
 
@@ -99,6 +102,7 @@
 
         &__list {
           display: grid;
+          animation: slideIn 0.3s forwards;
         }
 
         &__angle {
@@ -116,6 +120,7 @@
     @include scroll-y;
 
     display: none;
+    opacity: 0;
     gap: rem(10px);
     max-height: rem(360px);
     padding-bottom: rem(15px);

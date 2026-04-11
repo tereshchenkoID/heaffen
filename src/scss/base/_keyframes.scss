@@ -1,0 +1,14 @@
+@use 'scss/config' as *;
+
+@keyframes slideIn {
+
+  from {
+    transform: translateY(rem(-15px));
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

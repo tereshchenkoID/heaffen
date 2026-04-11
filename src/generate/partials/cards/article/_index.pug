@@ -6,7 +6,7 @@ mixin article(data)
             +tags(data.tags).article__tags
             a(href="./article.html" aria-label="Show more" title="Show more").article__description= data.title
             footer.article__footer
-                a(href="./article.html" aria-label=data.author title=data.author).article__author= data.author
+                a(href="./author.html" aria-label=data.author title=data.author).article__author= data.author
                 p.article__date= data.date
 
 mixin article-alt(data)

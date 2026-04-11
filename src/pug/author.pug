@@ -1,0 +1,69 @@
+extends ../generate/layout/_layout
+
+block title
+  - var title = "Mykola Venherenko"
+
+block content
+  main.main
+    +banner.banner--wide
+
+    section.section
+      .container-fluid
+        .container
+          +breadcrumbs([
+            {
+              text: 'Main page',
+              url: './'
+            },
+            {
+              text: 'Articles',
+              url: './articles.html'
+            },
+            {
+              text: 'Mykola Venherenko',
+              url: null
+            }
+          ])
+
+          .content.content--left
+            .content__header
+              .content__meta
+                .grid
+                  .col-12.col-tab-s-6.col-desk-s-8
+                    .content__title
+                      +social-block-alt.social-block--alt
+                      h2.content__subtitle Mykola Venherenko
+                    .text
+                      p I’ve been writing about the affiliate marketing industry for 3 years. I specialize in gambling, dating, and crypto. I actively look for money-making strategies and share them with my audience, and I genuinely enjoy diving into complex technical guides. I firmly believe in the magical power of getting two leads in the stats first thing in the morning.
+                  .col-12.col-tab-s-5.offset-tab-s-7.col-desk-s-3.offset-desk-s-9
+                    h4.mb-10 Author social media:
+                    +social.social--polar-white
+
+            .content__center
+              .grid
+                each item, index in ARTICLES
+                  .col-12.col-mob-m-6.col-desk-s-4
+                    +article(item)
+                .col-12
+                  +pagination
+            .content__left
+              +banner
+
+    section.section
+      .container-fluid
+        .container
+          +banner
+
+    section.section
+      .container-fluid
+        .container
+          .text
+            h3 Affiliate Program Ranking by “Heaffen” Media
+            br
+            p There are many CPA affiliate networks — several thousand — and their number continues to grow.
+            br
+            p Our team has prepared a list of top CPA networks, including affiliate programs from different verticals. The editorial team at “Heaffen” Media keeps a close eye on the market and works to update the affiliate program ranking as quickly as possible. So if you don’t find the one you need yet, feel free to contact us at admin@heaffen.media or on Telegram @heaffen_sales.
+            br
+            p Before starting to work with any CPA affiliate network from the list, we recommend reviewing information about the program, checking the company’s social media, and reading reviews. Remember, when choosing an affiliate network to run traffic, you are choosing a partner with whom you will earn money. So don’t neglect basic checks to ensure the company’s reliability and safety.
+            br
+            p Choose your top CPA network or affiliate program and start driving traffic with a cosmic ROI! 🚀

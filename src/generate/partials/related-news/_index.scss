@@ -24,8 +24,8 @@
   &__item {
     padding-block: rem(20px);
 
-    &:not(:last-child) {
-      border-bottom: rem(1px) solid var(--color-category-grey);
+    &:not(:first-child) {
+      border-top: rem(1px) solid var(--color-category-grey);
     }
 
     &:last-child {

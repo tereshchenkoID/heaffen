@@ -5,71 +5,63 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fe553189-2b0a-46d9-81cb-a7502248d449" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/pug/articles.pug" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pug/directories.pug" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pug/events.pug" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pug/jobs.pug" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pug/news.pug" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pug/offers.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.eslintrc" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.prettierrc" beforeDir="false" afterPath="$PROJECT_DIR$/.prettierrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.stylelintrc" beforeDir="false" afterPath="$PROJECT_DIR$/.stylelintrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/img/logo-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/img/logo-1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/img/logo-2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/img/logo-2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/img/logo-3.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/img/logo-3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/generate/components/button/_index.pug" beforeDir="false" afterPath="$PROJECT_DIR$/src/generate/components/button/_index.pug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pug/author.pug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scss/base/_keyframes.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/404.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/about.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/article.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/articles.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/assets/fonts/Gilroy-Black.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/assets/fonts/Gilroy-BlackItalic.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/assets/fonts/Gilroy-Bold.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/assets/fonts/Gilroy-BoldItalic.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/assets/fonts/Gilroy-Extrabold.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/assets/fonts/Gilroy-ExtraboldItalic.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/assets/fonts/Gilroy-Medium.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/assets/fonts/Gilroy-MediumItalic.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/assets/fonts/Gilroy-Regular.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/assets/fonts/Gilroy-RegularItalic.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/assets/fonts/Gilroy-Semibold.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/assets/fonts/Gilroy-SemiboldItalic.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/candidate.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/candidates.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/css/app.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/css/app.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/css/custom.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/css/custom.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/directories.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/directory.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/event.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/events.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/img/sprite.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/job.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jobs.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/js/app.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/js/app.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/js/vendors.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/js/vendors.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/news.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/offer.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/offers.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/privacy-policy.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/provider.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/providers.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/search.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/terms-conditions.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/generate/components/button/_index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/generate/components/button/_index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/generate/components/image/_index.pug" beforeDir="false" afterPath="$PROJECT_DIR$/src/generate/components/image/_index.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/generate/components/image/_index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/generate/components/image/_index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/generate/components/index.pug" beforeDir="false" afterPath="$PROJECT_DIR$/src/generate/components/index.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/generate/components/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/generate/components/index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/generate/layout/_head.pug" beforeDir="false" afterPath="$PROJECT_DIR$/src/generate/layout/_head.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/generate/layout/_layout.pug" beforeDir="false" afterPath="$PROJECT_DIR$/src/generate/layout/_layout.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/generate/layout/_media-tags.pug" beforeDir="false" afterPath="$PROJECT_DIR$/src/generate/layout/_media-tags.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/generate/partials/index.pug" beforeDir="false" afterPath="$PROJECT_DIR$/src/generate/partials/index.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/generate/partials/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/generate/partials/index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/generate/sections/index.pug" beforeDir="false" afterPath="$PROJECT_DIR$/src/generate/sections/index.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/generate/sections/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/generate/sections/index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pug/about.pug" beforeDir="false" afterPath="$PROJECT_DIR$/src/pug/about.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pug/index.pug" beforeDir="false" afterPath="$PROJECT_DIR$/src/pug/index.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/_config.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/_config.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/abstract/helpers/_functions.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/abstract/helpers/_functions.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/abstract/helpers/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/abstract/helpers/index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/abstract/helpers/mixins/_absolute.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/abstract/helpers/mixins/_absolute.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/abstract/helpers/mixins/_breakpoints.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/abstract/helpers/mixins/_breakpoints.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/abstract/helpers/mixins/_ellipsis.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/abstract/helpers/mixins/_ellipsis.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/abstract/helpers/mixins/_flexbox.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/abstract/helpers/mixins/_flexbox.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/abstract/helpers/mixins/_font-size.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/abstract/helpers/mixins/_font-size.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/abstract/helpers/mixins/_gradients.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/abstract/helpers/mixins/_gradients.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/abstract/helpers/mixins/_line-clamp.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/abstract/helpers/mixins/_line-clamp.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/abstract/helpers/mixins/_rem-converter.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/abstract/helpers/mixins/_rem-converter.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/abstract/helpers/mixins/_reset-button.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/abstract/helpers/mixins/_reset-button.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/abstract/helpers/mixins/_reset-list.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/abstract/helpers/mixins/_reset-list.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/abstract/helpers/mixins/_size.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/abstract/helpers/mixins/_size.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/abstract/helpers/mixins/_smooth-font.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/abstract/helpers/mixins/_smooth-font.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/abstract/helpers/mixins/_spacing.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/abstract/helpers/mixins/_stroke.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/abstract/helpers/mixins/_stroke.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/abstract/helpers/mixins/_transition.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/abstract/helpers/mixins/_transition.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/abstract/helpers/mixins/_utils.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/abstract/helpers/mixins/_utils.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/abstract/helpers/mixins/_word-break.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/abstract/helpers/mixins/_word-break.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/abstract/variables/_breakpoints.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/abstract/variables/_breakpoints.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/abstract/variables/_z-indexes.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/abstract/variables/_z-indexes.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/abstract/variables/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/abstract/variables/index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/base/_global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/base/_global.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/base/fonts/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/base/fonts/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/generate/partials/cards/article/_index.pug" beforeDir="false" afterPath="$PROJECT_DIR$/src/generate/partials/cards/article/_index.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/generate/partials/cards/post/_index.pug" beforeDir="false" afterPath="$PROJECT_DIR$/src/generate/partials/cards/post/_index.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/generate/partials/filters/_index.pug" beforeDir="false" afterPath="$PROJECT_DIR$/src/generate/partials/filters/_index.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/generate/partials/filters/_index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/generate/partials/filters/_index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/generate/partials/related-news/_index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/generate/partials/related-news/_index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/generate/partials/social-block/_index.pug" beforeDir="false" afterPath="$PROJECT_DIR$/src/generate/partials/social-block/_index.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/generate/partials/social-block/_index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/generate/partials/social-block/_index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/generate/partials/submenu-desk/_index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/generate/partials/submenu-desk/_index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/generate/partials/submenu-mob/_index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/generate/partials/submenu-mob/_index.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scss/base/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/base/index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/base/reset/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/base/reset/index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/base/variables/_base.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/base/variables/_base.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/base/variables/_colors.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/base/variables/_colors.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/base/variables/_typography.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/base/variables/_typography.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/base/variables/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/base/variables/index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +79,7 @@
 }</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/tereshchenkoID/HTML&quot;,
+    &quot;url&quot;: &quot;https://github.com/tereshchenkoID/heaffen.git&quot;,
     &quot;accountId&quot;: &quot;4deddfa3-f78a-4aa6-a0e8-b685a669940f&quot;
   }
 }</component>
@@ -99,29 +91,47 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/ihor/Desktop/Projects/Heafen/src/scss/abstract/helpers/mixins&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.stylelint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.stylelint&quot;: &quot;/Users/ihor/Desktop/Projects/Heafen/node_modules/stylelint&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "junie.onboarding.icon.badge.shown": "true",
+    "last_opened_file_path": "/Users/ihor/Desktop/Projects/Heaffen/src/pug",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.stylelint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.stylelint": "/Users/ihor/Desktop/Projects/Heafen/node_modules/stylelint",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.start.executor": "Run",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/scss/abstract/helpers/mixins" />
       <recent name="$PROJECT_DIR$/src/pug" />
+      <recent name="$PROJECT_DIR$/src/scss/abstract/helpers/mixins" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.start" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -138,6 +148,9 @@
       <option name="presentableId" value="Default" />
       <updated>1773085141827</updated>
       <workItem from="1773085143120" duration="1159000" />
+      <workItem from="1775805537725" duration="631000" />
+      <workItem from="1775849002443" duration="48000" />
+      <workItem from="1775928053433" duration="3182000" />
     </task>
     <servers />
   </component>
