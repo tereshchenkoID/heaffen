@@ -4,64 +4,47 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fe553189-2b0a-46d9-81cb-a7502248d449" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/pug/author.pug" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scss/base/_keyframes.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+    <list default="true" id="fe553189-2b0a-46d9-81cb-a7502248d449" name="Changes" comment="- author page, transition for active classes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/404.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/about.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/article.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/articles.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/assets/fonts/Gilroy-Black.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/assets/fonts/Gilroy-BlackItalic.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/assets/fonts/Gilroy-Bold.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/assets/fonts/Gilroy-BoldItalic.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/assets/fonts/Gilroy-Extrabold.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/assets/fonts/Gilroy-ExtraboldItalic.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/assets/fonts/Gilroy-Medium.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/assets/fonts/Gilroy-MediumItalic.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/assets/fonts/Gilroy-Regular.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/assets/fonts/Gilroy-RegularItalic.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/assets/fonts/Gilroy-Semibold.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/assets/fonts/Gilroy-SemiboldItalic.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/candidate.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/candidates.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/css/app.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/css/app.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/css/custom.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/css/custom.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/directories.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/directory.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/event.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/events.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/img/sprite.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/job.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/jobs.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/js/app.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/js/app.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/js/vendors.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/js/vendors.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/news.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/offer.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/offers.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/privacy-policy.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/provider.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/providers.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/search.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/terms-conditions.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/generate/components/button/_index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/generate/components/button/_index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/generate/partials/cards/article/_index.pug" beforeDir="false" afterPath="$PROJECT_DIR$/src/generate/partials/cards/article/_index.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/generate/partials/cards/post/_index.pug" beforeDir="false" afterPath="$PROJECT_DIR$/src/generate/partials/cards/post/_index.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/404.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/article.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/article.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/articles.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/articles.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/author.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/author.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/candidate.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/candidate.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/candidates.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/candidates.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/css/app.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/build/css/app.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/directories.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/directories.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/directory.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/directory.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/event.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/event.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/events.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/events.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/job.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/job.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jobs.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/jobs.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/news.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/news.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/offer.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/offer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/offers.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/offers.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/privacy-policy.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/privacy-policy.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/provider.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/provider.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/providers.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/providers.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/search.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/terms-conditions.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/terms-conditions.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/generate/components/menu/_index.pug" beforeDir="false" afterPath="$PROJECT_DIR$/src/generate/components/menu/_index.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/generate/components/upload/_index.pug" beforeDir="false" afterPath="$PROJECT_DIR$/src/generate/components/upload/_index.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/generate/partials/cards/post/_index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/generate/partials/cards/post/_index.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/generate/partials/filters/_index.pug" beforeDir="false" afterPath="$PROJECT_DIR$/src/generate/partials/filters/_index.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/generate/partials/filters/_index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/generate/partials/filters/_index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/generate/partials/related-news/_index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/generate/partials/related-news/_index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/generate/partials/job-add/_index.pug" beforeDir="false" afterPath="$PROJECT_DIR$/src/generate/partials/job-add/_index.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/generate/partials/logo/_index.pug" beforeDir="false" afterPath="$PROJECT_DIR$/src/generate/partials/logo/_index.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/generate/partials/slots-provider/_index.pug" beforeDir="false" afterPath="$PROJECT_DIR$/src/generate/partials/slots-provider/_index.pug" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/generate/partials/social-block/_index.pug" beforeDir="false" afterPath="$PROJECT_DIR$/src/generate/partials/social-block/_index.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/generate/partials/social-block/_index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/generate/partials/social-block/_index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/generate/partials/submenu-desk/_index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/generate/partials/submenu-desk/_index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/generate/partials/submenu-mob/_index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/generate/partials/submenu-mob/_index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/base/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/base/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/generate/partials/submenu-desk/_index.pug" beforeDir="false" afterPath="$PROJECT_DIR$/src/generate/partials/submenu-desk/_index.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/generate/partials/submenu-mob/_index.pug" beforeDir="false" afterPath="$PROJECT_DIR$/src/generate/partials/submenu-mob/_index.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/generate/partials/tag/_index.pug" beforeDir="false" afterPath="$PROJECT_DIR$/src/generate/partials/tag/_index.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/generate/partials/video/_index.pug" beforeDir="false" afterPath="$PROJECT_DIR$/src/generate/partials/video/_index.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/generate/partials/video/_index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/generate/partials/video/_index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pug/articles.pug" beforeDir="false" afterPath="$PROJECT_DIR$/src/pug/articles.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pug/index.pug" beforeDir="false" afterPath="$PROJECT_DIR$/src/pug/index.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pug/jobs.pug" beforeDir="false" afterPath="$PROJECT_DIR$/src/pug/jobs.pug" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,11 +133,32 @@
       <workItem from="1773085143120" duration="1159000" />
       <workItem from="1775805537725" duration="631000" />
       <workItem from="1775849002443" duration="48000" />
-      <workItem from="1775928053433" duration="3182000" />
+      <workItem from="1775928053433" duration="5509000" />
     </task>
+    <task id="LOCAL-00001" summary="- author page, transition for active classes">
+      <option name="closed" value="true" />
+      <created>1775934839605</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1775934839605</updated>
+    </task>
+    <task id="LOCAL-00002" summary="- author page, transition for active classes">
+      <option name="closed" value="true" />
+      <created>1775934843545</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1775934843545</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="- author page, transition for active classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="- author page, transition for active classes" />
   </component>
 </project>

@@ -11,7 +11,7 @@ mixin submenu-mob
                         each item in MENU
                             .submenu-mob__dropdown.js-submenu-mob-dropdown
                                 if item.submenu
-                                    a(arial-label=item.text data-value=item.slug).submenu-mob__link.js-submenu-mob-link
+                                    a(data-value=item.slug).submenu-mob__link.js-submenu-mob-link
                                         span= item.text
                                         +icon('angle-right').submenu-mob__angle
                                     .submenu-mob__wrapper(data-category=item.slug).js-submenu-mob-wrapper
@@ -19,7 +19,7 @@ mixin submenu-mob
                                             each link in columns
                                                 a(href="./" aria-label=link).submenu-mob__sublink= link
                                 else
-                                    a(href=item.link arial-label=item.text).submenu-mob__link= item.text
+                                    a(href=item.link aria-label=item.text).submenu-mob__link= item.text
 
                 .submenu-mob__step(data-step="2").js-submenu-mob-step
                     .submenu-mob__header

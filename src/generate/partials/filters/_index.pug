@@ -21,5 +21,5 @@ mixin filters
                       each item in COUNTRIES
                           +checkox(item, item.toLowerCase()).filters__checkbox
             .filters__footer
-                a(aria-label="Apply" title="Apply filters").button.button--primary.button--sm.js-filters-apply Apply
+                a.button.button--primary.button--sm.js-filters-apply Apply
                 +button('Reset', 'reset').button--outline.button--sm.js-filters-reset

@@ -12,7 +12,7 @@ mixin submenu-desk
                                             each columns in item.submenu
                                                 .col-12.col-tab-l-4
                                                     each link in columns
-                                                        a(href="./" aria-label=link).submenu-desk__link= link
+                                                        a(href="./").submenu-desk__link= link
                         .submenu-desk__step(data-step="2").js-submenu-desk-step
                             form.submenu-desk__search.js-submenu-desk-search
                                 +icon('search')

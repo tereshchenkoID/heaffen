@@ -1,6 +1,6 @@
 mixin upload(id)
     label(for=id).upload&attributes(attributes)
         +icon('upload').upload__icon
-        p.upload__title Upload Your CV (PDF)
-        p.upload__description Drag & drop your CV here or click to browse files. Please upload your resume in PDF format only. Max size: 10MB.
+        span.upload__title Upload Your CV (PDF)
+        span.upload__description Drag & drop your CV here or click to browse files. Please upload your resume in PDF format only. Max size: 10MB.
         input(type="file" id=id accept=".pdf").upload__input
