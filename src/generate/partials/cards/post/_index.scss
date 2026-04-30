@@ -2,6 +2,17 @@
 
 .post {
   line-height: 1;
+  position: relative;
+
+  @include hover {
+    &:hover {
+      .post {
+        &__img {
+          transform: scale(1.05);
+        }
+      }
+    }
+  }
 
   &__picture {
     display: block;
@@ -14,16 +25,12 @@
       background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, var(--color-black) 86.58%);
       content: '';
     }
+  }
 
-    @include hover {
-      &:hover {
-        .post {
-          &__img {
-            transform: scale(1.05);
-          }
-        }
-      }
-    }
+  &__link {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
   }
 
   &__img {

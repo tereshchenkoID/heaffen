@@ -4,47 +4,54 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fe553189-2b0a-46d9-81cb-a7502248d449" name="Changes" comment="- author page, transition for active classes">
+    <list default="true" id="fe553189-2b0a-46d9-81cb-a7502248d449" name="Changes" comment="- validator fix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/404.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/article.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/article.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/articles.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/articles.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/author.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/author.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/candidate.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/candidate.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/candidates.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/candidates.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/css/app.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/build/css/app.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/directories.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/directories.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/directory.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/directory.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/event.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/event.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/events.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/events.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/job.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/job.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/jobs.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/jobs.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/news.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/news.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/offer.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/offer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/offers.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/offers.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/privacy-policy.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/privacy-policy.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/provider.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/provider.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/providers.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/providers.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/search.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/terms-conditions.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/terms-conditions.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/generate/components/menu/_index.pug" beforeDir="false" afterPath="$PROJECT_DIR$/src/generate/components/menu/_index.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/generate/components/upload/_index.pug" beforeDir="false" afterPath="$PROJECT_DIR$/src/generate/components/upload/_index.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/404.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/about.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/article.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/articles.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/assets/fonts/Gilroy-Black.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/assets/fonts/Gilroy-BlackItalic.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/assets/fonts/Gilroy-Bold.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/assets/fonts/Gilroy-BoldItalic.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/assets/fonts/Gilroy-Extrabold.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/assets/fonts/Gilroy-ExtraboldItalic.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/assets/fonts/Gilroy-Medium.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/assets/fonts/Gilroy-MediumItalic.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/assets/fonts/Gilroy-Regular.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/assets/fonts/Gilroy-RegularItalic.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/assets/fonts/Gilroy-Semibold.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/assets/fonts/Gilroy-SemiboldItalic.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/author.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/candidate.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/candidates.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/css/app.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/css/app.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/css/custom.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/css/custom.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/directories.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/directory.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/event.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/events.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/job.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jobs.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/js/app.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/js/app.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/js/vendors.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/js/vendors.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/news.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/offer.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/offers.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/privacy-policy.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/provider.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/providers.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/search.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/terms-conditions.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/generate/partials/cards/post/_index.pug" beforeDir="false" afterPath="$PROJECT_DIR$/src/generate/partials/cards/post/_index.pug" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/generate/partials/cards/post/_index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/generate/partials/cards/post/_index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/generate/partials/filters/_index.pug" beforeDir="false" afterPath="$PROJECT_DIR$/src/generate/partials/filters/_index.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/generate/partials/job-add/_index.pug" beforeDir="false" afterPath="$PROJECT_DIR$/src/generate/partials/job-add/_index.pug" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/generate/partials/logo/_index.pug" beforeDir="false" afterPath="$PROJECT_DIR$/src/generate/partials/logo/_index.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/generate/partials/slots-provider/_index.pug" beforeDir="false" afterPath="$PROJECT_DIR$/src/generate/partials/slots-provider/_index.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/generate/partials/social-block/_index.pug" beforeDir="false" afterPath="$PROJECT_DIR$/src/generate/partials/social-block/_index.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/generate/partials/submenu-desk/_index.pug" beforeDir="false" afterPath="$PROJECT_DIR$/src/generate/partials/submenu-desk/_index.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/generate/partials/submenu-mob/_index.pug" beforeDir="false" afterPath="$PROJECT_DIR$/src/generate/partials/submenu-mob/_index.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/generate/partials/tag/_index.pug" beforeDir="false" afterPath="$PROJECT_DIR$/src/generate/partials/tag/_index.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/generate/partials/video/_index.pug" beforeDir="false" afterPath="$PROJECT_DIR$/src/generate/partials/video/_index.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/generate/partials/video/_index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/generate/partials/video/_index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pug/articles.pug" beforeDir="false" afterPath="$PROJECT_DIR$/src/pug/articles.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pug/index.pug" beforeDir="false" afterPath="$PROJECT_DIR$/src/pug/index.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pug/jobs.pug" beforeDir="false" afterPath="$PROJECT_DIR$/src/pug/jobs.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/generate/partials/logo/_index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/generate/partials/logo/_index.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,25 +81,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "junie.onboarding.icon.badge.shown": "true",
-    "last_opened_file_path": "/Users/ihor/Desktop/Projects/Heaffen/src/pug",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.stylelint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.stylelint": "/Users/ihor/Desktop/Projects/Heafen/node_modules/stylelint",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "npm.start.executor": "Run",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/ihor/Desktop/Projects/Heaffen/src/pug&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.stylelint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.stylelint&quot;: &quot;/Users/ihor/Desktop/Projects/Heafen/node_modules/stylelint&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.start.executor&quot;: &quot;Run&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/pug" />
@@ -133,7 +140,9 @@
       <workItem from="1773085143120" duration="1159000" />
       <workItem from="1775805537725" duration="631000" />
       <workItem from="1775849002443" duration="48000" />
-      <workItem from="1775928053433" duration="5509000" />
+      <workItem from="1775928053433" duration="6144000" />
+      <workItem from="1776280501910" duration="285000" />
+      <workItem from="1777561937800" duration="1273000" />
     </task>
     <task id="LOCAL-00001" summary="- author page, transition for active classes">
       <option name="closed" value="true" />
@@ -151,7 +160,15 @@
       <option name="project" value="LOCAL" />
       <updated>1775934843545</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="- validator fix">
+      <option name="closed" value="true" />
+      <created>1776086551405</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1776086551405</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -159,6 +176,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="- author page, transition for active classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="- author page, transition for active classes" />
+    <MESSAGE value="- validator fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="- validator fix" />
   </component>
 </project>

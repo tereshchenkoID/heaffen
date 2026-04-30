@@ -4,9 +4,9 @@
   display: grid;
 
   @include media(desk-s) {
-    grid-template-columns: rem(30px) auto;
+    grid-template-columns: rem(29px) auto;
     align-items: center;
-    gap: rem(10px);
+    gap: rem(7px);
   }
 
   &__right {
