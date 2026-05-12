@@ -10,9 +10,9 @@
   margin-bottom: rem(30px);
 
   &__icon {
-    @include size(rem(22px));
+    @include size(rem(20px), rem(35px));
 
-    color: var(--color-electric-ocean);
+    color: var(--color-orange);
   }
 
   &--italic {

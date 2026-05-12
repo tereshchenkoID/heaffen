@@ -34,6 +34,7 @@
   }
 
   &__button {
+    order: 2;
     height: rem(30px);
     font-size: rem(12px);
 
@@ -53,21 +54,35 @@
   }
 
   &__option {
-    display: none;
+    order: 1;
 
     @include media(tab-l) {
-      display: inline-flex;
+      order: 3;
     }
 
     .icon {
       @include size(rem(24px));
+    }
+
+    &--active {
+      visibility: hidden;
+      opacity: 0;
+      pointer-events: none;
+
+      @include media(tab-l) {
+        visibility: visible;
+        opacity: 1;
+        pointer-events: auto;
+      }
     }
   }
 
   &__toggle {
     @include flex(center, center, column);
 
+    order: 3;
     gap: rem(4px);
+    flex-shrink: 0;
 
     @include media(tab-l) {
       display: none;

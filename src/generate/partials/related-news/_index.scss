@@ -59,7 +59,7 @@
   }
 
   &__icon {
-    @include size(rem(18px), rem(20px));
+    @include size(rem(14px), rem(26px));
 
     color: var(--color-stroke-polar);
   }

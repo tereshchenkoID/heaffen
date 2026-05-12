@@ -150,5 +150,9 @@
 
   &__default {
     margin: auto;
+
+    .icon {
+      @include size(rem(24px), rem(43px));
+    }
   }
 }

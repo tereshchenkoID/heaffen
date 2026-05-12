@@ -272,6 +272,14 @@ const initContentContext = () => {
   });
 }
 
+// const toggleSearchIcon = (isOpen) => {
+//   const navSearch = document.querySelector('.js-nav-search');
+//   const useElement = navSearch?.querySelector('use');
+//   if (!useElement) return;
+//   const icon = isOpen ? 'img/sprite.svg#close' : 'img/sprite.svg#search';
+//   useElement.setAttribute('xlink:href', icon);
+// };
+
 const initDesktopSubmenu = () => {
   const submenu = document.querySelector('.js-submenu-desk');
   if (!submenu) return;
@@ -323,6 +331,10 @@ const initDesktopSubmenu = () => {
   };
 
   navSearch?.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    if (window.innerWidth < 1024) return;
+
     e.preventDefault();
     const isSearchActive = submenu.classList.contains('submenu-desk--active')
       && stepSearch?.classList.contains('submenu-desk__step--active');
@@ -431,11 +443,13 @@ const initMobileSubmenu = () => {
   const openMenu = () => {
     submenu.classList.add('submenu-mob--active');
     navToggle.classList.add('nav__toggle--active');
+    navSearch.classList.add('nav__option--active');
   };
 
   const closeMenu = () => {
     submenu.classList.remove('submenu-mob--active');
     navToggle.classList.remove('nav__toggle--active');
+    navSearch.classList.remove('nav__option--active');
   };
 
   navToggle?.addEventListener('click', (e) => {
@@ -446,6 +460,7 @@ const initMobileSubmenu = () => {
 
   navSearch?.addEventListener('click', (e) => {
     e.preventDefault();
+    if (window.innerWidth >= 1024) return;
     openMenu();
     switchStep(2);
   });

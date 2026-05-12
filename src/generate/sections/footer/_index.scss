@@ -76,7 +76,12 @@
   }
 
   &__logo {
+    margin-top: rem(-10px);
     color: var(--color-polar-white);
+
+    @include media(tab-l) {
+      margin-top: rem(-30px);
+    }
   }
 
   &__description {
@@ -116,7 +121,7 @@
     inset-inline-end: rem(16px);
     transform: translateY(-50%);
     border-radius: 50%;
-    background-color: var(--color-secret-yellow);
+    background-color: var(--color-orange);
 
     .icon {
       @include size(rem(24px));
