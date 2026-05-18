@@ -108,7 +108,26 @@ mixin footer
                             p.footer__description Heaffen is a media platform for affiliate and iGaming professionals, featuring news, insights, events, and trusted industry directories.
                 .footer__center
                     .grid
-                        each item in FOOTER
+                        each item in FOOTER.slice(0, 1)
+                            .col-12.col-mob-m-6.col-tab-l-2
+                                .grid.footer__grid
+                                    .col-12
+                                        ul.footer__list.footer__list--alt
+                                            li.footer__item
+                                                p.footer__subtitle= `${item.key}:`
+                                    .col-6.col-mob-m-12
+                                        ul.footer__list.footer__list--default
+                                            each link in item.links.slice(0, 3)
+                                                li.footer__item
+                                                    a(href=link.link title=link.text aria-label=link.text).footer__link= link.text
+                                    .col-6.col-mob-m-12
+                                        ul.footer__list
+                                            each link in item.links.slice(3, item.links.length)
+                                                li.footer__item
+                                                    a(href=link.link title=link.text aria-label=link.text).footer__link= link.text
+
+
+                        each item in FOOTER.slice(1, FOOTER.length)
                             .col-12.col-mob-m-6.col-tab-l-2
                                 ul.footer__list
                                     li.footer__item
@@ -118,8 +137,8 @@ mixin footer
                                             a(href=link.link title=link.text aria-label=link.text).footer__link= link.text
                 .footer__bottom
                     p.footer__copyright © 2022-2026 Heaffen
-                    a(href='./terms-conditions.html').footer__link Terms & conditions
                     a(href='./privacy-policy.html').footer__link Privacy Policy
+                    a(href='./terms-conditions.html').footer__link Terms & conditions
                     .footer__social
                         p.footer__subtitle Our social media:
                         +social
